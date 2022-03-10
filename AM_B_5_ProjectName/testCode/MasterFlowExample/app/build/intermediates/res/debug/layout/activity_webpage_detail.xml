@@ -1,0 +1,5 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/webpage_detail_container"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    tools:context=".WebpageDetailActivity" tools:ignore="MergeRootFrame" />
+<!-- From: file:/C:/Users/Aaron/AndroidStudioProjects/MasterFlowExample/app/src/main/res/layout/activity_webpage_detail.xml -->

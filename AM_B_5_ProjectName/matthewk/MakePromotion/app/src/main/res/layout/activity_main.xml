@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <!--android:background="#FFF"-->
+    <!--android:fillViewport="true"-->
+    <!--android:id="@+id/scrollView1">-->
+    <LinearLayout
+        android:orientation="vertical"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:context="com.example.matthewkinnander.recitationproject.MainActivity">
+
+
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:text="Complete the fields to insert a Promotion"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/BusinessId"
+            android:hint="Business Id"
+            />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PromoTitle"
+            android:hint="Title"
+            />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PromoDescription"
+            android:hint="Description"
+            />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PromoDate"
+            android:hint="Date"
+            />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PromoDuration"
+            android:hint="Duration"
+            />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/StartDate"
+            android:hint="Start Date"
+            />
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/EndDate"
+            android:hint="End Date"
+            />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/InsertPromotion"
+            android:hint="Insert Promotion"
+            />
+
+
+        <!-- here -->
+
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,5 @@
+C:\Users\Aaron\AndroidStudioProjects\GestureEx\app\build\intermediates\classes\debug
+C:\Users\Aaron\AndroidStudioProjects\GestureEx\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-905c61fd281ebee4def76d6e77700de819e5a819.jar
+C:\Users\Aaron\AndroidStudioProjects\GestureEx\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-a0005dae5664b6c78bc8c889734a971779e8a57e.jar
+C:\Users\Aaron\AndroidStudioProjects\GestureEx\app\build\intermediates\pre-dexed\debug\classes-26027eaa883743ecd0132f73e69654d5c09b7056.jar
+C:\Users\Aaron\AndroidStudioProjects\GestureEx\app\build\intermediates\pre-dexed\debug\classes-bc1af155b7275d6eb0d1132263dd784461311a15.jar

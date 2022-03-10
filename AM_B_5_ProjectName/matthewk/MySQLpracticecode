@@ -1,0 +1,35 @@
+
+CREATE TABLE MatthewTest (
+    Id int,
+    LastName varchar(250),
+    FirstName varchar(250),
+    City varchar(250),
+    FavoriteRestaurant varchar(250)
+);
+
+drop table MatthewTest;
+
+CREATE TABLE MatthewTest2 (
+    Id int not null primary key,
+    LastName varchar(250) not null,
+    FirstName varchar(250) not null,
+    City varchar(250) not null,
+    FavoriteRestaurant varchar(250)
+);
+
+
+insert into MatthewTest2 (Id, LastName, FirstName, City, FavoriteRestaurant)
+Values (1234, 'K', 'Matthew', 'Ames', 'Pizza Ranch'),
+(007, 'Bond', 'James', 'NA', 'Bars'),
+(008, 'The Other Bond', 'Not James', 'New York City', 'Taco Bell');
+
+
+insert into MatthewTest2 (Id, LastName, FirstName, City)
+Values (345, 'Noodle', 'Chicken', 'Store City');
+
+
+insert into MatthewTest2 (Id, LastName, FirstName, City, FavoriteRestaurant)
+Values (12345, 'K', 'Matthew', 'Ames', 'Pizza Ranch');
+
+Delete from MatthewTest2
+where Id = 12345;
