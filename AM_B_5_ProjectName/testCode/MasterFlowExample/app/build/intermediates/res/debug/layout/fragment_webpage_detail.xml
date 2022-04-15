@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<WebView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/detail_area"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    />
-<!-- From: file:/C:/Users/Aaron/AndroidStudioProjects/MasterFlowExample/app/src/main/res/layout/fragment_webpage_detail.xml -->

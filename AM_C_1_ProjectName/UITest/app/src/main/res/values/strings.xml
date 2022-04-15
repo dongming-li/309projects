@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">UITest</string>
-    <string name="login">Login</string>
-    <string name="userName">UserName</string>
-    <string name="password">Password</string>
-</resources>

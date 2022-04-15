@@ -1,5 +1,0 @@
-C:\Users\Aaron\Desktop\AM_B_5_ProjectName\testCode\MyApplication\app\build\intermediates\classes\debug
-C:\Users\Aaron\Desktop\AM_B_5_ProjectName\testCode\MyApplication\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-905c61fd281ebee4def76d6e77700de819e5a819.jar
-C:\Users\Aaron\Desktop\AM_B_5_ProjectName\testCode\MyApplication\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-d6cc6f657c6a72b06efbe8b91522559bc7e22d9e.jar
-C:\Users\Aaron\Desktop\AM_B_5_ProjectName\testCode\MyApplication\app\build\intermediates\pre-dexed\debug\classes-8d117936653f3954609d2696c405b1dfbd93f38f.jar
-C:\Users\Aaron\Desktop\AM_B_5_ProjectName\testCode\MyApplication\app\build\intermediates\pre-dexed\debug\classes-967a32f3a1c0b81ab9feda2aa0037a23363dee2d.jar

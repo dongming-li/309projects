@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">PlacePicker</string>
-    <string name="picker_differentLocation">At a different location?</string>
-    <string name="picker_currentLocation">Current Location: </string>
-    <string name="picker_notCheckedIn">Not checked in</string>
-    <string name="picker_locationAddress">Address: </string>
-    <string name="check_in">Check-in</string>
-</resources>
