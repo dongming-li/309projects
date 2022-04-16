@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="match_parent"
+    tools:context="com.example.nidhi.student.MainActivity">
+   <LinearLayout
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:weightSum="1">
+
+       <ImageView
+           android:id="@+id/imageView"
+           android:layout_width="match_parent"
+           android:layout_height="191dp"
+           app:srcCompat="@drawable/Timetable"
+           android:layout_weight="3.59" />
+
+       <ImageView
+           android:id="@+id/imageToUpload"
+           android:layout_gravity="center_horizontal"
+           android:layout_width="150dp"
+           android:layout_height="150dp" />
+       
+       <EditText
+           android:id="@+id/UploadName"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+
+       <Button
+           android:id="@+id/Uploadimage"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Upload schedule" />
+
+
+
+
+
+
+   </LinearLayout>
+   
+</ScrollView>

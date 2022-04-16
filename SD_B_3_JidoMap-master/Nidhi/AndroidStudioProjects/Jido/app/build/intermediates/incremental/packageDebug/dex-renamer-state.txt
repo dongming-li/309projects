@@ -1,0 +1,7 @@
+#Tue Nov 14 10:41:40 CST 2017
+base.0=C\:\\Android\\AndroidStudioProjects\\Jido\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c9fed2364e67a64ed7cd59e89e33cf023d5a5543
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Android\\AndroidStudioProjects\\Jido\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_54a55c169a55c96f9bb51eecd4f862694ee9bb6b\\classes.dex
+base.1=C\:\\Android\\AndroidStudioProjects\\Jido\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_54a55c169a55c96f9bb51eecd4f862694ee9bb6b
+file.0=C\:\\Android\\AndroidStudioProjects\\Jido\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c9fed2364e67a64ed7cd59e89e33cf023d5a5543\\classes.dex

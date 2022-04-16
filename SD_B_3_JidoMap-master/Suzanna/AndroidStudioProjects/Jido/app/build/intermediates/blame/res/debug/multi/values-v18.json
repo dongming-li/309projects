@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "C:\\Users\\Suzanna Gudivada\\Desktop\\SD_B_3_JidoMap\\AndroidStudioProjects\\Jido\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 48,
+                    "endOffset": 99
+                },
+                "from": {
+                    "file": "C:\\Users\\Suzanna Gudivada\\.android\\build-cache\\f0cbb333fed47079bd8390b0945a5e4fd7921e49\\output\\res\\values-v18\\values-v18.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 48,
+                        "endOffset": 99
+                    }
+                }
+            }
+        ]
+    }
+]

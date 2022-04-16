@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Android\AndroidStudioProjects\Jido\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="6a0c73bf15d362118dff68c9ab8d935b40af28d2">
+        <dex dex="C:\Android\AndroidStudioProjects\Jido\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_54a55c169a55c96f9bb51eecd4f862694ee9bb6b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\AndroidStudioProjects\Jido\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Android\AndroidStudioProjects\Jido\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_c9fed2364e67a64ed7cd59e89e33cf023d5a5543\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\박중현\.android\build-cache\994123c96a4a3c74361364591934b8b9ca9d6043\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
+        <dex dex="C:\Android\AndroidStudioProjects\Jido\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6aa8c8ca62b6c2e733daba3d2949a98a400c65cc\classes.dex" />
+    </item>
+
+</items>
