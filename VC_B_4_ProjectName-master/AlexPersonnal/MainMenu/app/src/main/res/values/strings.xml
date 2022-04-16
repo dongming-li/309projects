@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Main Menu</string>
+    <string name="title_activity_home">home</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_map__editor">Map_Editor</string>
+    <string name="title_activity_leader__board">Leader_Board</string>
+    <string name="title_activity_friends__list">Friends_List</string>
+</resources>

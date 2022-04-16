@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_fragment"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_profile_fragment"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_friends_fragment"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_leaderboard_fragment"
+            android:title="Leaderboards" />
+        <item
+            android:id="@+id/nav_courses_fragment"
+            android:title="Courses" />
+        <item
+            android:id="@+id/nav_discBag_fragment"
+            android:title="Disc Bag" />
+        <item
+            android:id="@+id/nav_event_fragment"
+            android:title="Events" />
+        <item
+            android:id="@+id/nav_login_fragment"
+            android:title="Login" />
+        <item
+            android:id="@+id/nav_register_fragment"
+            android:title="Register" />
+        <item
+            android:id="@+id/nav_scorecard_fragment"
+            android:title="Scorecard" />
+		<item
+            android:id="@+id/nav_map"
+            android:title="Map" />
+        <item
+            android:id="@+id/nav_weather"
+            android:title="Weather" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="Photo Gallery"/>
+        <item
+            android:id="@+id/nav_handbook"
+            android:title="Rules"/>
+        <item
+            android:id="@+id/nav_analysis"
+            android:title="Analysis"/>
+    </group>
+</menu>

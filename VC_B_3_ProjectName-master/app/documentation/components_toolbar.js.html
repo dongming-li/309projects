@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/toolbar.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/toolbar.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module toolbar
+ */
+
+import React, { Component } from 'react';
+import {
+    TouchableOpacity,
+    View,
+    TextInput,
+    StyleSheet,
+    Text
+} from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
+
+import Colors from '../helpers/colors';
+import Navigation from "./map";
+
+/**
+ * Toolbar component
+ */
+export default class Toolbar extends Component {
+    /**
+     * Creates the toolbar
+     * @param {object} props Props passed to the component
+     */
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            destination: ''
+        };
+    }
+
+    /**
+     * Updates the user's destination
+     * @function
+     * @param {string} text User's destination
+     */
+    handleDestination = text => {
+        this.setState({destination: text});
+    };
+
+    /**
+     * Renders the component
+     */
+    render() {
+        const {
+            onIconClicked,
+            isMenuOpen
+        } = this.props;
+
+        return (
+            &lt;View
+                style={styles.toolbar}
+            >
+                &lt;View
+                    style={styles.toolbarTopSpacer}
+                />
+                &lt;View
+                    style={styles.toolbarContainer}
+                >
+                    &lt;TouchableOpacity
+                        onPress={onIconClicked}
+                    >
+                        &lt;FontAwesome
+                            name={isMenuOpen ? 'times' : 'navicon'}
+                            size={32}
+                            color={Colors.getNeutral(100)}
+                            style={styles.menuIcon}
+                        />
+                    &lt;/TouchableOpacity>
+                    &lt;View
+                        style={styles.mapDestinationInputContainer}
+                    >
+                        &lt;TextInput
+                            style={styles.mapDestinationInput}
+                            underlineColorAndroid={Colors.getNeutral(100)}
+                            selectionColor={Colors.getNeutral(100)}
+                            placeholder='Search here'
+                            placeholderTextColor={Colors.getNeutral(100)}
+                            onChangeText={this.handleDestination}
+                        />
+                        &lt;Navigation destination = {this.state.destination}/>
+                    &lt;/View>
+                &lt;/View>
+            &lt;/View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    toolbar: {
+        backgroundColor: Colors.getBlue(600),
+        height: 70,
+        display: 'flex',
+        flexDirection: 'column'
+    },
+    toolbarTopSpacer: {
+        height: 30
+    },
+    toolbarContainer: {
+        display: 'flex',
+        flexDirection: 'row'
+    },
+    menuIcon: {
+        flexBasis: 'auto',
+        paddingLeft: 12,
+        paddingRight: 8
+    },
+    mapDestinationInputContainer: {
+        marginTop: -4,
+        flexBasis: 'auto',
+        flexGrow: 1
+    },
+    mapDestinationInput: {
+        height: 40,
+        borderColor: Colors.getNeutral(100),
+        marginRight: 8,
+        paddingHorizontal: 10,
+        fontSize: 16,
+        paddingVertical: 10,
+        color: Colors.getNeutral(100),
+        marginBottom: 10,
+    }
+})
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:26 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

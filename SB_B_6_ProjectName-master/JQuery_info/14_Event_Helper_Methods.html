@@ -1,0 +1,47 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  blur() - binds function to blur event of any element
+	  change()
+	  click()
+	  dblclick()
+	  focus()
+	  keyup()
+	  keydown()
+	  Mouseup()
+	  mousedown()
+	  
+	  */
+		$(document).ready(function(){
+			$("#inputName").blur(function(event){
+				$("#messageSpan").text("Text box lost focus!");
+			});
+			$("#inputName").focus(function(event){
+				$("#messageSpan").text("Text box in focus!");
+			});
+			$("#inputName").change(function(event){
+				$("#textSpan").text("Text box text change!" + event.target.value);
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<div></div>
+		<div id="testDiv">
+			<input type="text" id="inputName" value="Hello World!"></input>
+			<br/>
+			<span id="messageSpan" style="color:red;"></span>
+			<br/>
+			<span id="textSpan" style="color:blue;"></span>
+		</div>
+   </body>
+	
+</html>

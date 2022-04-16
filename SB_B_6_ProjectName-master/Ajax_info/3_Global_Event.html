@@ -1,0 +1,50 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The AJAX Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+		ajaxStart - sequence as started
+		ajaxSend - its sent
+		ajaxSuccess - receive form successfully
+		ajaxError - problem
+		ajaxComplete - procedure is done
+	  */
+		$(document).ready(function(){
+			var counter = 0;
+			
+			$("#loadButton").click(function(event){
+				$.ajax({
+					url: "Example.html",
+					type: "GET",
+					dataType: "html",
+					success: function(response){
+						$('#dataDiv').html(response);
+					},
+					error: function(){
+						$.alert("failed to complete request: ");
+					}
+				});
+			});
+			
+			$(document).bind("ajaxSend", function(){
+				$("#loading").show();
+			}).bind("ajaxComplete", function(){
+				$("#loading").hide();
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<p>Click on the button to load Example.html file</p>
+		<input type="button" id="loadButton" value="Load Data" />
+		<div id="dataDiv"></div>
+		<div id="loading" style="display: none">loading...</div>
+   </body>
+	
+</html>

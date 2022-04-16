@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SB_C_4_CyDisc</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve">AIzaSyB71d4l71LVMGlWgzwUWG3qJ_ICWPpQGD4</string>
+
+    <!-- Weather Strings -->
+    <string name="open_weather_maps_apikey">f32bc400318d2dbec23aeb13160a1888</string>
+    <string name="place_not_found">Whoops! We couldn\'t find your location.</string>
+
+    <string name="weather_sunny">&#xf00d;</string>
+    <string name="weather_clear_night">&#xf02e;</string>
+    <string name="weather_stormy">&#xf01e;</string>
+    <string name="weather_drizzle">&#xf01c;</string>
+    <string name="weather_foggy">&#xf014;</string>
+    <string name="weather_cloudy">&#xf013;</string>
+    <string name="weather_snowy">&#xf01b;</string>
+    <string name="weather_rainy">&#xf019;</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

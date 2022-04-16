@@ -1,0 +1,26 @@
+stages:
+    - build
+    - test
+    - publish
+    - deploy
+
+build:
+    stage: build
+    only:
+    script:
+        - docker-compose -f docker-compose.build.yml build
+
+test:
+    stage: test
+    only:
+    script:
+        - docker-compose -p "toque-test-$CI_COMMIT_REF_NAME" -f docker-compose.test.yml up --exit-code-from web-test
+        - docker-compose -p "toque-test-$CI_COMMIT_REF_NAME" -f docker-compose.test.yml down --remove-orphans
+deploy:
+    stage: deploy
+    only:
+        - master
+    script:
+        - docker-compose -p "toque" build
+        - docker-compose -p "toque" down --remove-orphans
+        - docker-compose -p "toque" up -d

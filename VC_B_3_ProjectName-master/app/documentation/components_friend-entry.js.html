@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/friend-entry.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/friend-entry.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module friend-entry
+ */
+
+import React, {Component} from 'react';
+import {
+    StyleSheet,
+    View,
+    Text
+} from 'react-native';
+import Colors from '../helpers/colors';
+
+/**
+ * Friend Entry component
+ */
+export default class FriendEntry extends Component {
+    /**
+     * Creates a Friend Entry component
+     * @param {object} props Props passed to the component
+     */
+    constructor(props) {
+        super(props);
+
+        this.getStatusIndicator = this.getStatusIndicator.bind(this);
+    }
+
+    /**
+     * Gets the correct status indicator for the given status
+     * @param {string} status 
+     */
+    getStatusIndicator(status) {
+        switch(status) {
+            case 'Online':
+                return (
+                    &lt;View
+                        style={styles.statusIndicatorOnline}
+                    />
+                );
+
+            case 'Walking':
+                return (
+                    &lt;View
+                        style={styles.statusIndicatorWalking}
+                    />
+                );
+
+            default:
+                return (
+                    &lt;View
+                        style={styles.statusIndicatorOffline}
+                    />
+                );
+        }
+    }
+
+    /**
+     * Renders the component
+     */
+    render() {
+        const { status } = this.props,
+            name = this.props.name.length > 25 ? `${this.props.name.slice(0, 24)}...` : this.props.name;
+
+        return (
+            &lt;View
+                style={styles.container}
+            >
+                &lt;View
+                    style={styles.friendSpacer}
+                />
+                &lt;Text
+                    style={styles.friendName}
+                >
+                    {name}
+                &lt;/Text>
+                &lt;View
+                    style={styles.statusSpacer}
+                />
+                &lt;View
+                    style={styles.statusContainer}
+                >
+                    &lt;View
+                        style={styles.statusPadding}
+                    />
+                    &lt;View
+                        style={styles.statusIndicator}
+                    />
+                    {this.getStatusIndicator(status)}
+                    &lt;Text
+                        style={styles.friendStatus}
+                    >
+                        {status}
+                    &lt;/Text>
+                &lt;/View>
+            &lt;/View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        borderBottomColor: Colors.getNeutral(200),
+        borderBottomWidth: 2,
+        width: 250,
+        height: 72
+    },
+    friendName: {
+        fontSize: 18,
+        paddingLeft: 12,
+        color: Colors.getNeutral(800)
+    },
+    friendStatus: {
+        paddingLeft: 6,
+        color: Colors.getNeutral(700),
+        lineHeight: 11
+    },
+    friendSpacer: {
+        height: 12
+    },
+    statusContainer: {
+        flex: 1,
+        flexDirection: 'row'
+    },
+    statusIndicatorOnline: {
+        height: 12,
+        width: 12,
+        borderRadius: 6,
+        backgroundColor: Colors.getGreen()
+    },
+    statusIndicatorWalking: {
+        height: 12,
+        width: 12,
+        borderRadius: 6,
+        backgroundColor: Colors.getBlue(400)
+    },
+    statusIndicatorOffline: {
+        height: 12,
+        width: 12,
+        borderRadius: 6,
+        backgroundColor: Colors.getNeutral(700)
+    },
+    statusSpacer: {
+        height: 5
+    },
+    statusPadding: {
+        width: 12
+    }
+})
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:25 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

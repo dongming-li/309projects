@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/menu.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/menu.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module menu
+ */
+
+import React, {Component} from 'react';
+import {
+    StyleSheet,
+    View,
+    Text,
+    Dimensions,
+    TouchableOpacity
+} from 'react-native';
+import _ from 'lodash';
+import { FontAwesome } from '@expo/vector-icons';
+
+import FriendEntry from './friend-entry';
+import Toolbar from './toolbar';
+import Map from './map';
+import Settings from './settings';
+import AddFriends from './add-friends';
+import Notifications from './notifications';
+
+import Colors from '../helpers/colors';
+import Routes from '../helpers/routes';
+import Menus from '../helpers/menu';
+
+/**
+ * Main view component
+ */
+export default class Menu extends Component {
+    /**
+     * Creates the main view
+     * @param {object} props Props passed to the component
+     */
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isMenuOpen: false,
+            hasFriends: false,
+            hasFriendDetails: false,
+            friends: [],
+            friendsData: [],
+            menu: Menus.friends
+        };
+
+        this.toggleMenu = this.toggleMenu.bind(this);
+        this.displayDrawer = this.displayDrawer.bind(this);
+        this.getFriends = this.getFriends.bind(this);
+        this.getFriendsInfo = this.getFriendsInfo.bind(this);
+        this.changeState = this.changeState.bind(this);
+
+        this.getFriends();
+    }
+
+    /**
+     * Tasks to complete before the component has mounted to the DOM
+     */
+    componentWillMount() {
+        fetch(Routes.updateUserStatus, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user: this.props.email,
+                status: 'Online'
+            })
+        });
+    }
+
+    /**
+     * Change the given field inside of state with the given value
+     * @param {string} property Field inside of state to modify
+     * @param {*} value Value to be put inside of state
+     */
+    changeState(property, value) {
+        this.setState(previousState => {
+            return Object.assign({}, previousState, {
+                [property]: value
+            });
+        });
+    }
+
+    /**
+     * Toggle the menu open/close
+     */
+    toggleMenu() {
+        this.changeState('isMenuOpen', !this.state.isMenuOpen);
+        this.changeMenu(Menus.friends);
+    }
+
+    /**
+     * Change which menu is currently being displayed inside of the drawer
+     * @param {string} menu 
+     */
+    changeMenu(menu) {
+        this.changeState('menu', menu);
+    }
+
+    /**
+     * Display the drawer
+     */
+    displayDrawer() {
+        const {
+            isMenuOpen,
+            menu
+        } = this.state;
+
+        if (isMenuOpen) {
+            return (
+                &lt;View
+                    style={styles.menuContainer}
+                >
+                    &lt;View>
+                        &lt;View
+                            style={styles.menuHeaderContainer}
+                        >
+                            &lt;TouchableOpacity
+                                onPress={this.changeMenu.bind(this, Menus.friends)}
+                            >
+                                &lt;FontAwesome
+                                    name='users'
+                                    size={24}
+                                    color={menu === Menus.friends ? Colors.getBlue(500) : Colors.getNeutral(700)}
+                                    style={styles.menuIcon}
+                                />
+                            &lt;/TouchableOpacity>
+                            &lt;TouchableOpacity
+                                onPress={this.changeMenu.bind(this, Menus.addFriends)}
+                            >
+                                &lt;FontAwesome
+                                    name='user-plus'
+                                    size={24}
+                                    color={menu === Menus.addFriends ? Colors.getBlue(500) : Colors.getNeutral(700)}
+                                    style={styles.menuIcon}
+                                />
+                            &lt;/TouchableOpacity>
+                            &lt;TouchableOpacity
+                                onPress={this.changeMenu.bind(this, Menus.notifications)}
+                            >
+                                &lt;FontAwesome
+                                    name='bell-o'
+                                    size={24}
+                                    color={menu === Menus.notifications ? Colors.getBlue(500) : Colors.getNeutral(700)}
+                                    style={styles.menuIcon}
+                                />
+                            &lt;/TouchableOpacity>
+                            &lt;TouchableOpacity
+                                onPress={this.changeMenu.bind(this, Menus.settings)}
+                            >
+                                &lt;FontAwesome
+                                    name='cog'
+                                    size={24}
+                                    color={menu === Menus.settings ? Colors.getBlue(500) : Colors.getNeutral(700)}
+                                    style={styles.menuIcon}
+                                />
+                            &lt;/TouchableOpacity>
+                        &lt;/View>
+                        {this.displayMenu()}
+                    &lt;/View>
+                &lt;/View>
+            );
+        }
+    }
+
+    /**
+     * Display the menu
+     */
+    displayMenu() {
+        const {
+            logout,
+            email
+        } = this.props;
+
+        switch (this.state.menu) {
+            case Menus.settings:
+                return (
+                    &lt;Settings
+                        logout={logout}
+                        user={email}
+                    />
+                );
+            case Menus.addFriends:
+                return (
+                    &lt;AddFriends
+                        user={email}
+                    />
+                );
+            case Menus.notifications:
+                return (
+                    &lt;Notifications
+                        user={email}
+                    />
+                );
+            default:
+                return (
+                    &lt;View>
+                        {this.displayFriendEntries()}
+                        &lt;View
+                            style={styles.addFriendsButtonContainer}
+                        >
+                            &lt;TouchableOpacity
+                                style={styles.addFriendsButton}
+                                onPress={this.changeMenu.bind(this, Menus.addFriends)}
+                            >
+                                &lt;Text
+                                    style={styles.addFriendsButtonText}
+                                >
+                                    ADD NEW FRIEND
+                                &lt;/Text>
+                            &lt;/TouchableOpacity>
+                        &lt;/View>
+                    &lt;/View>
+                );
+        }
+    }
+
+    /**
+     * Get a list of the user's friends
+     */
+    getFriends() {
+        const { email } = this.props;
+
+        fetch(Routes.getFriends, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email
+            })
+        }).then(response => {
+            if (response.ok)
+                return response.json();
+            
+            console.log(response.status);
+        }).then(friends => {
+            this.setState(previousState => {
+                return Object.assign({}, previousState, {
+                    hasFriends: true,
+                    friends
+                });
+            });
+        });
+    }
+
+    /**
+     * Get a list of the user's friends' detailed information
+     */
+    getFriendsInfo() {
+        const { friends } = this.state;
+        friends.forEach((friend, i, friends) => {
+            fetch(Routes.getFriendInfo, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: friend.friend
+                })
+            }).then(response => {
+                return response.json();
+            }).then(friendDetails => {
+                this.setState(previousState => {
+                    const friendsData = _.cloneDeep(previousState.friendsData);
+                    let containsFriend = false;
+
+                    for (let i = 0; i &lt; friendsData.length; i++) {
+                        if (_.isEqual(friendsData[i], friendDetails)) {
+                            containsFriend = true;
+                            break;
+                        }
+                    }
+
+                    if (!containsFriend)
+                        friendsData.push(friendDetails);
+
+                    return Object.assign({}, previousState, {
+                        friendsData,
+                        hasFriendDetails: previousState.hasFriendDetails || i === friends.length - 1 ? true : false
+                    });
+                });
+
+                this.setState(previousState => {
+                    const sortedFriendData = this.state.friendsData.sort((a, b) => {
+                        if (a.status === b.status) {
+                            if (a.firstName === b.firstName) {
+                                return a.lastName.localeCompare(b.lastName);
+                            } else {
+                                return a.firstName.localeCompare(b.firstName);
+                            }
+                        } else if (a.status === 'Walking' || a.status === 'Online' &amp;&amp; b.status === 'Offline') {
+                            return -1;
+                        } else {
+                            return 1;
+                        }
+                    });
+
+                    return Object.assign({}, previousState, {
+                        friendsData: sortedFriendData
+                    });
+                });
+            });
+        });
+    }
+
+    /**
+     * Display the user's friends
+     */
+    displayFriendEntries() {
+        if (this.state.hasFriendDetails) {
+            const friendEntries = this.state.friendsData.map(friend => {
+                return (
+                    &lt;FriendEntry
+                        name={`${friend.firstName} ${friend.lastName}`}
+                        status={friend.status}
+                        key={friend.email}
+                    />
+                );
+            });
+
+            return (
+                &lt;View>
+                    {friendEntries}
+                &lt;/View>
+            );
+        }
+
+        return (
+            &lt;Text
+                style={styles.noFriendsText}
+            >
+                It appears you have no friends yet. Try adding some!
+            &lt;/Text>
+        );
+    }
+
+    /**
+     * Determine whether to update the component
+     * @param {object} previousProps The component's props from the previous render
+     * @param {object} previousState The component's state from the previous render
+     */
+    componentDidUpdate(previousProps, previousState) {
+        if (this.state.hasFriends &amp;&amp; !this.state.hasFriendDetails) {
+            this.getFriendsInfo()
+        }
+    }
+
+    /**
+     * Render the component
+     */
+    render() {
+        return (
+            &lt;View
+                style={styles.container}
+            >
+                &lt;Toolbar
+                    title='Walk Me Home'
+                    style={styles.toolbar}
+                    titleColor='white'
+                    navIconName='navicon'
+                    onIconClicked={this.toggleMenu}
+                    isMenuOpen={this.state.isMenuOpen}
+                />
+                {this.displayDrawer()}
+                &lt;Map/>
+            &lt;/View>
+        );
+    }
+
+    /**
+     * Tasks to complete after the component has unmounted from the DOM
+     */
+    componentWillUnmount() {
+        fetch(Routes.updateUserStatus, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user: this.props.email,
+                status: 'Offline'
+            })
+        });
+    }
+}
+
+const styles = StyleSheet.create({
+    toolbar: {
+        height: 56,
+        backgroundColor: Colors.getBlue(600)
+    },
+    menuContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        width: 250,
+        backgroundColor: Colors.getNeutral(100),
+        position: 'absolute',
+        zIndex: 100,
+        top: 70,
+        height: Dimensions.get('window').height - 70
+    },
+    container: {
+        flex: 1,
+        backgroundColor: Colors.getNeutral(300)
+    },
+    menuHeaderContainer: {
+        width: 250,
+        height: 34,
+        backgroundColor: Colors.getNeutral(100),
+        borderBottomColor: Colors.getNeutral(200),
+        borderBottomWidth: 2,
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
+    friendEntriesContainer: {
+        flex: 1,
+        flexDirection: 'row'
+    },
+    menuIcon: {
+        paddingVertical: 4
+    },
+    addFriendsButtonContainer: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        paddingTop: 20
+    },
+    addFriendsButton: {
+        backgroundColor: Colors.getBlue(500),
+        paddingVertical: 10,
+        borderRadius: 5,
+        width: 125,
+        height: 38
+    },
+    addFriendsButtonText: {
+        textAlign: 'center',
+        color: Colors.getNeutral(100)
+    },
+    noFriendsText: {
+        color: Colors.getNeutral(900),
+        textAlign: 'center',
+        paddingTop: 12
+    }
+})
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:25 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

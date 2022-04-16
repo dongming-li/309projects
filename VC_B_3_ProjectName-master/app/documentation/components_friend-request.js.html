@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/friend-request.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/friend-request.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module friend-request
+ */
+
+import React, { Component } from 'react';
+import {
+    View,
+    Text,
+    StyleSheet,
+    TouchableOpacity
+} from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
+import Moment from 'moment';
+
+import Colors from '../helpers/colors';
+import Routes from '../helpers/routes';
+import MessageTypes from '../helpers/message-types';
+
+/**
+ * Friend request message component
+ */
+export default class FriendRequest extends Component {
+    /**
+     * Creates a friend request message
+     * @param {Object} props Props passed to the component
+     */
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            visible: true
+        }
+
+        this.changeState = this.changeState.bind(this);
+        this.displayAge = this.displayAge.bind(this);
+        this.acceptFriendRequest = this.acceptFriendRequest.bind(this);
+        this.rejectFriendRequest = this.rejectFriendRequest.bind(this);
+    }
+
+    /**
+     * Change the given field inside of state with the given value
+     * @param {string} field Field inside of state to modify
+     * @param {*} value Value to be put inside of state
+     */
+    changeState(field, value) {
+        this.setState(previousState => {
+            return Object.assign({}, previousState, {
+                [field]: value
+            });
+        });
+    }
+
+    /**
+     * Displays how long ago the message was sent
+     */
+    displayAge() {
+        const { timestamp } = this.props;
+
+        return Moment(timestamp, 'x').fromNow();
+    }
+
+    /**
+     * Accepts and deletes the friend request and sends a friend request accepted message to the sender
+     */
+    acceptFriendRequest() {
+        fetch(Routes.sendMessage, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                type: MessageTypes.friendRequestAccepted,
+                sender: this.props.user,
+                sendee: this.props.sender,
+                timestamp: Date.now()
+            })
+        })
+
+        fetch(Routes.deleteMessage, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                type: MessageTypes.friendRequest,
+                sender: this.props.sender,
+                sendee: this.props.user,
+                timestamp: this.props.timestamp
+            })
+        });
+
+        fetch(Routes.addFriend, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user: this.props.user,
+                friend: this.props.sender
+            })
+        });
+
+        this.changeState('visible', false);
+    }
+
+    /**
+     * Deletes the friend request and sends a friend request rejected message to the sender
+     */
+    rejectFriendRequest() {
+        fetch(Routes.sendMessage, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                type: MessageTypes.friendRequestRejected,
+                sender: this.props.user,
+                sendee: this.props.sender,
+                timestamp: Date.now()
+            })
+        })
+
+        fetch(Routes.deleteMessage, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                type: MessageTypes.friendRequest,
+                sender: this.props.sender,
+                sendee: this.props.user,
+                timestamp: this.props.timestamp
+            })
+        });
+
+        this.changeState('visible', false);
+    }
+
+    /**
+     * Renders the component
+     */
+    render() {
+        const {
+            sender,
+            timestamp
+        } = this.props;
+
+        if (this.state.visible) {
+            return (
+                &lt;View
+                    style={styles.messageContainer}
+                >
+                    &lt;Text
+                        style={styles.messageAge}
+                    >
+                        {this.displayAge()}
+                    &lt;/Text>
+                    &lt;Text
+                        style={styles.messageText}
+                    >
+                        {`Friend request from ${sender}`}
+                    &lt;/Text>
+                    &lt;View
+                        style={styles.messageButtonContainer}
+                    >
+                        &lt;TouchableOpacity
+                            onPress={this.acceptFriendRequest}
+                            style={styles.actionButton}
+                        >
+                            &lt;FontAwesome
+                                name='check'
+                                size={24}
+                                color={Colors.getGreen()}
+                            />
+                        &lt;/TouchableOpacity>
+                        &lt;TouchableOpacity
+                            onPress={this.rejectFriendRequest}
+                            style={styles.actionButton}
+                        >
+                            &lt;FontAwesome
+                                name='times'
+                                size={24}
+                                color={Colors.getRed()}
+                            />
+                        &lt;/TouchableOpacity>
+                    &lt;/View>
+                &lt;/View>
+            );
+        }
+
+        return &lt;View/>
+    }
+}
+
+const styles = StyleSheet.create({
+    messageContainer: {
+        borderBottomColor: Colors.getNeutral(300),
+        borderBottomWidth: 2
+    },
+    messageAge: {
+        fontSize: 10,
+        paddingTop: 12,
+        paddingLeft: 12
+    },
+    messageText: {
+        paddingVertical: 10,
+        paddingLeft: 12,
+        color: Colors.getNeutral(800),
+        fontSize: 18
+    },
+    messageButtonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        paddingBottom: 12
+    },
+    actionButton: {
+        paddingVertical: 6
+    }
+})
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:25 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

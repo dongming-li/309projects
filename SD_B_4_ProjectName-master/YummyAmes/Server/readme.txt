@@ -1,0 +1,1 @@
+This dir contains YummyAmes server part (delete this line and replace with your readme details.)

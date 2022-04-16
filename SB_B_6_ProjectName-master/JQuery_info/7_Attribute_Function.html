@@ -1,0 +1,45 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+	  <style>
+		.error {
+			color: red;
+		}
+		.italic {
+			font-weight: italic;
+		}
+	  </style>
+	  
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  removeAttr('attr_name') - remove attribute
+	  hasClass('class_name') - Check if style class is applied
+	  removeClass('clas_name') - remove style class
+	  toggleClass('class_name') - remove style class if present otherwise adds
+	  html('html') - Sets html to that container
+	  text('text') - Sets text to container.
+	  val('value') - Sets value to control.
+	  */
+		$(document).ready(function(){
+			if($("#messageDiv").hasClass("error")){
+				$("#messageDiv").removeClass("error");
+			}
+			$("#messageDiv").removeAttr("class");
+			$("#messageDiv").html("<b>sample</b>");
+			$("#messageDiv1").text("<b>sample</b>");
+		});
+	  </script>
+   </head>
+	
+   <body>
+	  <div id="messageDiv" class="error italic"></div>
+	  <div id="messageDiv1" class="italic"></div>
+   </body>
+	
+</html>

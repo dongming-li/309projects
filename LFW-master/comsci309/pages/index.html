@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/testindex.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+
+<body>
+    <div ng-app="navigation">
+        <ul class="nav1">
+            <!-- <li>
+                <a class="navbutton" ng-href='#/landing'>Landing</a>
+            </li> -->
+            <li>
+                <a class="navbutton1" ng-href='#/profile'>Profile</a>
+            </li>
+            <li>
+                <a class="navbutton1" ng-href='#/ach'>Achievements</a>
+            </li>
+            <li>
+                <a class="navbutton1" ng-href='#/joinlobby'>Join Lobby</a>
+            </li>
+            <li>
+                <a class="navbutton1" ng-href='#/createlobby'>Create Lobby</a>
+            </li>
+            <li>
+                    <a class="navbutton1" ng-href='#/game'>GameBoard</a>
+                </li>
+                <li>
+                    <a class="navbutton1" ng-href='#/docs'>Docs</a>
+                </li>
+            <li>
+                    <a class="navbutton1" onClick="toggleChat()">Toggle Chat</a>
+                </li>
+            <li>
+                <a class="navbutton1" ng-href='#/' onclick="logout()">Logout</a>
+            </li>
+           </ul>
+
+        
+
+        <div id="chatcontainer" class="chatcontainer">
+            
+            <table>
+                <tr><td style="border-color:white;border-width:medium;border-style:inset;text-align:center;letter-spacing:2px;">Users</td></tr>
+                <tr>
+                        <td class='chatbox-users'></td>
+                </tr>
+                <tr>
+                    <td style="border-color:white;border-width:medium;border-style:inset;text-align:center;letter-spacing:2px;">
+                        Chat
+                    </td>
+                    <td>
+             
+                    </td>
+                </tr>
+                <tr>
+                    <td class="chatbox"></td>
+
+                </tr>
+            </table>
+
+            <div class="chatcontrols">
+            <input type="text" maxlength="26" id="send-message-input" style="margin-left:80px;width:56%;overflow: hidden; border-width:thick; border-style:inset">
+            <button type="button" name="button" onclick="sendMessage()">Send</button>
+        </div>
+        </div>
+        <div ng-view></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+    <script src="../js/app.config.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/socket-client.js"></script>
+    <script src="../js/chat.js"></script>
+    <script>
+                 var off=0;
+                 $("#chatcontainer").show();
+                 $(".nav1").show();
+    
+            
+       function logout() {
+            socket.disconnect();
+            $("#chatcontainer").hide();
+            $(".nav1").hide();
+        }
+
+        function toggleChat(){
+           
+             if(off==0){
+            $("#chatcontainer").animate({right:"-460px"},1000);
+            off=1;
+         }else{
+             $("#chatcontainer").animate({right:"0px"},1000);
+             off=0;
+         }
+    }
+
+         </script>
+</body>
+
+</html>

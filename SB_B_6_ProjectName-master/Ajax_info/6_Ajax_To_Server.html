@@ -1,0 +1,40 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+<!-- DO NOT TRY not working yet, looking through JSP to find how to accept data -->
+<html>
+
+   <head>
+      <title>The AJAX Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+		Every ajax methos has a parameter data which can be used to pass data to server
+		load(url [,data][,callback])
+	  */
+		$(document).ready(function(){
+			$("#loadButton").click(function(event){
+				var name = $("#name").val();
+				$.ajax({
+					type: "POST",
+					url: "Example.jsp",
+					data: {name: name},
+					success: function(response){
+						alert(response);
+					},
+					error: function(){
+						$.alert("failed to complete request: ");
+					}
+				});
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<p>Click on the button to load Example.jsp with name</p>
+		<input type="input" id="name" size="40" value="Hello World"/><br />
+		<input type="button" id="loadButton" value="Load Data"/>
+		<div id="dataDiv"></div>
+   </body>
+	
+</html>

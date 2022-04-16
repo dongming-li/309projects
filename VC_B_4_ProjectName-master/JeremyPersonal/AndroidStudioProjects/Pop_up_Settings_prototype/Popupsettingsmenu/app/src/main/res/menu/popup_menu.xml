@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <item
+        android:id="@+id/one"
+        android:title = "sound"/>
+
+    <item
+        android:id="@+id/two"
+        android:title="fonts"/>
+
+    <item
+        android:id="@+id/three"
+        android:title="Brightness"/>
+
+</menu>

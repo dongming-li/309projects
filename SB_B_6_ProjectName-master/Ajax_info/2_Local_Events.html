@@ -1,0 +1,36 @@
+<!doctype html>	
+<!-- Using AJAX Tutorial Training -->
+<!-- Not working unknown TypeError: a is null -->
+
+<html>
+
+   <head>
+      <title>The AJAX Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+			$("#loadButton").click(function(event){
+				$.ajax({
+					url: "Example.html",
+					type: "GET",
+					dataType: "html",
+					success: function(response){
+						$('#dataDiv').html(response);
+					},
+					error: function(){
+						$.alert("failed to complete request: ");
+					}
+				});
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<p>Click on the button to load Example.html file</p>
+		<input type="button" id="loadButton" value="Load Data" />
+		<div id="dataDiv"></div>
+		<div id="message"></div>
+   </body>
+	
+</html>

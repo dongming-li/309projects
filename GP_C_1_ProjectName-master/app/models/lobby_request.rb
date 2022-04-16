@@ -1,0 +1,2 @@
+class LobbyRequest < ApplicationRecord
+end

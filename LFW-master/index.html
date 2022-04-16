@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        
+        /*most of the formatting in css*/
+        html {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background-color: lightslategray;
+        }
+        
+        body {
+        
+            transition: background-color .9s;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        /*added an animated fog-type background, this is the css animation portion*/
+        .haze{
+            animation: 16s scroll infinite linear;
+        
+        }
+        @keyframes opacity{
+            0%{opacity:.3;}
+            100%{opacity:1;}
+        }
+        @keyframes scroll{
+0% { transform: translate(-1000px, 0px)}
+    10% { transform: translate(-880px, -10px);}
+    20% { transform: translate(-650px, -30px);}
+    30% { transform: translate(-350px, -10px);}
+    40% { transform: translate(-100px, 0px);}
+    50% { transform: translate(0px, -10px);}
+    60% { transform: translate(-100px, -30px);}
+    70% { transform: translate(-350px, -10px);}
+    80% { transform: translate(-650px, 0px);}
+    90% { transform: translate(-880px, -10px);}
+    100% { transform: translate(-1000px, 0px);}
+        }
+        .haze{
+             background-repeat: no-repeat;
+            background-attachment:local;
+            background-size: cover;
+            background-position:top;
+            overflow:hidden;
+            position:fixed;
+            background-image: url(imgs/haze.png);
+            z-index:-1;
+            opacity: 1;
+            margin-left: -500px;
+            
+            width:4000px;
+            height: 1080px;
+        }
+        
+        /*background image container*/
+        .container {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:fixed;
+            background-image: url(imgs/acs.jpg);
+            opacity: .8;
+            transition: opacity .9s;
+            margin: 0;
+            width: 100%;
+            height: 958px;
+            padding: 0px;
+            
+        }
+        
+        /*sidemenu / friends list / easy nav popout*/
+        .sideMenu {
+            height: 1064px;
+            width: 0%;
+            
+            border-right-color: beige;
+            border-right-style: groove;
+            border-right-width: thick;
+            background-color: rgba(150,150,255,0.3);
+            background-blend-mode: darken;
+            background-image: url("imgs/candle.jpg");
+            background-position: -300px 320px;
+            background-size: cover;
+            background-repeat: repeat-y;
+            opacity: .8;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: lightslategrey;
+            overflow-x: hidden;
+            transition: .9s;
+            padding-top: 0px;
+
+        }
+        /*animation for sidemenu*/
+        .sideMenu a {
+            padding: 0px 2px 2px 4px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #919191;
+            display: block;
+            transition: 0.9s;
+        }
+        
+        /*login menu that overlays main menu initially*/
+        .login {
+            height: 0%;
+            width: 100%;
+            background-image: url("imgs/login.jpg");
+            background-position: center;
+            background-size:cover;
+
+
+            opacity: .95;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #a11;
+            overflow-x: hidden;
+            transition: .9s;
+            padding-top: 0px;
+            padding-left: 0px;
+        }
+        /*login animation*/
+        .login a{
+            padding: 0px 2px 2px 2px;
+            text-decoration: none;
+            font-size: 54px;
+            color: #919191;
+            display: block;
+            transition: 0.9s;
+        }
+        
+       /* simple hover colors on buttons*/
+        .login a:hover,
+        .sideMenu a:hover {
+            color: coral;
+        }
+        .login .closebtn {
+            position: absolute;
+            top: 4px;
+            right: 30px;
+            font-size: 72px;
+            margin-left: 0px;
+        }
+        
+        .main {
+            transition: opacity .9s;
+            padding: 0px;
+        }
+        /*div for title/buttons*/
+        .mainmenu {
+            position:fixed;
+            opacity: .7;
+            width: 180px;
+            height: 600px;
+            padding: 0px;
+            margin-left: 260px;
+            z-index: 1;
+            margin-top: 0px;
+        }
+        #stats{
+            position:fixed;
+            opacity: .6;
+            width: 600px;
+            height: 600px;
+            padding: 0px;
+            margin-left: 1160px;
+            z-index: 1;
+            margin-top: 200px;
+            background-color:silver;
+        }
+        .menucontainer {
+            width: 20%;
+            background-color: white;
+            position: absolute;
+        }
+        
+        form,
+        p {
+            color: white;
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        .btncontainer{
+            margin-top:400px;
+            margin-left:200px;
+        }
+        /*button template for main menu buttons*/
+        .button {
+
+            color: white;
+            padding: 16px 32px;
+            width:200px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.8s;
+            cursor: pointer;
+        }
+        
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #e7e7e7;
+        }
+        
+        .button1:hover {
+            background-color: lightsteelblue;
+            opacity: .8;
+        }
+        /*header on login dropdown*/
+        h3 {
+            background-color: oldlace;
+            opacity: .45;
+            color: maroon;
+            padding-left: 25%;
+            overflow:hidden;
+            background-size:cover;
+            letter-spacing: 8px;
+        }
+        
+        @media screen and (max-height: 400px) {
+            .login {
+                padding-top: 100px;
+            }
+            .login a {
+                font-size: 18px;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="haze"></div>
+    <!--login div that comes down upon page load-->
+    <div id="login" class="login" style=background-image:url(imgs/login.jpg)>
+        <!--close button for login overlay-->
+        <!--<a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">&times;</a>-->
+
+        <div id=login2 style="margin-top:100px;">
+            
+            <!--everything for the login page, including input fields and buttons-->
+            <h3 style="font-size:70px;padding-top:20px;white-space: nowrap; overflow:hidden;">           Letters from Whitechapel</h3>
+            <form style=margin-left:40%; style=object-position:center;>
+                <p style=font-size:24px;>Username:</p> <input type="text" id="username"></form>
+
+            <form style=margin-left:40%; style=position:absolute; style=padding-top:40%;>
+                <p style=font-size:24px;>Password:</p> <input type="text" id="password"></form>
+
+            <form style=margin-left:40%; style=padding-top:50%;>
+                <p style=font-size:24px;>Update Password:</p> <input type="text" id="newpassword"></form>
+
+            <button id="loginbtn" onclick=ajax("check") style=margin-left:40%;>Login</button>
+            <button id="createbtn" onclick=ajax("create")>Sign Up</button>
+            <button id="updatebtn" onclick=ajax("update")>Update</button>
+            <p id = "message" style="margin-left:40%;opacity:0;"></p> 
+        </div>
+    </div>
+    
+    <!--side menu / friends list template-->
+    <div id="sideMenu" class="sideMenu">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeSide()" style="font-size:60px;padding-left:0px;width:66px;">&#9776;</a>
+    
+        <h1 style="padding-top:0px;padding-left:20px;color:whitesmoke;font-family:monospace;overflow:hidden;white-space:nowrap;"><span>Friends List</span></h1>
+        <div class="friends" style="font-size:20px;color:white;font-family:monospace;overflow:hidden;white-space:nowrap;">
+            <div style="background-color: dimgrey;opacity:.9;">
+                <div style="background-color:orange;opacity:.3">Online</div>
+                <br>
+            <div style="background-color:forestgreen;opacity:.6">Inspector blu</div>
+            <div style="background-color:forestgreen;opacity:.6">Inspector yello</div>
+            <div style="background-color:darkred;opacity:.6">RipperJack</div>
+                <br>
+                <div style="background-color:black;opacity:.3">Offline
+                    <br>
+            <br>
+            lin
+            <br>
+            sauerbrei
+            <br>
+            handel
+            <br>
+            evans
+            </div>
+            </div>
+        </div>
+    </div>
+        <div class="container">
+            <div id="stats"><div id="showstats" style="color:white; font-size:24px;"></div><div class="btncontainer">           </div>
+          
+            </div>
+            
+            <div style="font-size:60px; cursor:pointer;color:whitesmoke; width: 66px;" onclick="openSide()">&#9776;</div>
+              
+                <!--main menu with buttons that call js functions below-->
+                <div class="mainmenu" style="padding-left:-40px;">
+                    <p style="font-size:72px;">Letters From Whitechapel</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    
+                <button onclick="profile()" class="button button1"; >Profile Page</button>
+                    <button onclick="achievements()" class="button button1";>Achievements</button>
+      
+                    <button onclick="joinLobby()" class="button button1"; >Join Lobby</button>
+                    <button onclick="createLobby()" class="button button1";>Create Lobby</button>
+                    <button onclick="showStats()" class="button button1";>Show Statistics</button>
+                    <button class="button button1" onclick=ajax("updateLose")>UpdateLose</button>
+                    <button class="button button1" onclick=ajax("updateWin")>UpdateWin</button>
+
+                </div>
+             
+        </div>
+
+    <!--scripts, open login on page load, html buttons + js for navigation-->
+    <script> 
+
+         
+    function ajax(type){ 
+    var xhttp; 
+    var username = document.getElementById("username").value; 
+    var password = document.getElementById("password").value; 
+    var newpassword = document.getElementById("newpassword").value; 
+    if(username.length == 0 || password.length == 0){ 
+        window.alert("empty username or password"); 
+        return; 
+    }else{ 
+        if(window.XMLHttpRequest){ 
+            xhttp = new XMLHttpRequest(); 
+        }else{ 
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP"); 
+        } 
+        xhttp.onreadystatechange = function(){ 
+            if(this.readyState == 4 && this.status == 200){ 
+                document.getElementById("message").innerHTML = this.responseText;
+                if(type === "showStat"){
+                    document.getElementById("showstats").innerHTML = this.responseText;
+                   }
+                var mes = document.getElementById("message").innerText; 
+                if(mes == "login..."){ 
+                    closeLogin(); 
+                }
+                if(type === "check" || type === "create" || type === "delete" 
+                    || type === "update"){
+                    window.alert(mes); 
+                   }
+                 
+            } 
+        }; 
+        if(type === "check" || type === "create" || type === "delete" 
+          || type === "updateWin" || type === "updateLose" ||type === "showStat"){ 
+            xhttp.open("GET","User.php?t="+ type + "&u=" + username + "&p="+password, true); 
+        }else if(type === "update"){ 
+            xhttp.open("GET","User.php?t="+ type + "&u=" + username + "&p="+password 
+                       + "&n="+ newpassword, true);      
+                 } 
+         
+        xhttp.send(); 
+    } 
+}    
+        var logged = false;
+        var Statshown = false;
+        if (logged == false) {
+            openLogin().onbeforeunload;
+        }
+
+        function joinLobby() {
+            window.location.replace("jlobby.html");
+        }
+
+        function achievements() {
+            window.location.replace("ach.html");
+        }
+
+        function profile() {
+            window.location.replace("profile.html");
+        }
+
+
+/*animations for sidebar*/
+        function showStats(){
+            if(Statshown == false){
+                ajax("showStat");
+                Statshown = true;
+               }else{
+                   Statshown=false;
+                   document.getElementById("showstats").innerHTML = "";
+               }
+        }
+        function openSide() {
+
+            document.getElementById("sideMenu").style.width = "200px";
+            document.getElementById("sideMenu").innerHTML.style.width = "200px";
+            document.getElementById("main").style.paddingLeft = "12%";
+            document.body.style.backgroundColor = "rgba(100,20,20,.8)";
+            document.html.style.backgroundColor = "rgba(100,20,20,.8)";
+
+        }
+
+        function closeSide() {
+             document.getElementById("sideMenu").style.width = "0";
+            document.getElementById("sideMenu").innerHTML.style.width = "0";
+
+            document.body.style.backgroundColor = "slategrey";
+            document.html.style.backgroundColor = "slategrey";
+            document.body.style.opacity = .2;
+
+        }
+        /*  login animation open/close*/
+        function openLogin() {
+
+            document.getElementById("login").style.height = "958px";
+            document.getElementById("main").style.marginBottom = "0";
+            document.body.style.backgroundColor = "rgba(100,20,20,.8)";
+            document.html.style.backgroundColor = "rgba(100,20,20,.8)";
+        }
+
+        function closeLogin() {
+            document.getElementById("login").style.height = "0";
+            document.getElementById("main").style.marginBottom = "0";
+            document.body.style.backgroundColor = "slategrey";
+            document.html.style.backgroundColor = "slategrey";
+            document.body.style.opacity = .8;
+        }
+    </script>
+</body>
+
+</html>

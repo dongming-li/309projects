@@ -1,0 +1,57 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The AJAX Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <style>
+		#dataDiv{
+			margin:10px;padding:12px;
+			border:2px solid #666;
+			width:100px;
+			height:100px;
+		}
+	  </style>
+	  <script type="text/javascript" language="javascript">
+	  /*
+		Simple API to create Amazing effects
+		Each method accepts two parameters
+			*Speed - control speed of effects
+			*Callback - function to be called once effect is completed
+		Commonly Used Effects
+			*Show	*Hide	*Toggle	*FadeIn		*FadeOut	*Animate
+	  */
+		$(document).ready(function(){
+			$("#showButton").click(function(event){
+				$('#dataDiv').show();
+			});
+			$("#hideButton").click(function(event){
+				$('#dataDiv').hide();
+			});
+			$("#toggleButton").click(function(event){
+				$('#dataDiv').toggle();
+			});
+			$("#fadeInButton").click(function(event){
+				$('#dataDiv').hide();
+				$('#dataDiv').fadeIn(2000);
+			});
+			$("#fadeOutButton").click(function(event){
+				$('#dataDiv').show();
+				$('#dataDiv').fadeOut(2000);
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<input type="button" id="showButton" value="Show"/>
+		<input type="button" id="hideButton" value="Hide"/>
+		<input type="button" id="toggleButton" value="Toggle"/>
+		<input type="button" id="fadeInButton" value="Fade In"/>
+		<input type="button" id="fadeOutButton" value="Fade Out"/>
+		<div id="dataDiv" style="display:none">Hello World!</div>
+   </body>
+	
+</html>

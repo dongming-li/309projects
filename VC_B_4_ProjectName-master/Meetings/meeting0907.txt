@@ -1,0 +1,44 @@
+Meeting 07/09 present all start 3:30pm
+
+- Everyone presents what they did indivudually as screen sketches. 
+- Critique of screens and we establish a list of screens we would like to have and what they should include. 
+1) Main menu
+- The app starts on this screen 
+- Play button -> sub menu to choose what kind of game -> setup 
+- Map editor -> sub menu of map editing. 
+- Leaderboards
+- Settings
+- See your list of friends
+- An area are the bottom still free. what ? Discussion board ? 
+2) Leaderboards ( Horizontal ) 
+global/local tab
+tabs to sort the player by rank, name, lvl, ...
+Player is displayed at all time so we can compare the player to the others. 
+3)Map editor map. 
+- on the left side a bar to chose the category. 
+- on the rest of the screen the map that is edited. 
+- option to save/quit. 
+- on saving chose to save locally globally or cancelly. 
+4) admin screen. 
+- 2 option Ban player/Ban Map
+- or they can also manage banned playesrs. 
+5) Map management menu 
+- 2 options : load a map or create a new one
+- at the bottom a list of maps or maybe a map of the day...
+6) Setup of games. 
+- option to chose race, kind of game played etc..
+7) Map 
+(This is the most disputed screen we do still not entirely agree on how it should be displayed)
+- 2 tabs (one for attack one for defense) 
+- option to zoom in/out - scroll 
+- ~~ will be discussed more in next meeting Monday 
+
+After that we had to shortening as time was running out. 
+Decided too that 
+- Alex will do the sprint backlog with all the tasks of the project. 
+- Joe said he could maybe do the flow chart
+- was decided to discuss tomorrow after class who would do what. 
+- Overall everyone said they would continue to work on their code with android to learn more
+- Johan said we would push this document to the git and add it to the trello. 
+
+END at 4:45p. 

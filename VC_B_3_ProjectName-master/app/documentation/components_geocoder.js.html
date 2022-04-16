@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/geocoder.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/geocoder.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module geocoder
+ */
+
+import React, { Component } from 'react';
+import {StyleSheet, Dimensions, Button, View, TextInput } from 'react-native';
+import MapView from 'react-native-maps';
+import Geocoder from 'react-native-geocoding';
+
+let { width, height } = Dimensions.get('window');
+const ASPECT_RATIO = width / height;
+const LATITUDE = 0;
+const LONGITUDE = 0;
+const LATITUDE_DELTA = 0.0922;
+const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
+let curLat = 0;
+let curLong = 0;
+let destLat = 0;
+let destLong = 0;
+let dest = '';
+
+/**
+ * Geocoder component
+ */
+export default class WalkMeHome extends Component {
+    /**
+     * Creates a geocoder
+     */
+    constructor() {
+        super();
+        this.state = {
+            region: {
+                latitude: LATITUDE,
+                longitude: LONGITUDE,
+                latitudeDelta: LATITUDE_DELTA,
+                longitudeDelta: LONGITUDE_DELTA,
+            },
+            destination: '',
+
+        };
+    }
+
+    /**
+     * Tasks to complete before the component is mounted to the DOM
+     */
+    componentDidMount() {
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                this.setState({
+                    region: {
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude,
+                        latitudeDelta: LATITUDE_DELTA,
+                        longitudeDelta: LONGITUDE_DELTA,
+                    }
+                });
+            },
+            (error) => console.log(error.message),
+            { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
+        );
+        this.watchID = navigator.geolocation.watchPosition(
+            position => {
+                this.setState({
+                    region: {
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude,
+                        latitudeDelta: LATITUDE_DELTA,
+                        longitudeDelta: LONGITUDE_DELTA,
+                    }
+
+                });
+                curLat = position.coords.latitude;
+                curLong = position.coords.longitude;
+            }
+        );
+    }
+
+    /**
+     * Tasks to complete before the component is unmounted from the DOM
+     */
+    componentWillUnmount() {
+        navigator.geolocation.clearWatch(this.watchId);
+    }
+
+    /**
+     * Get latitude and longitude coordinates from the user's location
+     */
+    geocodeLocation(){
+        Geocoder.setApiKey('AIzaSyBnGTwxpl6Gx-mwMQ2tXiVmlJGcwgrq1ms');
+
+        Geocoder.getFromLocation(dest).then(json=>{
+                let location = json.results[0].geometry.location;
+                destLat = location.lat;
+                destLong = location.lng;
+                alert(destLat + "," + destLong);
+            },
+            error => {
+                console.log(error);
+            }
+        );
+    };
+
+    /**
+     * Updates the user's destination
+     * @function
+     * @param {string} text User's destination
+     */
+    handleDestination = text => {
+        this.setState({destination:text});
+        dest = this.state.destination;
+    };
+
+    /**
+     * Renders the component
+     */
+    render() {
+        return (
+            &lt;View style={{paddingTop: 20}} >
+                &lt;TextInput
+                    placeholder="Enter Destination:"
+                    onChangeText={this.handleDestination}
+                />
+                &lt;Button
+                    onPress={this.geocodeLocation}
+                    title="Geocode Location"
+                />
+                &lt;MapView
+                    style={ styles.container }
+                    showsUserLocation={ true }
+                    region={ this.state.region }
+                    onRegionChange={ region => this.setState({region}) }
+                    onRegionChangeComplete={ region => this.setState({region}) }
+                >
+                    &lt;MapView.Marker
+                        coordinate={{latitude: destLat,
+                            longitude: destLong}}
+                        title={"Destination"}
+                        description={"Go Here!"}
+                    />
+                &lt;/MapView>
+            &lt;/View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+        height: '100%',
+        width: '100%',
+    }
+});</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:25 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

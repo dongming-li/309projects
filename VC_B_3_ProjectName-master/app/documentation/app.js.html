@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: app.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: app.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module app
+ */
+
+import React, { Component } from 'react';
+import {
+    View,
+    StyleSheet
+} from 'react-native';
+
+import Menu from './components/menu';
+import Login from './components/login';
+import Register from './components/register';
+
+import AppView from './helpers/view';
+
+/**
+ * App container component
+ */
+export default class App extends Component {
+    /**
+     * Creates the app
+     * @param {object} props Props passed to the component
+     */
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            user: '',
+            view: AppView.login
+        };
+
+        this.changeState = this.changeState.bind(this);
+        this.chooseView = this.chooseView.bind(this);
+        this.makeAuthed = this.makeAuthed.bind(this);
+        this.logout = this.logout.bind(this);
+        this.changeView = this.changeView.bind(this);
+        this.switchToLoginView = this.switchToLoginView.bind(this);
+        this.switchToRegisterView = this.switchToRegisterView.bind(this);
+
+        console.log('[DEBUG] Starting app');
+    }
+
+    /**
+     * Change the given field inside of state with the given value
+     * @param {string} property Field inside of state to modify
+     * @param {*} value Value to be put inside of state
+     */
+    changeState(property, value) {
+        this.setState(previousState => {
+            return Object.assign({}, previousState, {
+                [property]: value
+            });
+        });
+    }
+
+    /**
+     * Authenticates the user
+     * @param {string} userEmail User's email
+     */
+    makeAuthed(userEmail) {
+        this.changeState('user', userEmail);
+        this.changeView(AppView.main);
+    }
+
+    /**
+     * Logs the user out of the app
+     */
+    logout() {
+        this.changeView(AppView.login);
+        this.changeState('user', '');
+    }
+
+    /**
+     * Changes the view the app is displaying
+     * @param {string} view View to display
+     */
+    changeView(view) {
+        this.changeState('view', view);
+    }
+
+    /**
+     * Switch the app to the register view
+     */
+    switchToRegisterView() {
+        this.changeView(AppView.register);
+    }
+
+    /**
+     * Switch the app to the login view
+     */
+    switchToLoginView() {
+        this.changeView(AppView.login);
+    }
+
+    /**
+     * Display the current view inside of app's state
+     */
+    chooseView() {
+        switch(this.state.view) {
+            case AppView.main:
+                return (
+                    &lt;Menu
+                        email={this.state.user}
+                        logout={this.logout}
+                    />
+                );
+            case AppView.register:
+                return (
+                    &lt;Register
+                        authUser={this.makeAuthed}
+                        switchToLoginView={this.switchToLoginView}
+                    />
+                );
+            default:
+                return (
+                    &lt;Login
+                        authUser={this.makeAuthed}
+                        switchToRegisterView={this.switchToRegisterView}
+                    />
+                );
+        }
+        
+    }
+
+    /**
+     * Renders the component
+     */
+    render() {
+        return this.chooseView();
+    }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:25 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

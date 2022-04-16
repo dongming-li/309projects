@@ -1,0 +1,4385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API">
+<note>The data included in this document is from Alec Sauerbrei based off of a Letters from WhiteChapel board</note>
+
+    <!-- Numbered Nodes -->
+    <node id="1" color="w" xCo="383" yCo="69"/>
+    <node id="2" color="r" xCo="613" yCo="54"/>
+    <node id="3" color="w" xCo="728" yCo="53"/>
+    <node id="4" color="w" xCo="793" yCo="98"/>
+    <node id="5" color="w" xCo="963" yCo="58"/>
+    <node id="6" color="w" xCo="306" yCo="193"/>
+    <node id="7" color="w" xCo="356" yCo="178"/>
+    <node id="8" color="w" xCo="605" yCo="207"/>
+    <node id="9" color="w" xCo="653" yCo="172"/>
+    <node id="10" color="w" xCo="716" yCo="203"/>
+    <node id="11" color="w" xCo="724" yCo="137"/>
+    <node id="12" color="w" xCo="895" yCo="137"/>
+    <node id="13" color="w" xCo="1003" yCo="182"/>
+    <node id="14" color="w" xCo="1073" yCo="220"/>
+    <node id="15" color="w" xCo="1136" yCo="211"/>
+    <node id="16" color="w" xCo="1191" yCo="194"/>
+    <node id="17" color="w" xCo="1212" yCo="137"/>
+    <node id="18" color="w" xCo="1373" yCo="143"/>
+    <node id="19" color="w" xCo="1448" yCo="196"/>
+    <node id="20" color="w" xCo="1535" yCo="190"/>
+    <node id="21" color="r" xCo="1757" yCo="135"/>
+    <node id="22" color="w" xCo="1835" yCo="224"/>
+    <node id="23" color="w" xCo="1971" yCo="159"/>
+    <node id="24" color="w" xCo="248" yCo="248"/>
+    <node id="25" color="w" xCo="294" yCo="301"/>
+    <node id="26" color="w" xCo="409" yCo="235"/>
+    <node id="27" color="r" xCo="478" yCo="309"/>
+    <node id="28" color="w" xCo="565" yCo="260"/>
+    <node id="29" color="w" xCo="746" yCo="317"/>
+    <node id="30" color="w" xCo="820" yCo="263"/>
+    <node id="31" color="w" xCo="1001" yCo="308"/>
+    <node id="32" color="w" xCo="1021" yCo="263"/>
+    <node id="33" color="w" xCo="1120" yCo="267"/>
+    <node id="34" color="w" xCo="1166" yCo="317"/>
+    <node id="35" color="w" xCo="1215" yCo="293"/>
+    <node id="36" color="w" xCo="1232" yCo="241"/>
+    <node id="37" color="w" xCo="1255" yCo="326"/>
+    <node id="38" color="w" xCo="1272" yCo="269"/>
+    <node id="39" color="w" xCo="1316" yCo="186"/>
+    <node id="40" color="w" xCo="1560" yCo="270"/>
+    <node id="41" color="w" xCo="1655" yCo="241"/>
+    <node id="42" color="w" xCo="1719" yCo="267"/>
+    <node id="43" color="w" xCo="225" yCo="408"/>
+    <node id="44" color="w" xCo="355" yCo="364"/>
+    <node id="45" color="w" xCo="453" yCo="403"/>
+    <node id="46" color="w" xCo="484" yCo="349"/>
+    <node id="47" color="w" xCo="573" yCo="421"/>
+    <node id="48" color="w" xCo="607" yCo="393"/>
+    <node id="49" color="w" xCo="793" yCo="371"/>
+    <node id="50" color="w" xCo="900" yCo="341"/>
+    <node id="51" color="w" xCo="935" yCo="410"/>
+    <node id="52" color="w" xCo="1024" yCo="379"/>
+    <node id="53" color="w" xCo="1087" yCo="424"/>
+    <node id="54" color="w" xCo="1109" yCo="352"/>
+    <node id="55" color="w" xCo="1214" yCo="426"/>
+    <node id="56" color="w" xCo="1381" yCo="404"/>
+    <node id="57" color="w" xCo="1492" yCo="352"/>
+    <node id="58" color="w" xCo="1705" yCo="353"/>
+    <node id="59" color="w" xCo="316" yCo="475"/>
+    <node id="60" color="w" xCo="371" yCo="495"/>
+    <node id="61" color="w" xCo="544" yCo="493"/>
+    <node id="62" color="w" xCo="657" yCo="491"/>
+    <node id="63" color="w" xCo="766" yCo="478"/>
+    <node id="64" color="w" xCo="807" yCo="430"/>
+    <node id="65" color="r" xCo="849" yCo="497"/>
+    <node id="66" color="w" xCo="888" yCo="449"/>
+    <node id="67" color="w" xCo="1005" yCo="456"/>
+    <node id="68" color="w" xCo="1165" yCo="472"/>
+    <node id="69" color="w" xCo="1303" yCo="521"/>
+    <node id="70" color="w" xCo="1382" yCo="524"/>
+    <node id="71" color="w" xCo="1468" yCo="512"/>
+    <node id="72" color="w" xCo="1554" yCo="496"/>
+    <node id="73" color="w" xCo="1595" yCo="436"/>
+    <node id="74" color="w" xCo="1665" yCo="476"/>
+    <node id="75" color="w" xCo="1735" yCo="494"/>
+    <node id="76" color="w" xCo="1779" yCo="459"/>
+    <node id="77" color="w" xCo="1935" yCo="439"/>
+    <node id="78" color="w" xCo="456" yCo="586"/>
+    <node id="79" color="w" xCo="474" yCo="535"/>
+    <node id="80" color="w" xCo="581" yCo="543"/>
+    <node id="81" color="w" xCo="652" yCo="605"/>
+    <node id="82" color="w" xCo="722" yCo="525"/>
+    <node id="83" color="w" xCo="853" yCo="616"/>
+    <node id="84" color="r" xCo="948" yCo="566"/>
+    <node id="85" color="w" xCo="1133" yCo="614"/>
+    <node id="86" color="w" xCo="1138" yCo="539"/>
+    <node id="87" color="w" xCo="1431" yCo="559"/>
+    <node id="88" color="w" xCo="1520" yCo="557"/>
+    <node id="89" color="w" xCo="1615" yCo="574"/>
+    <node id="90" color="w" xCo="1670" yCo="536"/>
+    <node id="91" color="w" xCo="1682" yCo="593"/>
+    <node id="92" color="w" xCo="1752" yCo="613"/>
+    <node id="93" color="w" xCo="1816" yCo="575"/>
+    <node id="94" color="w" xCo="1874" yCo="534"/>
+    <node id="95" color="w" xCo="316" yCo="631"/>
+    <node id="96" color="w" xCo="424" yCo="653"/>
+    <node id="97" color="w" xCo="530" yCo="639"/>
+    <node id="98" color="w" xCo="750" yCo="671"/>
+    <node id="99" color="w" xCo="954" yCo="673"/>
+    <node id="100" color="w" xCo="1020" yCo="681"/>
+    <node id="101" color="w" xCo="1226" yCo="638"/>
+    <node id="102" color="w" xCo="1274" yCo="649"/>
+    <node id="103" color="w" xCo="1358" yCo="644"/>
+    <node id="104" color="w" xCo="1487" yCo="671"/>
+    <node id="105" color="w" xCo="1577" yCo="665"/>
+    <node id="106" color="w" xCo="1632" yCo="691"/>
+    <node id="107" color="w" xCo="1690" yCo="652"/>
+    <node id="108" color="w" xCo="1700" yCo="710"/>
+    <node id="109" color="w" xCo="1820" yCo="633"/>
+    <node id="110" color="w" xCo="1832" yCo="691"/>
+    <node id="111" color="w" xCo="1921" yCo="720"/>
+    <node id="112" color="w" xCo="154" yCo="788"/>
+    <node id="113" color="w" xCo="236" yCo="789"/>
+    <node id="114" color="w" xCo="338" yCo="758"/>
+    <node id="115" color="w" xCo="437" yCo="765"/>
+    <node id="116" color="w" xCo="528" yCo="768"/>
+    <node id="117" color="w" xCo="598" yCo="760"/>
+    <node id="118" color="w" xCo="741" yCo="805"/>
+    <node id="119" color="w" xCo="821" yCo="821"/>
+    <node id="120" color="w" xCo="860" yCo="734"/>
+    <node id="121" color="r" xCo="907" yCo="823"/>
+    <node id="122" color="w" xCo="1004" yCo="761"/>
+    <node id="123" color="w" xCo="1022" yCo="804"/>
+    <node id="124" color="w" xCo="1132" yCo="742"/>
+    <node id="125" color="w" xCo="1156" yCo="812"/>
+    <node id="126" color="w" xCo="1196" yCo="750"/>
+    <node id="127" color="w" xCo="1336" yCo="741"/>
+    <node id="128" color="w" xCo="1376" yCo="783"/>
+    <node id="129" color="w" xCo="1443" yCo="749"/>
+    <node id="130" color="w" xCo="1543" yCo="748"/>
+    <node id="131" color="w" xCo="1648" yCo="810"/>
+    <node id="132" color="w" xCo="1769" yCo="732"/>
+    <node id="133" color="w" xCo="1778" yCo="805"/>
+    <node id="134" color="w" xCo="1846" yCo="754"/>
+    <node id="135" color="w" xCo="205" yCo="848"/>
+    <node id="136" color="w" xCo="282" yCo="909"/>
+    <node id="137" color="w" xCo="342" yCo="822"/>
+    <node id="138" color="w" xCo="355" yCo="912"/>
+    <node id="139" color="w" xCo="547" yCo="911"/>
+    <node id="140" color="w" xCo="998" yCo="892"/>
+    <node id="141" color="w" xCo="1090" yCo="892"/>
+    <node id="142" color="w" xCo="1296" yCo="892"/>
+    <node id="143" color="w" xCo="1330" yCo="831"/>
+    <node id="144" color="w" xCo="1419" yCo="834"/>
+    <node id="145" color="w" xCo="1507" yCo="837"/>
+    <node id="146" color="w" xCo="1716" yCo="844"/>
+    <node id="147" color="w" xCo="1941" yCo="845"/>
+    <node id="148" color="w" xCo="176" yCo="951"/>
+    <node id="149" color="r" xCo="265" yCo="969"/>
+    <node id="150" color="w" xCo="641" yCo="949"/>
+    <node id="151" color="w" xCo="774" yCo="959"/>
+    <node id="152" color="w" xCo="858" yCo="984"/>
+    <node id="153" color="w" xCo="884" yCo="930"/>
+    <node id="154" color="w" xCo="990" yCo="987"/>
+    <node id="155" color="w" xCo="1144" yCo="981"/>
+    <node id="156" color="w" xCo="1245" yCo="945"/>
+    <node id="157" color="w" xCo="1283" yCo="1012"/>
+    <node id="158" color="r" xCo="1346" yCo="966"/>
+    <node id="159" color="w" xCo="1418" yCo="1002"/>
+    <node id="160" color="w" xCo="1507" yCo="998"/>
+    <node id="161" color="w" xCo="1566" yCo="937"/>
+    <node id="162" color="w" xCo="151" yCo="1043"/>
+    <node id="163" color="w" xCo="341" yCo="1032"/>
+    <node id="164" color="w" xCo="458" yCo="1053"/>
+    <node id="165" color="w" xCo="729" yCo="1094"/>
+    <node id="166" color="w" xCo="742" yCo="1036"/>
+    <node id="167" color="w" xCo="877" yCo="1040"/>
+    <node id="168" color="w" xCo="989" yCo="1066"/>
+    <node id="169" color="w" xCo="1046" yCo="1120"/>
+    <node id="170" color="w" xCo="1068" yCo="1042"/>
+    <node id="171" color="w" xCo="1313" yCo="1090"/>
+    <node id="172" color="w" xCo="1383" yCo="1042"/>
+    <node id="173" color="w" xCo="1461" yCo="1064"/>
+    <node id="174" color="w" xCo="381" yCo="1143"/>
+    <node id="175" color="w" xCo="590" yCo="1162"/>
+    <node id="176" color="w" xCo="676" yCo="1126"/>
+    <node id="177" color="w" xCo="792" yCo="1133"/>
+    <node id="178" color="w" xCo="866" yCo="1169"/>
+    <node id="179" color="w" xCo="950" yCo="1190"/>
+    <node id="180" color="w" xCo="987" yCo="1152"/>
+    <node id="181" color="w" xCo="1093" yCo="1153"/>
+    <node id="182" color="w" xCo="1159" yCo="1184"/>
+    <node id="183" color="w" xCo="1206" yCo="1127"/>
+    <node id="184" color="w" xCo="1270" yCo="1213"/>
+    <node id="185" color="w" xCo="1356" yCo="1136"/>
+    <node id="186" color="w" xCo="1358" yCo="1203"/>
+    <node id="187" color="w" xCo="1413" yCo="1166"/>
+    <node id="188" color="w" xCo="544" yCo="1225"/>
+    <node id="189" color="w" xCo="748" yCo="1241"/>
+    <node id="190" color="w" xCo="805" yCo="1287"/>
+    <node id="191" color="w" xCo="964" yCo="1248"/>
+    <node id="192" color="w" xCo="1220" yCo="1252"/>
+    <node id="193" color="w" xCo="1316" yCo="1247"/>
+    <node id="194" color="w" xCo="1366" yCo="1285"/>
+    <node id="195" color="w" xCo="1464" yCo="1278"/>
+
+    <!-- A district nodes -->
+    <node id="A1" color="b" xCo="253" yCo="129"/>
+    <node id="A2" color="b" xCo="310" yCo="140"/>
+    <node id="A3" color="b" xCo="357" yCo="116"/>
+    <node id="A4" color="b" xCo="430" yCo="76"/>
+    <node id="A5" color="b" xCo="568" yCo="78"/>
+    <node id="A6" color="b" xCo="302" yCo="246"/>
+    <node id="A7" color="b" xCo="348" yCo="242"/>
+    <node id="A8" color="b" xCo="566" yCo="156"/>
+    <node id="A9" color="b" xCo="564" yCo="208"/>
+    <node id="A10" color="b" xCo="251" yCo="311"/>
+    <node id="A11" color="b" xCo="336" yCo="337"/>
+    <node id="A12" color="b" xCo="398" yCo="322"/>
+    <node id="A13" color="b" xCo="569" yCo="297"/>
+    <node id="A14" color="b" xCo="228" yCo="368"/>
+    <node id="A15" color="b" xCo="275" yCo="371"/>
+    <node id="A16" color="b" xCo="410" yCo="358"/>
+    <node id="A17" color="b" xCo="570" yCo="335"/>
+    <node id="A18" color="b" xCo="262" yCo="423"/>
+    <node id="A19" color="b" xCo="305" yCo="441"/>
+    <node id="A20" color="b" xCo="565" yCo="384"/>
+    <node id="A21" color="b" xCo="445" yCo="459"/>
+    <node id="A22" color="b" xCo="493" yCo="468"/>
+    <node id="A23" color="b" xCo="579" yCo="456"/>
+    <node id="A24" color="b" xCo="638" yCo="454"/>
+    <node id="A25" color="b" xCo="332" yCo="512"/>
+    <node id="A26" color="b" xCo="413" yCo="504"/>
+    <node id="A27" color="b" xCo="355" yCo="579"/>
+    <node id="A28" color="b" xCo="442" yCo="547"/>
+    <node id="A29" color="b" xCo="676" yCo="530"/>
+    <node id="A30" color="b" xCo="403" yCo="629"/>
+    <node id="A31" color="b" xCo="497" yCo="572"/>
+    <node id="A32" color="b" xCo="285" yCo="672"/>
+    <node id="A33" color="b" xCo="445" yCo="679"/>
+    <node id="A34" color="b" xCo="617" yCo="626"/>
+    <node id="A35" color="b" xCo="671" yCo="644"/>
+    <node id="A36" color="b" xCo="713" yCo="604"/>
+    <node id="A37" color="b" xCo="192" yCo="746"/>
+    <node id="A38" color="b" xCo="355" yCo="732"/>
+    <node id="A39" color="b" xCo="481" yCo="720"/>
+    <node id="A40" color="b" xCo="568" yCo="708"/>
+    <node id="A41" color="b" xCo="776" yCo="724"/>
+    <node id="A42" color="b" xCo="169" yCo="816"/>
+    <node id="A43" color="b" xCo="278" yCo="834"/>
+    <node id="A44" color="b" xCo="369" yCo="779"/>
+    <node id="A45" color="b" xCo="566" yCo="817"/>
+    <node id="A46" color="b" xCo="632" yCo="810"/>
+    <node id="A47" color="b" xCo="249" yCo="874"/>
+    <node id="A48" color="b" xCo="310" yCo="865"/>
+    <node id="A49" color="b" xCo="610" yCo="875"/>
+    <node id="A50" color="b" xCo="657" yCo="850"/>
+    <node id="A51" color="b" xCo="162" yCo="981"/>
+    <node id="A52" color="b" xCo="312" yCo="941"/>
+    <node id="A53" color="b" xCo="248" yCo="995"/>
+    <node id="A54" color="b" xCo="315" yCo="1044"/>
+    <node id="A55" color="b" xCo="378" yCo="1011"/>
+    <node id="A56" color="b" xCo="421" yCo="984"/>
+
+    <!-- B district nodes -->
+    <node id="B1" color="b" xCo="667" yCo="57"/>
+    <node id="B2" color="b" xCo="789" yCo="58"/>
+    <node id="B3" color="b" xCo="1020" yCo="93"/>
+    <node id="B4" color="b" xCo="1129" yCo="147"/>
+    <node id="B5" color="b" xCo="1181" yCo="141"/>
+    <node id="B6" color="b" xCo="1277" yCo="141"/>
+    <node id="B7" color="b" xCo="1423" yCo="144"/>
+    <node id="B8" color="b" xCo="1521" yCo="152"/>
+    <node id="B9" color="b" xCo="1548" yCo="223"/>
+    <node id="B10" color="b" xCo="1637" yCo="191"/>
+    <node id="B11" color="b" xCo="1675" yCo="167"/>
+    <node id="B12" color="b" xCo="1836" yCo="103"/>
+    <node id="B13" color="b" xCo="1940" yCo="66"/>
+    <node id="B14" color="b" xCo="659" yCo="135"/>
+    <node id="B15" color="b" xCo="794" yCo="133"/>
+    <node id="B16" color="b" xCo="1000" yCo="137"/>
+    <node id="B17" color="b" xCo="651" yCo="205"/>
+    <node id="B18" color="b" xCo="799" yCo="203"/>
+    <node id="B19" color="b" xCo="915" yCo="252"/>
+    <node id="B20" color="b" xCo="1012" yCo="232"/>
+    <node id="B21" color="b" xCo="846" yCo="362"/>
+    <node id="B22" color="b" xCo="973" yCo="318"/>
+    <node id="B23" color="b" xCo="1031" yCo="298"/>
+    <node id="B24" color="b" xCo="1091" yCo="278"/>
+    <node id="B25" color="b" xCo="1151" yCo="258"/>
+    <node id="B26" color="b" xCo="1203" yCo="246"/>
+    <node id="B27" color="b" xCo="1263" yCo="253"/>
+    <node id="B28" color="b" xCo="1390" yCo="231"/>
+    <node id="B29" color="b" xCo="1695" yCo="215"/>
+    <node id="B30" color="b" xCo="1877" yCo="211"/>
+    <node id="B31" color="b" xCo="739" yCo="382"/>
+    <node id="B32" color="b" xCo="757" yCo="440"/>
+    <node id="B33" color="b" xCo="867" yCo="420"/>
+    <node id="B34" color="b" xCo="1012" yCo="345"/>
+    <node id="B35" color="b" xCo="996" yCo="390"/>
+    <node id="B36" color="b" xCo="1053" yCo="369"/>
+    <node id="B37" color="b" xCo="1227" yCo="343"/>
+    <node id="B38" color="b" xCo="1282" yCo="306"/>
+    <node id="B39" color="b" xCo="1348" yCo="338"/>
+    <node id="B40" color="b" xCo="1673" yCo="284"/>
+    <node id="B41" color="b" xCo="1794" yCo="240"/>
+    <node id="B42" color="b" xCo="775" yCo="517"/>
+    <node id="B43" color="b" xCo="910" yCo="485"/>
+    <node id="B44" color="b" xCo="951" yCo="471"/>
+    <node id="B45" color="b" xCo="1052" yCo="439"/>
+    <node id="B46" color="b" xCo="1124" yCo="404"/>
+    <node id="B47" color="b" xCo="1134" yCo="437"/>
+    <node id="B48" color="b" xCo="827" yCo="570"/>
+    <node id="B49" color="b" xCo="933" yCo="523"/>
+    <node id="B50" color="b" xCo="877" yCo="664"/>
+    <node id="B51" color="b" xCo="966" yCo="609"/>
+    <node id="B52" color="b" xCo="925" yCo="697"/>
+    <node id="B53" color="b" xCo="984" yCo="650"/>
+    <node id="B54" color="b" xCo="1011" yCo="634"/>
+    <node id="B55" color="b" xCo="1100" yCo="569"/>
+    <node id="B56" color="b" xCo="1186" yCo="503"/>
+    <node id="B57" color="b" xCo="1241" yCo="473"/>
+    <node id="B58" color="b" xCo="1310" yCo="439"/>
+    <node id="B59" color="b" xCo="1436" yCo="380"/>
+    <node id="B60" color="b" xCo="660" yCo="326"/>
+
+    <!-- C district nodes -->
+    <node id="C1" color="b" xCo="1588" yCo="397"/>
+    <node id="C2" color="b" xCo="1720" yCo="395"/>
+    <node id="C3" color="b" xCo="1925" yCo="338"/>
+    <node id="C4" color="b" xCo="1231" yCo="529"/>
+    <node id="C5" color="b" xCo="1346" yCo="523"/>
+    <node id="C6" color="b" xCo="1427" yCo="518"/>
+    <node id="C7" color="b" xCo="1511" yCo="504"/>
+    <node id="C8" color="b" xCo="1602" yCo="484"/>
+    <node id="C9" color="b" xCo="1730" yCo="466"/>
+    <node id="C10" color="b" xCo="1835" yCo="454"/>
+    <node id="C11" color="b" xCo="1612" yCo="544"/>
+    <node id="C12" color="b" xCo="1740" yCo="522"/>
+    <node id="C13" color="b" xCo="1846" yCo="506"/>
+    <node id="C14" color="b" xCo="1321" yCo="629"/>
+    <node id="C15" color="b" xCo="1432" yCo="601"/>
+    <node id="C16" color="b" xCo="1480" yCo="596"/>
+    <node id="C17" color="b" xCo="1527" yCo="611"/>
+    <node id="C18" color="b" xCo="1620" yCo="604"/>
+    <node id="C19" color="b" xCo="1747" yCo="583"/>
+    <node id="C20" color="b" xCo="1881" yCo="564"/>
+    <node id="C21" color="b" xCo="1107" yCo="690"/>
+    <node id="C22" color="b" xCo="1158" yCo="660"/>
+    <node id="C23" color="b" xCo="1440" yCo="674"/>
+    <node id="C24" color="b" xCo="1534" yCo="668"/>
+    <node id="C25" color="b" xCo="1628" yCo="661"/>
+    <node id="C26" color="b" xCo="1757" yCo="642"/>
+    <node id="C27" color="b" xCo="1891" yCo="623"/>
+    <node id="C28" color="b" xCo="1045" yCo="739"/>
+    <node id="C29" color="b" xCo="1084" yCo="761"/>
+    <node id="C30" color="b" xCo="1304" yCo="746"/>
+    <node id="C31" color="b" xCo="1370" yCo="737"/>
+    <node id="C32" color="b" xCo="1492" yCo="752"/>
+    <node id="C33" color="b" xCo="1636" yCo="720"/>
+    <node id="C34" color="b" xCo="1765" yCo="701"/>
+    <node id="C35" color="b" xCo="1905" yCo="679"/>
+    <node id="C36" color="b" xCo="1645" yCo="778"/>
+    <node id="C37" color="b" xCo="1773" yCo="760"/>
+    <node id="C38" color="b" xCo="1930" yCo="761"/>
+    <node id="C39" color="b" xCo="906" yCo="796"/>
+    <node id="C40" color="b" xCo="966" yCo="799"/>
+    <node id="C41" color="b" xCo="1093" yCo="812"/>
+    <node id="C42" color="b" xCo="1201" yCo="821"/>
+    <node id="C43" color="b" xCo="1259" yCo="829"/>
+    <node id="C44" color="b" xCo="1388" yCo="833"/>
+    <node id="C45" color="b" xCo="1452" yCo="834"/>
+    <node id="C46" color="b" xCo="1619" yCo="841"/>
+    <node id="C47" color="b" xCo="1652" yCo="840"/>
+    <node id="C48" color="b" xCo="1784" yCo="846"/>
+
+    <!-- D district nodes -->
+    <node id="D1" color="b" xCo="741" yCo="897"/>
+    <node id="D2" color="b" xCo="842" yCo="859"/>
+    <node id="D3" color="b" xCo="934" yCo="866"/>
+    <node id="D4" color="b" xCo="1039" yCo="862"/>
+    <node id="D5" color="b" xCo="867" yCo="904"/>
+    <node id="D6" color="b" xCo="1049" yCo="896"/>
+    <node id="D7" color="b" xCo="1136" yCo="886"/>
+    <node id="D8" color="b" xCo="1253" yCo="892"/>
+    <node id="D9" color="b" xCo="1340" yCo="892"/>
+    <node id="D10" color="b" xCo="1561" yCo="889"/>
+    <node id="D11" color="b" xCo="655" yCo="1009"/>
+    <node id="D12" color="b" xCo="728" yCo="985"/>
+    <node id="D13" color="b" xCo="900" yCo="961"/>
+    <node id="D14" color="b" xCo="961" yCo="917"/>
+    <node id="D15" color="b" xCo="1344" yCo="926"/>
+    <node id="D16" color="b" xCo="1401" yCo="924"/>
+    <node id="D17" color="b" xCo="1514" yCo="922"/>
+    <node id="D18" color="b" xCo="1610" yCo="938"/>
+    <node id="D19" color="b" xCo="672" yCo="1058"/>
+    <node id="D20" color="b" xCo="815" yCo="1006"/>
+    <node id="D21" color="b" xCo="841" yCo="1052"/>
+    <node id="D22" color="b" xCo="1218" yCo="1018"/>
+    <node id="D23" color="b" xCo="1348" yCo="1009"/>
+    <node id="D24" color="b" xCo="1382" yCo="1008"/>
+    <node id="D25" color="b" xCo="1457" yCo="1001"/>
+    <node id="D26" color="b" xCo="471" yCo="1130"/>
+    <node id="D27" color="b" xCo="568" yCo="1135"/>
+    <node id="D28" color="b" xCo="740" yCo="1151"/>
+    <node id="D29" color="b" xCo="849" yCo="1118"/>
+    <node id="D30" color="b" xCo="960" yCo="1084"/>
+    <node id="D31" color="b" xCo="1020" yCo="1057"/>
+    <node id="D32" color="b" xCo="1201" yCo="1057"/>
+    <node id="D33" color="b" xCo="1204" yCo="1101"/>
+    <node id="D34" color="b" xCo="1355" yCo="1086"/>
+    <node id="D35" color="b" xCo="1385" yCo="1076"/>
+    <node id="D36" color="b" xCo="1425" yCo="1069"/>
+    <node id="D37" color="b" xCo="1513" yCo="1062"/>
+    <node id="D38" color="b" xCo="1563" yCo="1061"/>
+    <node id="D39" color="b" xCo="487" yCo="1231"/>
+    <node id="D40" color="b" xCo="605" yCo="1192"/>
+    <node id="D41" color="b" xCo="608" yCo="1212"/>
+    <node id="D42" color="b" xCo="687" yCo="1202"/>
+    <node id="D43" color="b" xCo="747" yCo="1202"/>
+    <node id="D44" color="b" xCo="931" yCo="1153"/>
+    <node id="D45" color="b" xCo="1087" yCo="1109"/>
+    <node id="D46" color="b" xCo="1152" yCo="1104"/>
+    <node id="D47" color="b" xCo="1281" yCo="1114"/>
+    <node id="D49" color="b" xCo="1410" yCo="1131"/>
+    <node id="D50" color="b" xCo="1462" yCo="1124"/>
+    <node id="D51" color="b" xCo="879" yCo="1211"/>
+    <node id="D52" color="b" xCo="703" yCo="1310"/>
+    <node id="D53" color="b" xCo="895" yCo="1269"/>
+    <node id="D54" color="b" xCo="1031" yCo="1235"/>
+    <node id="D55" color="b" xCo="1079" yCo="1202"/>
+    <node id="D56" color="b" xCo="1208" yCo="1175"/>
+    <node id="D57" color="b" xCo="1264" yCo="1144"/>
+    <node id="D58" color="b" xCo="1303" yCo="1141"/>
+    <node id="D59" color="b" xCo="1311" yCo="1209"/>
+    <node id="D60" color="b" xCo="1412" yCo="1201"/>
+    <node id="D61" color="b" xCo="1413" yCo="1237"/>
+    <node id="D62" color="b" xCo="1274" yCo="1279"/>
+    <node id="D63" color="b" xCo="1319" yCo="1285"/>
+    <node id="D64" color="b" xCo="1415" yCo="1280"/>
+
+    <!-- Yellow nodes -->
+    <node id="Y1" color="y" xCo="797" yCo="772"/>
+    <node id="Y2" color="y" xCo="479" yCo="949"/>
+    <node id="Y3" color="y" xCo="827" yCo="308"/>
+    <node id="Y4" color="y" xCo="1181" yCo="372"/>
+    <node id="Y5" color="y" xCo="1574" yCo="320"/>
+    <node id="Y6" color="y" xCo="1260" yCo="752"/>
+    <node id="Y7" color="y" xCo="1558" yCo="835"/>
+
+	<!-- A district neighborGroups-->
+	<neighborGroup id="A1">
+		<nd ref="A2"/>
+		<nd ref="24"/>
+	</neighborGroup>
+
+	<neighborGroup id="A2">
+		<nd ref="A1"/>
+		<nd ref="A3"/>
+		<nd ref="6"/>
+	</neighborGroup>
+
+	<neighborGroup id="A3">
+		<nd ref="A2"/>
+		<nd ref="1"/>
+		<nd ref="7"/>
+	</neighborGroup>
+
+	<neighborGroup id="A4">
+		<nd ref="1"/>
+		<nd ref="26"/>
+		<nd ref="A5"/>
+	</neighborGroup>
+
+	<neighborGroup id="A5">
+		<nd ref="A4"/>
+		<nd ref="A8"/>
+		<nd ref="2"/>
+	</neighborGroup>
+
+    <neighborGroup id="A6">
+        <nd ref="24"/>
+        <nd ref="6"/>
+        <nd ref="A7"/>
+        <nd ref="25"/>
+    </neighborGroup>
+
+    <neighborGroup id="A7">
+        <nd ref="A6"/>
+        <nd ref="7"/>
+        <nd ref="26"/>
+        <nd ref="A11"/>
+    </neighborGroup>
+
+	<neighborGroup id="A8">
+		<nd ref="A5"/>
+		<nd ref="9"/>
+		<nd ref="A9"/>
+	</neighborGroup>
+
+	<neighborGroup id="A9">
+		<nd ref="A8"/>
+		<nd ref="26"/>
+		<nd ref="28"/>
+		<nd ref="8"/>
+	</neighborGroup>
+
+	<neighborGroup id="A10">
+		<nd ref="24"/>
+		<nd ref="25"/>
+		<nd ref="A15"/>
+	</neighborGroup>
+
+	<neighborGroup id="A11">
+		<nd ref="A7"/>
+		<nd ref="25"/>
+		<nd ref="44"/>
+	</neighborGroup>
+
+	<neighborGroup id="A12">
+		<nd ref="26"/>
+		<nd ref="44"/>
+		<nd ref="A16"/>
+		<nd ref="27"/>
+	</neighborGroup>
+
+	<neighborGroup id="A13">
+		<nd ref="27"/>
+		<nd ref="28"/>
+		<nd ref="A17"/>
+	</neighborGroup>
+
+	<neighborGroup id="A14">
+		<nd ref="A15"/>
+		<nd ref="43"/>
+	</neighborGroup>
+
+	<neighborGroup id="A15">
+		<nd ref="A10"/>
+		<nd ref="A14"/>
+		<nd ref="44"/>
+		<nd ref="A19"/>
+	</neighborGroup>
+
+	<neighborGroup id="A16">
+		<nd ref="A12"/>
+		<nd ref="44"/>
+		<nd ref="A21"/>
+		<nd ref="46"/>
+	</neighborGroup>
+
+	<neighborGroup id="A17">
+        <nd ref="A13"/>
+		<nd ref="46"/>
+		<nd ref="A20"/>
+		<nd ref="48"/>
+		<nd ref="B60"/>
+	</neighborGroup>
+
+	<neighborGroup id="A18">
+		<nd ref="43"/>
+		<nd ref="A19"/>
+	</neighborGroup>
+
+	<neighborGroup id="A19">
+		<nd ref="A18"/>
+		<nd ref="A15"/>
+		<nd ref="59"/>
+	</neighborGroup>
+
+	<neighborGroup id="A20">
+		<nd ref="46"/>
+		<nd ref="A17"/>
+		<nd ref="45"/>
+		<nd ref="47"/>
+	</neighborGroup>
+
+	<neighborGroup id="A21">
+		<nd ref="A16"/>
+		<nd ref="79"/>
+	</neighborGroup>
+
+	<neighborGroup id="A22">
+		<nd ref="45"/>
+		<nd ref="47"/>
+		<nd ref="A23"/>
+		<nd ref="61"/>
+	</neighborGroup>
+
+	<neighborGroup id="A23">
+		<nd ref="A22"/>
+		<nd ref="47"/>
+		<nd ref="61"/>
+	</neighborGroup>
+
+	<neighborGroup id="A24">
+		<nd ref="48"/>
+		<nd ref="B32"/>
+		<nd ref="62"/>
+	</neighborGroup>
+
+	<neighborGroup id="A25">
+		<nd ref="59"/>
+		<nd ref="60"/>
+		<nd ref="A27"/>
+	</neighborGroup>
+
+	<neighborGroup id="A26">
+		<nd ref="60"/>
+		<nd ref="A28"/>
+	</neighborGroup>
+
+	<neighborGroup id="A27">
+		<nd ref="A25"/>
+		<nd ref="95"/>
+		<nd ref="A30"/>
+	</neighborGroup>
+
+	<neighborGroup id="A28">
+		<nd ref="A26"/>
+		<nd ref="79"/>
+		<nd ref="78"/>
+	</neighborGroup>
+
+	<neighborGroup id="A29">
+		<nd ref="80"/>
+		<nd ref="62"/>
+		<nd ref="82"/>
+		<nd ref="A36"/>
+	</neighborGroup>
+
+	<neighborGroup id="A30">
+		<nd ref="A27"/>
+		<nd ref="78"/>
+		<nd ref="96"/>
+	</neighborGroup>
+
+	<neighborGroup id="A31">
+		<nd ref="79"/>
+		<nd ref="78"/>
+		<nd ref="80"/>
+		<nd ref="97"/>
+	</neighborGroup>
+
+	<neighborGroup id="A32">
+		<nd ref="95"/>
+		<nd ref="A37"/>
+		<nd ref="A38"/>
+	</neighborGroup>
+
+	<neighborGroup id="A33">
+		<nd ref="96"/>
+		<nd ref="97"/>
+		<nd ref="A39"/>
+	</neighborGroup>
+
+	<neighborGroup id="A34">
+		<nd ref="80"/>
+		<nd ref="81"/>
+	</neighborGroup>
+
+	<neighborGroup id="A35">
+		<nd ref="81"/>
+		<nd ref="118"/>
+	</neighborGroup>
+
+	<neighborGroup id="A36">
+		<nd ref="A29"/>
+		<nd ref="98"/>
+	</neighborGroup>
+
+	<neighborGroup id="A37">
+		<nd ref="A32"/>
+		<nd ref="112"/>
+		<nd ref="113"/>
+	</neighborGroup>
+
+	<neighborGroup id="A38">
+		<nd ref="A32"/>
+		<nd ref="114"/>
+		<nd ref="96"/>
+	</neighborGroup>
+
+	<neighborGroup id="A39">
+		<nd ref="A33"/>
+		<nd ref="116"/>
+	</neighborGroup>
+
+	<neighborGroup id="A40">
+		<nd ref="97"/>
+		<nd ref="117"/>
+	</neighborGroup>
+
+	<neighborGroup id="A41">
+		<nd ref="98"/>
+		<nd ref="Y1"/>
+	</neighborGroup>
+
+	<neighborGroup id="A42">
+		<nd ref="112"/>
+		<nd ref="135"/>
+		<nd ref="A51"/>
+	</neighborGroup>
+
+	<neighborGroup id="A43">
+		<nd ref="113"/>
+		<nd ref="114"/>
+		<nd ref="A47"/>
+		<nd ref="A48"/>
+	</neighborGroup>
+
+	<neighborGroup id="A44">
+		<nd ref="114"/>
+		<nd ref="137"/>
+		<nd ref="115"/>
+	</neighborGroup>
+
+	<neighborGroup id="A45">
+		<nd ref="116"/>
+		<nd ref="A49"/>
+	</neighborGroup>
+
+	<neighborGroup id="A46">
+		<nd ref="117"/>
+		<nd ref="A50"/>
+	</neighborGroup>
+
+	<neighborGroup id="A47">
+		<nd ref="135"/>
+		<nd ref="A43"/>
+		<nd ref="136"/>
+		<nd ref="148"/>
+	</neighborGroup>
+
+	<neighborGroup id="A48">
+		<nd ref="A43"/>
+		<nd ref="137"/>
+		<nd ref="138"/>
+	</neighborGroup>
+
+	<neighborGroup id="A49">
+		<nd ref="A45"/>
+		<nd ref="139"/>
+		<nd ref="150"/>
+		<nd ref="A50"/>
+		<nd ref="D1"/>
+	</neighborGroup>
+
+	<neighborGroup id="A50">
+		<nd ref="A49"/>
+		<nd ref="A46"/>
+		<nd ref="118"/>
+		<nd ref="D1"/>
+	</neighborGroup>
+
+	<neighborGroup id="A51">
+		<nd ref="A42"/>
+		<nd ref="148"/>
+		<nd ref="162"/>
+	</neighborGroup>
+
+	<neighborGroup id="A52">
+		<nd ref="136"/>
+		<nd ref="149"/>
+		<nd ref="A55"/>
+	</neighborGroup>
+
+	<neighborGroup id="A53">
+		<nd ref="148"/>
+		<nd ref="149"/>
+		<nd ref="A54"/>
+	</neighborGroup>
+
+	<neighborGroup id="A54">
+		<nd ref="162"/>
+		<nd ref="A53"/>
+		<nd ref="163"/>
+	</neighborGroup>
+
+	<neighborGroup id="A55">
+		<nd ref="A52"/>
+		<nd ref="163"/>
+		<nd ref="174"/>
+		<nd ref="A56"/>
+	</neighborGroup>
+
+	<neighborGroup id="A56">
+		<nd ref="138"/>
+		<nd ref="Y2"/>
+		<nd ref="A55"/>
+		<nd ref="164"/>
+	</neighborGroup>
+
+    <!-- B district neighborGroups-->
+
+
+	<neighborGroup id="B1">
+		<nd ref="2"/>
+		<nd ref="3"/>
+		<nd ref="B14"/>
+	</neighborGroup>
+
+	<neighborGroup id="B2">
+		<nd ref="3"/>
+		<nd ref="4"/>
+		<nd ref="5"/>
+	</neighborGroup>
+
+	<neighborGroup id="B3">
+		<nd ref="5"/>
+		<nd ref="B16"/>
+		<nd ref="B4"/>
+	</neighborGroup>
+
+	<neighborGroup id="B4">
+		<nd ref="B5"/>
+		<nd ref="B3"/>
+		<nd ref="15"/>
+	</neighborGroup>
+
+	<neighborGroup id="B5">
+		<nd ref="B4"/>
+		<nd ref="17"/>
+		<nd ref="16"/>
+	</neighborGroup>
+
+	<neighborGroup id="B6">
+		<nd ref="17"/>
+		<nd ref="B27"/>
+		<nd ref="18"/>
+	</neighborGroup>
+
+	<neighborGroup id="B7">
+		<nd ref="18"/>
+		<nd ref="B8"/>
+	</neighborGroup>
+
+	<neighborGroup id="B8">
+		<nd ref="B7"/>
+		<nd ref="19"/>
+		<nd ref="20"/>
+	</neighborGroup>
+
+	<neighborGroup id="B9">
+		<nd ref="20"/>
+		<nd ref="40"/>
+		<nd ref="B10"/>
+	</neighborGroup>
+
+	<neighborGroup id="B10">
+		<nd ref="B9"/>
+		<nd ref="B11"/>
+		<nd ref="41"/>
+	</neighborGroup>
+
+	<neighborGroup id="B11">
+		<nd ref="B10"/>
+		<nd ref="B29"/>
+		<nd ref="21"/>
+	</neighborGroup>
+
+	<neighborGroup id="B12">
+		<nd ref="21"/>
+		<nd ref="B13"/>
+	</neighborGroup>
+
+	<neighborGroup id="B13">
+		<nd ref="B12"/>
+		<nd ref="23"/>
+	</neighborGroup>
+
+	<neighborGroup id="B14">
+		<nd ref="B1"/>
+		<nd ref="11"/>
+		<nd ref="9"/>
+	</neighborGroup>
+
+	<neighborGroup id="B15">
+		<nd ref="11"/>
+		<nd ref="4"/>
+		<nd ref="12"/>
+		<nd ref="B18"/>
+	</neighborGroup>
+
+	<neighborGroup id="B16">
+		<nd ref="B3"/>
+		<nd ref="12"/>
+		<nd ref="13"/>
+	</neighborGroup>
+
+	<neighborGroup id="B17">
+		<nd ref="8"/>
+		<nd ref="9"/>
+		<nd ref="10"/>
+	</neighborGroup>
+
+	<neighborGroup id="B18">
+		<nd ref="B15"/>
+		<nd ref="10"/>
+		<nd ref="30"/>
+	</neighborGroup>
+
+	<neighborGroup id="B19">
+		<nd ref="30"/>
+		<nd ref="B20"/>
+	</neighborGroup>
+
+	<neighborGroup id="B20">
+		<nd ref="B19"/>
+		<nd ref="32"/>
+		<nd ref="13"/>
+		<nd ref="14"/>
+	</neighborGroup>
+
+	<neighborGroup id="B21">
+		<nd ref="Y3"/>
+		<nd ref="50"/>
+		<nd ref="49"/>
+		<nd ref="B33"/>
+	</neighborGroup>
+
+	<neighborGroup id="B22">
+		<nd ref="50"/>
+		<nd ref="31"/>
+		<nd ref="B35"/>
+	</neighborGroup>
+
+	<neighborGroup id="B23">
+		<nd ref="32"/>
+		<nd ref="31"/>
+		<nd ref="B36"/>
+		<nd ref="B24"/>
+	</neighborGroup>
+
+	<neighborGroup id="B24">
+		<nd ref="B23"/>
+		<nd ref="14"/>
+		<nd ref="33"/>
+		<nd ref="54"/>
+	</neighborGroup>
+
+	<neighborGroup id="B25">
+		<nd ref="33"/>
+		<nd ref="15"/>
+		<nd ref="34"/>
+		<nd ref="B26"/>
+	</neighborGroup>
+
+	<neighborGroup id="B26">
+		<nd ref="B25"/>
+		<nd ref="16"/>
+		<nd ref="36"/>
+		<nd ref="35"/>
+	</neighborGroup>
+
+	<neighborGroup id="B27">
+		<nd ref="17"/>
+		<nd ref="B6"/>
+		<nd ref="36"/>
+		<nd ref="38"/>
+	</neighborGroup>
+
+	<neighborGroup id="B28">
+		<nd ref="18"/>
+		<nd ref="19"/>
+		<nd ref="39"/>
+	</neighborGroup>
+
+	<neighborGroup id="B29">
+		<nd ref="B11"/>
+		<nd ref="42"/>
+	</neighborGroup>
+
+	<neighborGroup id="B30">
+		<nd ref="22"/>
+		<nd ref="23"/>
+		<nd ref="C3"/>
+	</neighborGroup>
+
+	<neighborGroup id="B31">
+		<nd ref="48"/>
+		<nd ref="49"/>
+		<nd ref="B32"/>
+	</neighborGroup>
+
+	<neighborGroup id="B32">
+		<nd ref="B31"/>
+		<nd ref="A24"/>
+		<nd ref="64"/>
+		<nd ref="63"/>
+	</neighborGroup>
+
+	<neighborGroup id="B33">
+		<nd ref="64"/>
+		<nd ref="B21"/>
+		<nd ref="66"/>
+	</neighborGroup>
+
+	<neighborGroup id="B34">
+		<nd ref="31"/>
+		<nd ref="52"/>
+	</neighborGroup>
+
+	<neighborGroup id="B35">
+		<nd ref="51"/>
+		<nd ref="52"/>
+		<nd ref="B22"/>
+	</neighborGroup>
+
+	<neighborGroup id="B36">
+		<nd ref="52"/>
+		<nd ref="B23"/>
+		<nd ref="54"/>
+	</neighborGroup>
+
+	<neighborGroup id="B37">
+		<nd ref="Y4"/>
+		<nd ref="35"/>
+		<nd ref="37"/>
+	</neighborGroup>
+
+	<neighborGroup id="B38">
+		<nd ref="37"/>
+		<nd ref="38"/>
+		<nd ref="39"/>
+	</neighborGroup>
+
+	<neighborGroup id="B39">
+		<nd ref="39"/>
+		<nd ref="56"/>
+	</neighborGroup>
+
+	<neighborGroup id="B40">
+		<nd ref="Y5"/>
+		<nd ref="41"/>
+		<nd ref="42"/>
+		<nd ref="58"/>
+	</neighborGroup>
+
+	<neighborGroup id="B41">
+		<nd ref="42"/>
+		<nd ref="22"/>
+	</neighborGroup>
+
+	<neighborGroup id="B42">
+		<nd ref="82"/>
+		<nd ref="63"/>
+		<nd ref="B48"/>
+		<nd ref="65"/>
+	</neighborGroup>
+
+	<neighborGroup id="B43">
+		<nd ref="65"/>
+		<nd ref="66"/>
+		<nd ref="B49"/>
+		<nd ref="B44"/>
+	</neighborGroup>
+
+	<neighborGroup id="B44">
+		<nd ref="B43"/>
+		<nd ref="51"/>
+		<nd ref="67"/>
+	</neighborGroup>
+
+	<neighborGroup id="B45">
+		<nd ref="67"/>
+		<nd ref="52"/>
+		<nd ref="53"/>
+	</neighborGroup>
+
+	<neighborGroup id="B46">
+		<nd ref="53"/>
+		<nd ref="B47"/>
+		<nd ref="54"/>
+		<nd ref="Y4"/>
+	</neighborGroup>
+
+	<neighborGroup id="B47">
+		<nd ref="53"/>
+		<nd ref="B46"/>
+		<nd ref="68"/>
+	</neighborGroup>
+
+	<neighborGroup id="B48">
+		<nd ref="B42"/>
+		<nd ref="65"/>
+		<nd ref="83"/>
+	</neighborGroup>
+
+	<neighborGroup id="B49">
+		<nd ref="B43"/>
+		<nd ref="84"/>
+	</neighborGroup>
+
+	<neighborGroup id="B50">
+		<nd ref="83"/>
+		<nd ref="B52"/>
+	</neighborGroup>
+
+	<neighborGroup id="B51">
+		<nd ref="84"/>
+		<nd ref="B53"/>
+	</neighborGroup>
+
+	<neighborGroup id="B52">
+		<nd ref="B50"/>
+		<nd ref="120"/>
+		<nd ref="99"/>
+		<nd ref="100"/>
+	</neighborGroup>
+
+	<neighborGroup id="B53">
+		<nd ref="B51"/>
+		<nd ref="99"/>
+		<nd ref="B54"/>
+	</neighborGroup>
+
+	<neighborGroup id="B54">
+		<nd ref="B53"/>
+		<nd ref="100"/>
+		<nd ref="B55"/>
+	</neighborGroup>
+
+	<neighborGroup id="B55">
+		<nd ref="B54"/>
+		<nd ref="85"/>
+		<nd ref="86"/>
+	</neighborGroup>
+
+	<neighborGroup id="B56">
+		<nd ref="68"/>
+		<nd ref="86"/>
+		<nd ref="c4"/>
+		<nd ref="B57"/>
+	</neighborGroup>
+
+	<neighborGroup id="B57">
+		<nd ref="B56"/>
+		<nd ref="55"/>
+		<nd ref="B58"/>
+	</neighborGroup>
+
+	<neighborGroup id="B58">
+		<nd ref="B57"/>
+		<nd ref="56"/>
+	</neighborGroup>
+
+	<neighborGroup id="B59">
+		<nd ref="56"/>
+		<nd ref="57"/>
+	</neighborGroup>
+
+	<neighborGroup id="B60">
+		<nd ref="A17"/>
+		<nd ref="29"/>
+	</neighborGroup>
+
+    <!-- C district neighborGroups-->
+
+	<neighborGroup id="C1">
+		<nd ref="Y5"/>
+		<nd ref="58"/>
+		<nd ref="73"/>
+	</neighborGroup>
+
+	<neighborGroup id="C2">
+		<nd ref="58"/>
+		<nd ref="73"/>
+		<nd ref="C9"/>
+	</neighborGroup>
+
+	<neighborGroup id="C3">
+		<nd ref="B30"/>
+		<nd ref="77"/>
+	</neighborGroup>
+
+	<neighborGroup id="C4">
+		<nd ref="B56"/>
+		<nd ref="69"/>
+		<nd ref="102"/>
+	</neighborGroup>
+
+	<neighborGroup id="C5">
+		<nd ref="69"/>
+		<nd ref="70"/>
+		<nd ref="103"/>
+	</neighborGroup>
+
+	<neighborGroup id="C6">
+		<nd ref="70"/>
+		<nd ref="71"/>
+		<nd ref="87"/>
+	</neighborGroup>
+
+	<neighborGroup id="C7">
+		<nd ref="71"/>
+		<nd ref="72"/>
+		<nd ref="88"/>
+	</neighborGroup>
+
+	<neighborGroup id="C8">
+		<nd ref="72"/>
+		<nd ref="73"/>
+		<nd ref="74"/>
+		<nd ref="C11"/>
+	</neighborGroup>
+
+	<neighborGroup id="C9">
+		<nd ref="C2"/>
+		<nd ref="74"/>
+		<nd ref="75"/>
+		<nd ref="76"/>
+	</neighborGroup>
+
+	<neighborGroup id="C10">
+		<nd ref="76"/>
+		<nd ref="77"/>
+		<nd ref="C13"/>
+	</neighborGroup>
+
+	<neighborGroup id="C11">
+		<nd ref="C8"/>
+		<nd ref="90"/>
+		<nd ref="89"/>
+	</neighborGroup>
+
+	<neighborGroup id="C12">
+		<nd ref="90"/>
+		<nd ref="75"/>
+		<nd ref="C13"/>
+		<nd ref="C19"/>
+	</neighborGroup>
+
+	<neighborGroup id="C13">
+		<nd ref="C10"/>
+		<nd ref="C12"/>
+		<nd ref="94"/>
+	</neighborGroup>
+
+	<neighborGroup id="C14">
+		<nd ref="69"/>
+		<nd ref="127"/>
+	</neighborGroup>
+
+	<neighborGroup id="C15">
+		<nd ref="87"/>
+		<nd ref="C23"/>
+	</neighborGroup>
+
+	<neighborGroup id="C16">
+		<nd ref="71"/>
+		<nd ref="104"/>
+	</neighborGroup>
+
+	<neighborGroup id="C17">
+		<nd ref="88"/>
+		<nd ref="C24"/>
+	</neighborGroup>
+
+	<neighborGroup id="C18">
+		<nd ref="89"/>
+		<nd ref="91"/>
+		<nd ref="C25"/>
+	</neighborGroup>
+
+	<neighborGroup id="C19">
+		<nd ref="C12"/>
+		<nd ref="91"/>
+		<nd ref="93"/>
+		<nd ref="92"/>
+	</neighborGroup>
+
+	<neighborGroup id="C20">
+		<nd ref="94"/>
+		<nd ref="93"/>
+		<nd ref="C27"/>
+	</neighborGroup>
+
+	<neighborGroup id="C21">
+		<nd ref="C22"/>
+		<nd ref="124"/>
+	</neighborGroup>
+
+	<neighborGroup id="C22">
+		<nd ref="85"/>
+		<nd ref="C21"/>
+		<nd ref="101"/>
+		<nd ref="126"/>
+	</neighborGroup>
+
+	<neighborGroup id="C23">
+		<nd ref="C15"/>
+		<nd ref="104"/>
+		<nd ref="129"/>
+	</neighborGroup>
+
+	<neighborGroup id="C24">
+		<nd ref="C17"/>
+		<nd ref="104"/>
+		<nd ref="105"/>
+		<nd ref="130"/>
+	</neighborGroup>
+
+	<neighborGroup id="C25">
+		<nd ref="C18"/>
+		<nd ref="105"/>
+		<nd ref="106"/>
+		<nd ref="107"/>
+	</neighborGroup>
+
+	<neighborGroup id="C26">
+		<nd ref="107"/>
+		<nd ref="92"/>
+		<nd ref="109"/>
+		<nd ref="C34"/>
+	</neighborGroup>
+
+	<neighborGroup id="C27">
+		<nd ref="C20"/>
+		<nd ref="109"/>
+		<nd ref="C35"/>
+	</neighborGroup>
+
+	<neighborGroup id="C28">
+		<nd ref="100"/>
+		<nd ref="122"/>
+		<nd ref="C29"/>
+		<nd ref="C41"/>
+	</neighborGroup>
+
+	<neighborGroup id="C29">
+		<nd ref="C28"/>
+		<nd ref="124"/>
+		<nd ref="C41"/>
+	</neighborGroup>
+
+	<neighborGroup id="C30">
+		<nd ref="Y6"/>
+		<nd ref="102"/>
+		<nd ref="127"/>
+		<nd ref="143"/>
+	</neighborGroup>
+
+	<neighborGroup id="C31">
+		<nd ref="103"/>
+		<nd ref="127"/>
+		<nd ref="128"/>
+	</neighborGroup>
+
+	<neighborGroup id="C32">
+		<nd ref="104"/>
+		<nd ref="145"/>
+	</neighborGroup>
+
+	<neighborGroup id="C33">
+		<nd ref="106"/>
+		<nd ref="108"/>
+		<nd ref="C36"/>
+	</neighborGroup>
+
+	<neighborGroup id="C34">
+		<nd ref="C26"/>
+		<nd ref="108"/>
+		<nd ref="110"/>
+		<nd ref="132"/>
+	</neighborGroup>
+
+	<neighborGroup id="C35">
+		<nd ref="C27"/>
+		<nd ref="110"/>
+		<nd ref="111"/>
+	</neighborGroup>
+
+	<neighborGroup id="C36">
+		<nd ref="C33"/>
+		<nd ref="C37"/>
+		<nd ref="131"/>
+	</neighborGroup>
+
+	<neighborGroup id="C37">
+		<nd ref="C36"/>
+		<nd ref="132"/>
+		<nd ref="134"/>
+		<nd ref="133"/>
+	</neighborGroup>
+
+	<neighborGroup id="C38">
+		<nd ref="111"/>
+		<nd ref="134"/>
+		<nd ref="147"/>
+	</neighborGroup>
+
+	<neighborGroup id="C39">
+		<nd ref="Y1"/>
+		<nd ref="121"/>
+		<nd ref="C40"/>
+	</neighborGroup>
+
+	<neighborGroup id="C40">
+		<nd ref="C39"/>
+		<nd ref="122"/>
+		<nd ref="123"/>
+	</neighborGroup>
+
+	<neighborGroup id="C41">
+		<nd ref="C28"/>
+		<nd ref="C29"/>
+		<nd ref="123"/>
+		<nd ref="D4"/>
+		<nd ref="D7"/>
+		<nd ref="125"/>
+	</neighborGroup>
+
+	<neighborGroup id="C42">
+		<nd ref="125"/>
+		<nd ref="126"/>
+		<nd ref="C43"/>
+	</neighborGroup>
+
+	<neighborGroup id="C43">
+		<nd ref="Y6"/>
+		<nd ref="C42"/>
+		<nd ref="143"/>
+		<nd ref="D8"/>
+	</neighborGroup>
+
+	<neighborGroup id="C44">
+		<nd ref="143"/>
+		<nd ref="128"/>
+		<nd ref="144"/>
+		<nd ref="D16"/>
+	</neighborGroup>
+
+	<neighborGroup id="C45">
+		<nd ref="144"/>
+		<nd ref="129"/>
+		<nd ref="145"/>
+		<nd ref="D25"/>
+	</neighborGroup>
+
+	<neighborGroup id="C46">
+		<nd ref="Y7"/>
+		<nd ref="C47"/>
+		<nd ref="D18"/>
+	</neighborGroup>
+
+	<neighborGroup id="C47">
+		<nd ref="C46"/>
+		<nd ref="131"/>
+		<nd ref="146"/>
+	</neighborGroup>
+
+	<neighborGroup id="C48">
+		<nd ref="146"/>
+		<nd ref="133"/>
+		<nd ref="147"/>
+	</neighborGroup>
+
+    <!-- D district neighborGroups-->
+
+	<neighborGroup id="D1">
+		<nd ref="A49"/>
+		<nd ref="A50"/>
+		<nd ref="151"/>
+	</neighborGroup>
+
+	<neighborGroup id="D2">
+		<nd ref="119"/>
+		<nd ref="121"/>
+		<nd ref="D5"/>
+	</neighborGroup>
+
+	<neighborGroup id="D3">
+		<nd ref="121"/>
+		<nd ref="D5"/>
+	</neighborGroup>
+
+	<neighborGroup id="D4">
+		<nd ref="C41"/>
+		<nd ref="140"/>
+		<nd ref="D6"/>
+	</neighborGroup>
+
+	<neighborGroup id="D5">
+		<nd ref="D2"/>
+		<nd ref="D3"/>
+		<nd ref="151"/>
+		<nd ref="153"/>
+	</neighborGroup>
+
+	<neighborGroup id="D6">
+		<nd ref="D4"/>
+		<nd ref="141"/>
+		<nd ref="170"/>
+	</neighborGroup>
+
+	<neighborGroup id="D7">
+		<nd ref="C41"/>
+		<nd ref="141"/>
+		<nd ref="155"/>
+	</neighborGroup>
+
+	<neighborGroup id="D8">
+		<nd ref="C43"/>
+		<nd ref="142"/>
+		<nd ref="156"/>
+	</neighborGroup>
+
+	<neighborGroup id="D9">
+		<nd ref="143"/>
+		<nd ref="142"/>
+		<nd ref="D15"/>
+	</neighborGroup>
+
+	<neighborGroup id="D10">
+		<nd ref="Y7"/>
+		<nd ref="161"/>
+	</neighborGroup>
+
+	<neighborGroup id="D11">
+		<nd ref="150"/>
+		<nd ref="D12"/>
+		<nd ref="D19"/>
+	</neighborGroup>
+
+	<neighborGroup id="D12">
+		<nd ref="D11"/>
+		<nd ref="151"/>
+	</neighborGroup>
+
+	<neighborGroup id="D13">
+		<nd ref="152"/>
+		<nd ref="153"/>
+		<nd ref="D14"/>
+		<nd ref="D30"/>
+	</neighborGroup>
+
+	<neighborGroup id="D14">
+		<nd ref="D13"/>
+		<nd ref="140"/>
+		<nd ref="154"/>
+	</neighborGroup>
+
+	<neighborGroup id="D15">
+		<nd ref="D9"/>
+		<nd ref="158"/>
+	</neighborGroup>
+
+	<neighborGroup id="D16">
+		<nd ref="C44"/>
+		<nd ref="159"/>
+	</neighborGroup>
+
+	<neighborGroup id="D17">
+		<nd ref="145"/>
+		<nd ref="160"/>
+	</neighborGroup>
+
+	<neighborGroup id="D18">
+		<nd ref="C46"/>
+		<nd ref="161"/>
+	</neighborGroup>
+
+	<neighborGroup id="D19">
+		<nd ref="D11"/>
+		<nd ref="176"/>
+		<nd ref="166"/>
+	</neighborGroup>
+
+	<neighborGroup id="D20">
+		<nd ref="166"/>
+		<nd ref="152"/>
+		<nd ref="D21"/>
+	</neighborGroup>
+
+	<neighborGroup id="D21">
+		<nd ref="165"/>
+		<nd ref="D20"/>
+		<nd ref="167"/>
+		<nd ref="D29"/>
+	</neighborGroup>
+
+	<neighborGroup id="D22">
+		<nd ref="156"/>
+		<nd ref="157"/>
+		<nd ref="D32"/>
+	</neighborGroup>
+
+	<neighborGroup id="D23">
+		<nd ref="157"/>
+		<nd ref="158"/>
+		<nd ref="D24"/>
+		<nd ref="D34"/>
+	</neighborGroup>
+
+	<neighborGroup id="D24">
+		<nd ref="D23"/>
+		<nd ref="159"/>
+		<nd ref="172"/>
+	</neighborGroup>
+
+	<neighborGroup id="D25">
+		<nd ref="C45"/>
+		<nd ref="159"/>
+		<nd ref="160"/>
+		<nd ref="173"/>
+	</neighborGroup>
+
+	<neighborGroup id="D26">
+		<nd ref="164"/>
+		<nd ref="174"/>
+		<nd ref="D39"/>
+		<nd ref="D27"/>
+	</neighborGroup>
+
+	<neighborGroup id="D27">
+		<nd ref="D26"/>
+		<nd ref="D39"/>
+		<nd ref="175"/>
+	</neighborGroup>
+
+	<neighborGroup id="D28">
+		<nd ref="165"/>
+		<nd ref="177"/>
+		<nd ref="D43"/>
+	</neighborGroup>
+
+	<neighborGroup id="D29">
+		<nd ref="D21"/>
+		<nd ref="177"/>
+		<nd ref="178"/>
+	</neighborGroup>
+
+	<neighborGroup id="D30">
+		<nd ref="D13"/>
+		<nd ref="180"/>
+		<nd ref="168"/>
+	</neighborGroup>
+
+	<neighborGroup id="D31">
+		<nd ref="168"/>
+		<nd ref="154"/>
+		<nd ref="170"/>
+		<nd ref="169"/>
+	</neighborGroup>
+
+	<neighborGroup id="D32">
+		<nd ref="D22"/>
+		<nd ref="D33"/>
+	</neighborGroup>
+
+	<neighborGroup id="D33">
+		<nd ref="D32"/>
+		<nd ref="183"/>
+		<nd ref="171"/>
+	</neighborGroup>
+
+	<neighborGroup id="D34">
+		<nd ref="D23"/>
+		<nd ref="171"/>
+		<nd ref="D47"/>
+		<nd ref="185"/>
+	</neighborGroup>
+
+	<neighborGroup id="D35">
+		<nd ref="172"/>
+		<nd ref="185"/>
+		<nd ref="D49"/>
+	</neighborGroup>
+
+	<neighborGroup id="D36">
+		<nd ref="159"/>
+		<nd ref="D49"/>
+		<nd ref="D50"/>
+	</neighborGroup>
+
+	<neighborGroup id="D37">
+		<nd ref="160"/>
+		<nd ref="D38"/>
+	</neighborGroup>
+
+	<neighborGroup id="D38">
+		<nd ref="D37"/>
+		<nd ref="161"/>
+	</neighborGroup>
+
+	<neighborGroup id="D39">
+		<nd ref="D26"/>
+		<nd ref="D27"/>
+		<nd ref="188"/>
+	</neighborGroup>
+
+	<neighborGroup id="D40">
+		<nd ref="175"/>
+		<nd ref="D41"/>
+	</neighborGroup>
+
+	<neighborGroup id="D41">
+		<nd ref="188"/>
+		<nd ref="D40"/>
+		<nd ref="D42"/>
+	</neighborGroup>
+
+	<neighborGroup id="D42">
+		<nd ref="D41"/>
+		<nd ref="176"/>
+		<nd ref="D52"/>
+	</neighborGroup>
+
+	<neighborGroup id="D43">
+		<nd ref="D28"/>
+		<nd ref="189"/>
+		<nd ref="178"/>
+	</neighborGroup>
+
+	<neighborGroup id="D44">
+		<nd ref="167"/>
+		<nd ref="178"/>
+		<nd ref="179"/>
+	</neighborGroup>
+
+	<neighborGroup id="D45">
+		<nd ref="170"/>
+		<nd ref="D46"/>
+		<nd ref="181"/>
+	</neighborGroup>
+
+	<neighborGroup id="D46">
+		<nd ref="D45"/>
+		<nd ref="155"/>
+		<nd ref="182"/>
+	</neighborGroup>
+
+	<neighborGroup id="D47">
+		<nd ref="183"/>
+		<nd ref="D34"/>
+		<nd ref="185"/>
+	</neighborGroup>
+
+	<neighborGroup id="D49">
+		<nd ref="185"/>
+		<nd ref="D35"/>
+		<nd ref="187"/>
+		<nd ref="D36"/>
+		<nd ref="D50"/>
+	</neighborGroup>
+
+	<neighborGroup id="D50">
+		<nd ref="D49"/>
+		<nd ref="D36"/>
+		<nd ref="173"/>
+		<nd ref="195"/>
+	</neighborGroup>
+
+	<neighborGroup id="D51">
+		<nd ref="189"/>
+		<nd ref="178"/>
+		<nd ref="179"/>
+		<nd ref="D53"/>
+	</neighborGroup>
+
+	<neighborGroup id="D52">
+		<nd ref="D42"/>
+		<nd ref="190"/>
+	</neighborGroup>
+
+	<neighborGroup id="D53">
+		<nd ref="190"/>
+		<nd ref="D51"/>
+		<nd ref="191"/>
+	</neighborGroup>
+
+	<neighborGroup id="D54">
+		<nd ref="191"/>
+		<nd ref="180"/>
+		<nd ref="D55"/>
+	</neighborGroup>
+
+	<neighborGroup id="D55">
+		<nd ref="D54"/>
+		<nd ref="169"/>
+		<nd ref="181"/>
+	</neighborGroup>
+
+	<neighborGroup id="D56">
+		<nd ref="182"/>
+		<nd ref="183"/>
+		<nd ref="192"/>
+		<nd ref="D57"/>
+	</neighborGroup>
+
+	<neighborGroup id="D57">
+		<nd ref="D56"/>
+		<nd ref="183"/>
+		<nd ref="D58"/>
+		<nd ref="184"/>
+	</neighborGroup>
+
+	<neighborGroup id="D58">
+		<nd ref="D57"/>
+		<nd ref="185"/>
+		<nd ref="D59"/>
+	</neighborGroup>
+
+	<neighborGroup id="D59">
+		<nd ref="D58"/>
+		<nd ref="186"/>
+		<nd ref="193"/>
+	</neighborGroup>
+
+	<neighborGroup id="D60">
+		<nd ref="186"/>
+		<nd ref="187"/>
+		<nd ref="D61"/>
+	</neighborGroup>
+
+	<neighborGroup id="D61">
+		<nd ref="D60"/>
+		<nd ref="193"/>
+		<nd ref="D64"/>
+	</neighborGroup>
+
+	<neighborGroup id="D62">
+		<nd ref="192"/>
+		<nd ref="184"/>
+		<nd ref="D63"/>
+	</neighborGroup>
+
+	<neighborGroup id="D63">
+		<nd ref="D62"/>
+		<nd ref="193"/>
+		<nd ref="194"/>
+	</neighborGroup>
+
+	<neighborGroup id="D64">
+		<nd ref="194"/>
+		<nd ref="D61"/>
+		<nd ref="195"/>
+	</neighborGroup>
+
+    <!-- white/red nodes so far -->
+
+    <neighborGroup id="1">
+        <nd ref="A3"/>
+        <nd ref="A4"/>
+    </neighborGroup>
+
+    <neighborGroup id="2">
+        <nd ref="A5"/>
+        <nd ref="B1"/>
+    </neighborGroup>
+
+    <neighborGroup id="3">
+        <nd ref="B1"/>
+        <nd ref="B2"/>
+    </neighborGroup>
+
+    <neighborGroup id="4">
+        <nd ref="B2"/>
+        <nd ref="B15"/>
+    </neighborGroup>
+
+    <neighborGroup id="5">
+        <nd ref="B2"/>
+        <nd ref="B3"/>
+    </neighborGroup>
+
+    <neighborGroup id="6">
+        <nd ref="A2"/>
+        <nd ref="A6"/>
+    </neighborGroup>
+
+    <neighborGroup id="7">
+        <nd ref="A3"/>
+        <nd ref="A7"/>
+    </neighborGroup>
+
+    <neighborGroup id="8">
+        <nd ref="A9"/>
+        <nd ref="B17"/>
+    </neighborGroup>
+
+    <neighborGroup id="9">
+        <nd ref="A8"/>
+        <nd ref="B14"/>
+        <nd ref="B17"/>
+    </neighborGroup>
+
+    <neighborGroup id="10">
+        <nd ref="B17"/>
+        <nd ref="B18"/>
+    </neighborGroup>
+
+    <neighborGroup id="11">
+        <nd ref="B14"/>
+        <nd ref="B15"/>
+    </neighborGroup>
+
+    <neighborGroup id="12">
+        <nd ref="B15"/>
+        <nd ref="B16"/>
+    </neighborGroup>
+
+    <neighborGroup id="13">
+        <nd ref="B16"/>
+        <nd ref="B20"/>
+    </neighborGroup>
+
+    <neighborGroup id="14">
+        <nd ref="B20"/>
+        <nd ref="B24"/>
+    </neighborGroup>
+
+    <neighborGroup id="15">
+        <nd ref="B4"/>
+        <nd ref="B25"/>
+    </neighborGroup>
+
+    <neighborGroup id="16">
+        <nd ref="B5"/>
+        <nd ref="B26"/>
+    </neighborGroup>
+
+    <neighborGroup id="17">
+        <nd ref="B5"/>
+        <nd ref="B27"/>
+        <nd ref="B6"/>
+    </neighborGroup>
+
+    <neighborGroup id="18">
+        <nd ref="B6"/>
+        <nd ref="B7"/>
+        <nd ref="B28"/>
+    </neighborGroup>
+
+    <neighborGroup id="19">
+        <nd ref="B28"/>
+        <nd ref="B8"/>
+    </neighborGroup>
+
+    <neighborGroup id="20">
+        <nd ref="B8"/>
+        <nd ref="B9"/>
+    </neighborGroup>
+
+    <neighborGroup id="21">
+        <nd ref="B11"/>
+        <nd ref="B12"/>
+    </neighborGroup>
+
+    <neighborGroup id="22">
+        <nd ref="B41"/>
+        <nd ref="B30"/>
+    </neighborGroup>
+
+    <neighborGroup id="23">
+        <nd ref="B13"/>
+        <nd ref="B30"/>
+    </neighborGroup>
+
+    <neighborGroup id="24">
+        <nd ref="A1"/>
+        <nd ref="A6"/>
+        <nd ref="A10"/>
+    </neighborGroup>
+
+    <neighborGroup id="25">
+        <nd ref="A6"/>
+        <nd ref="A10"/>
+        <nd ref="A11"/>
+    </neighborGroup>
+
+    <neighborGroup id="26">
+        <nd ref="A7"/>
+        <nd ref="A4"/>
+        <nd ref="A9"/>
+        <nd ref="28"/>
+        <nd ref="A12"/>
+    </neighborGroup>
+
+    <neighborGroup id="27">
+        <nd ref="A12"/>
+        <nd ref="A13"/>
+    </neighborGroup>
+
+    <neighborGroup id="28">
+        <nd ref="26"/>
+        <nd ref="A9"/>
+        <nd ref="A13"/>
+    </neighborGroup>
+
+	<neighborGroup id="29">
+		<nd ref="B60"/>
+		<nd ref="Y3"/>
+	</neighborGroup>
+
+	<neighborGroup id="30">
+		<nd ref="B18"/>
+		<nd ref="B19"/>
+		<nd ref="Y3"/>
+	</neighborGroup>
+
+	<neighborGroup id="31">
+		<nd ref="B22"/>
+		<nd ref="B23"/>
+		<nd ref="B34"/>
+	</neighborGroup>
+
+	<neighborGroup id="32">
+		<nd ref="B20"/>
+		<nd ref="B23"/>
+	</neighborGroup>
+
+	<neighborGroup id="33">
+		<nd ref="B24"/>
+		<nd ref="B25"/>
+	</neighborGroup>
+
+	<neighborGroup id="34">
+		<nd ref="B25"/>
+		<nd ref="Y4"/>
+	</neighborGroup>
+
+	<neighborGroup id="35">
+		<nd ref="B26"/>
+		<nd ref="B37"/>
+	</neighborGroup>
+
+	<neighborGroup id="36">
+		<nd ref="B26"/>
+		<nd ref="B27"/>
+	</neighborGroup>
+
+	<neighborGroup id="37">
+		<nd ref="B37"/>
+		<nd ref="B38"/>
+	</neighborGroup>
+
+	<neighborGroup id="38">
+		<nd ref="B27"/>
+		<nd ref="B38"/>
+	</neighborGroup>
+
+	<neighborGroup id="39">
+		<nd ref="B38"/>
+		<nd ref="B28"/>
+		<nd ref="B39"/>
+	</neighborGroup>
+
+	<neighborGroup id="40">
+		<nd ref="B9"/>
+		<nd ref="Y5"/>
+	</neighborGroup>
+
+	<neighborGroup id="41">
+		<nd ref="B10"/>
+		<nd ref="B40"/>
+	</neighborGroup>
+
+	<neighborGroup id="42">
+		<nd ref="B40"/>
+		<nd ref="B29"/>
+		<nd ref="B41"/>
+	</neighborGroup>
+
+	<neighborGroup id="43">
+		<nd ref="A14"/>
+		<nd ref="A18"/>
+	</neighborGroup>
+
+	<neighborGroup id="44">
+		<nd ref="A15"/>
+		<nd ref="A11"/>
+		<nd ref="A12"/>
+		<nd ref="A16"/>
+	</neighborGroup>
+
+	<neighborGroup id="45">
+		<nd ref="A20"/>
+		<nd ref="47"/>
+		<nd ref="A22"/>
+	</neighborGroup>
+
+	<neighborGroup id="46">
+		<nd ref="A16"/>
+		<nd ref="A17"/>
+		<nd ref="A20"/>
+	</neighborGroup>
+
+	<neighborGroup id="47">
+		<nd ref="A20"/>
+		<nd ref="45"/>
+		<nd ref="A22"/>
+		<nd ref="A23"/>
+	</neighborGroup>
+
+	<neighborGroup id="48">
+		<nd ref="A17"/>
+		<nd ref="B31"/>
+		<nd ref="A24"/>
+	</neighborGroup>
+
+	<neighborGroup id="49">
+		<nd ref="B31"/>
+		<nd ref="B21"/>
+	</neighborGroup>
+
+	<neighborGroup id="50">
+		<nd ref="Y3"/>
+		<nd ref="B21"/>
+		<nd ref="B22"/>
+	</neighborGroup>
+
+	<neighborGroup id="51">
+		<nd ref="B35"/>
+		<nd ref="B44"/>
+	</neighborGroup>
+
+	<neighborGroup id="52">
+		<nd ref="B35"/>
+		<nd ref="B34"/>
+		<nd ref="B36"/>
+		<nd ref="B45"/>
+	</neighborGroup>
+
+	<neighborGroup id="53">
+		<nd ref="B45"/>
+		<nd ref="B46"/>
+		<nd ref="B47"/>
+	</neighborGroup>
+
+	<neighborGroup id="54">
+		<nd ref="B24"/>
+		<nd ref="B36"/>
+		<nd ref="B46"/>
+	</neighborGroup>
+
+	<neighborGroup id="55">
+		<nd ref="Y4"/>
+		<nd ref="B57"/>
+	</neighborGroup>
+
+	<neighborGroup id="56">
+		<nd ref="B58"/>
+		<nd ref="B39"/>
+		<nd ref="B59"/>
+	</neighborGroup>
+
+	<neighborGroup id="57">
+		<nd ref="B59"/>
+		<nd ref="Y5"/>
+	</neighborGroup>
+
+	<neighborGroup id="58">
+		<nd ref="C1"/>
+		<nd ref="B40"/>
+		<nd ref="C2"/>
+	</neighborGroup>
+
+	<neighborGroup id="59">
+		<nd ref="A19"/>
+		<nd ref="A25"/>
+	</neighborGroup>
+
+	<neighborGroup id="60">
+		<nd ref="A25"/>
+		<nd ref="A26"/>
+	</neighborGroup>
+
+	<neighborGroup id="61">
+		<nd ref="A22"/>
+		<nd ref="A23"/>
+	</neighborGroup>
+
+	<neighborGroup id="62">
+		<nd ref="A24"/>
+		<nd ref="A29"/>
+	</neighborGroup>
+
+	<neighborGroup id="63">
+		<nd ref="B32"/>
+		<nd ref="B42"/>
+	</neighborGroup>
+
+	<neighborGroup id="64">
+		<nd ref="B32"/>
+		<nd ref="B33"/>
+	</neighborGroup>
+
+	<neighborGroup id="65">
+		<nd ref="B42"/>
+		<nd ref="B48"/>
+		<nd ref="B43"/>
+	</neighborGroup>
+
+	<neighborGroup id="66">
+		<nd ref="B33"/>
+		<nd ref="B43"/>
+	</neighborGroup>
+
+	<neighborGroup id="67">
+		<nd ref="B44"/>
+		<nd ref="B45"/>
+	</neighborGroup>
+
+	<neighborGroup id="68">
+		<nd ref="B47"/>
+		<nd ref="B56"/>
+	</neighborGroup>
+
+	<neighborGroup id="69">
+		<nd ref="C4"/>
+		<nd ref="C5"/>
+		<nd ref="C14"/>
+	</neighborGroup>
+
+	<neighborGroup id="70">
+		<nd ref="C5"/>
+		<nd ref="C6"/>
+	</neighborGroup>
+
+	<neighborGroup id="71">
+		<nd ref="C6"/>
+		<nd ref="C7"/>
+		<nd ref="C16"/>
+	</neighborGroup>
+
+	<neighborGroup id="72">
+		<nd ref="C7"/>
+		<nd ref="C8"/>
+	</neighborGroup>
+
+	<neighborGroup id="73">
+		<nd ref="C1"/>
+		<nd ref="C2"/>
+		<nd ref="C8"/>
+	</neighborGroup>
+
+	<neighborGroup id="74">
+		<nd ref="C8"/>
+		<nd ref="C9"/>
+	</neighborGroup>
+
+	<neighborGroup id="75">
+		<nd ref="C9"/>
+		<nd ref="C12"/>
+	</neighborGroup>
+
+	<neighborGroup id="76">
+		<nd ref="C9"/>
+		<nd ref="C10"/>
+	</neighborGroup>
+
+	<neighborGroup id="77">
+		<nd ref="C3"/>
+		<nd ref="C10"/>
+	</neighborGroup>
+
+	<neighborGroup id="78">
+		<nd ref="A30"/>
+		<nd ref="A28"/>
+		<nd ref="A31"/>
+	</neighborGroup>
+
+	<neighborGroup id="79">
+		<nd ref="A28"/>
+		<nd ref="A21"/>
+		<nd ref="A31"/>
+	</neighborGroup>
+
+	<neighborGroup id="80">
+		<nd ref="A31"/>
+		<nd ref="A34"/>
+		<nd ref="A29"/>
+	</neighborGroup>
+
+	<neighborGroup id="81">
+		<nd ref="A34"/>
+		<nd ref="A35"/>
+	</neighborGroup>
+
+	<neighborGroup id="82">
+		<nd ref="A29"/>
+		<nd ref="B42"/>
+	</neighborGroup>
+
+	<neighborGroup id="83">
+		<nd ref="B48"/>
+		<nd ref="B50"/>
+	</neighborGroup>
+
+	<neighborGroup id="84">
+		<nd ref="B49"/>
+		<nd ref="B51"/>
+	</neighborGroup>
+
+	<neighborGroup id="85">
+		<nd ref="B55"/>
+		<nd ref="C22"/>
+	</neighborGroup>
+
+	<neighborGroup id="86">
+		<nd ref="B55"/>
+		<nd ref="B56"/>
+	</neighborGroup>
+
+	<neighborGroup id="87">
+		<nd ref="C6"/>
+		<nd ref="C15"/>
+	</neighborGroup>
+
+	<neighborGroup id="88">
+		<nd ref="C7"/>
+		<nd ref="C17"/>
+	</neighborGroup>
+
+	<neighborGroup id="89">
+		<nd ref="C11"/>
+		<nd ref="C18"/>
+	</neighborGroup>
+
+	<neighborGroup id="90">
+		<nd ref="C11"/>
+		<nd ref="C12"/>
+	</neighborGroup>
+
+	<neighborGroup id="91">
+		<nd ref="C18"/>
+		<nd ref="C19"/>
+	</neighborGroup>
+
+	<neighborGroup id="92">
+		<nd ref="C19"/>
+		<nd ref="C26"/>
+	</neighborGroup>
+
+	<neighborGroup id="93">
+		<nd ref="C19"/>
+		<nd ref="C20"/>
+	</neighborGroup>
+
+	<neighborGroup id="94">
+		<nd ref="C13"/>
+		<nd ref="C20"/>
+	</neighborGroup>
+
+	<neighborGroup id="95">
+		<nd ref="A27"/>
+		<nd ref="A32"/>
+	</neighborGroup>
+
+	<neighborGroup id="96">
+		<nd ref="A30"/>
+		<nd ref="A33"/>
+		<nd ref="A38"/>
+	</neighborGroup>
+
+	<neighborGroup id="97">
+		<nd ref="A31"/>
+		<nd ref="A33"/>
+		<nd ref="A40"/>
+	</neighborGroup>
+
+	<neighborGroup id="98">
+		<nd ref="A36"/>
+		<nd ref="A41"/>
+	</neighborGroup>
+
+	<neighborGroup id="99">
+		<nd ref="B52"/>
+		<nd ref="B53"/>
+	</neighborGroup>
+
+	<neighborGroup id="100">
+		<nd ref="B54"/>
+		<nd ref="B52"/>
+		<nd ref="C28"/>
+	</neighborGroup>
+
+	<neighborGroup id="101">
+		<nd ref="C22"/>
+		<nd ref="Y6"/>
+	</neighborGroup>
+
+	<neighborGroup id="102">
+		<nd ref="C4"/>
+		<nd ref="C30"/>
+	</neighborGroup>
+
+	<neighborGroup id="103">
+		<nd ref="C5"/>
+		<nd ref="C31"/>
+	</neighborGroup>
+
+	<neighborGroup id="104">
+		<nd ref="C16"/>
+		<nd ref="C23"/>
+		<nd ref="C24"/>
+		<nd ref="C32"/>
+	</neighborGroup>
+
+	<neighborGroup id="105">
+		<nd ref="C24"/>
+		<nd ref="C25"/>
+	</neighborGroup>
+
+	<neighborGroup id="106">
+		<nd ref="C25"/>
+		<nd ref="C33"/>
+	</neighborGroup>
+
+	<neighborGroup id="107">
+		<nd ref="C25"/>
+		<nd ref="C26"/>
+	</neighborGroup>
+
+	<neighborGroup id="108">
+		<nd ref="C33"/>
+		<nd ref="C34"/>
+	</neighborGroup>
+
+	<neighborGroup id="109">
+		<nd ref="C26"/>
+		<nd ref="C27"/>
+	</neighborGroup>
+
+	<neighborGroup id="110">
+		<nd ref="C34"/>
+		<nd ref="C35"/>
+	</neighborGroup>
+
+	<neighborGroup id="111">
+		<nd ref="C35"/>
+		<nd ref="C38"/>
+	</neighborGroup>
+
+	<neighborGroup id="112">
+		<nd ref="A37"/>
+		<nd ref="A42"/>
+	</neighborGroup>
+
+	<neighborGroup id="113">
+		<nd ref="A37"/>
+		<nd ref="A43"/>
+	</neighborGroup>
+
+	<neighborGroup id="114">
+		<nd ref="A43"/>
+		<nd ref="A38"/>
+		<nd ref="A44"/>
+	</neighborGroup>
+
+	<neighborGroup id="115">
+		<nd ref="A44"/>
+		<nd ref="A39"/>
+	</neighborGroup>
+
+	<neighborGroup id="116">
+		<nd ref="A39"/>
+		<nd ref="A45"/>
+	</neighborGroup>
+
+	<neighborGroup id="117">
+		<nd ref="A40"/>
+		<nd ref="A46"/>
+	</neighborGroup>
+
+	<neighborGroup id="118">
+		<nd ref="A35"/>
+		<nd ref="A50"/>
+		<nd ref="Y1"/>
+	</neighborGroup>
+
+	<neighborGroup id="119">
+		<nd ref="Y1"/>
+		<nd ref="D2"/>
+	</neighborGroup>
+
+	<neighborGroup id="120">
+		<nd ref="Y1"/>
+		<nd ref="B52"/>
+	</neighborGroup>
+
+	<neighborGroup id="121">
+		<nd ref="C39"/>
+		<nd ref="D2"/>
+		<nd ref="D3"/>
+	</neighborGroup>
+
+	<neighborGroup id="122">
+		<nd ref="C28"/>
+		<nd ref="C40"/>
+	</neighborGroup>
+
+	<neighborGroup id="123">
+		<nd ref="C40"/>
+		<nd ref="C41"/>
+	</neighborGroup>
+
+	<neighborGroup id="124">
+		<nd ref="C21"/>
+		<nd ref="C29"/>
+	</neighborGroup>
+
+	<neighborGroup id="125">
+		<nd ref="C41"/>
+		<nd ref="C42"/>
+	</neighborGroup>
+
+	<neighborGroup id="126">
+		<nd ref="C22"/>
+		<nd ref="Y6"/>
+		<nd ref="C42"/>
+	</neighborGroup>
+
+	<neighborGroup id="127">
+		<nd ref="C30"/>
+		<nd ref="C14"/>
+		<nd ref="C31"/>
+	</neighborGroup>
+
+	<neighborGroup id="128">
+		<nd ref="C31"/>
+		<nd ref="C44"/>
+	</neighborGroup>
+
+	<neighborGroup id="129">
+		<nd ref="C23"/>
+		<nd ref="C45"/>
+	</neighborGroup>
+
+	<neighborGroup id="130">
+		<nd ref="C24"/>
+		<nd ref="Y7"/>
+	</neighborGroup>
+
+	<neighborGroup id="131">
+		<nd ref="C36"/>
+		<nd ref="C47"/>
+	</neighborGroup>
+
+	<neighborGroup id="132">
+		<nd ref="C34"/>
+		<nd ref="C37"/>
+	</neighborGroup>
+
+	<neighborGroup id="133">
+		<nd ref="C37"/>
+		<nd ref="C48"/>
+	</neighborGroup>
+
+	<neighborGroup id="134">
+		<nd ref="C37"/>
+		<nd ref="C38"/>
+	</neighborGroup>
+
+	<neighborGroup id="135">
+		<nd ref="A42"/>
+		<nd ref="A47"/>
+	</neighborGroup>
+
+	<neighborGroup id="136">
+		<nd ref="A47"/>
+		<nd ref="A52"/>
+	</neighborGroup>
+
+	<neighborGroup id="137">
+		<nd ref="A44"/>
+		<nd ref="A48"/>
+	</neighborGroup>
+
+	<neighborGroup id="138">
+		<nd ref="A48"/>
+		<nd ref="A56"/>
+	</neighborGroup>
+
+	<neighborGroup id="139">
+		<nd ref="Y2"/>
+		<nd ref="A49"/>
+	</neighborGroup>
+
+	<neighborGroup id="140">
+		<nd ref="D4"/>
+		<nd ref="D14"/>
+	</neighborGroup>
+
+	<neighborGroup id="141">
+		<nd ref="D6"/>
+		<nd ref="D7"/>
+	</neighborGroup>
+
+	<neighborGroup id="142">
+		<nd ref="D8"/>
+		<nd ref="D9"/>
+	</neighborGroup>
+
+	<neighborGroup id="143">
+		<nd ref="C30"/>
+		<nd ref="C43"/>
+		<nd ref="C44"/>
+		<nd ref="D9"/>
+	</neighborGroup>
+
+	<neighborGroup id="144">
+		<nd ref="C44"/>
+		<nd ref="C45"/>
+	</neighborGroup>
+
+	<neighborGroup id="145">
+		<nd ref="C32"/>
+		<nd ref="C45"/>
+		<nd ref="Y7"/>
+		<nd ref="D17"/>
+	</neighborGroup>
+
+	<neighborGroup id="146">
+		<nd ref="C47"/>
+		<nd ref="C48"/>
+	</neighborGroup>
+
+	<neighborGroup id="147">
+		<nd ref="C38"/>
+		<nd ref="C48"/>
+	</neighborGroup>
+
+	<neighborGroup id="148">
+		<nd ref="A47"/>
+		<nd ref="A51"/>
+		<nd ref="A53"/>
+	</neighborGroup>
+
+	<neighborGroup id="149">
+		<nd ref="A52"/>
+		<nd ref="A53"/>
+	</neighborGroup>
+
+	<neighborGroup id="150">
+		<nd ref="A49"/>
+		<nd ref="D11"/>
+	</neighborGroup>
+
+	<neighborGroup id="151">
+		<nd ref="D1"/>
+		<nd ref="D5"/>
+		<nd ref="D12"/>
+	</neighborGroup>
+
+	<neighborGroup id="152">
+		<nd ref="D13"/>
+		<nd ref="D20"/>
+	</neighborGroup>
+
+	<neighborGroup id="153">
+		<nd ref="D5"/>
+		<nd ref="D13"/>
+	</neighborGroup>
+
+	<neighborGroup id="154">
+		<nd ref="D14"/>
+		<nd ref="D31"/>
+	</neighborGroup>
+
+	<neighborGroup id="155">
+		<nd ref="D7"/>
+		<nd ref="D46"/>
+	</neighborGroup>
+
+	<neighborGroup id="156">
+		<nd ref="D8"/>
+		<nd ref="D22"/>
+	</neighborGroup>
+
+	<neighborGroup id="157">
+		<nd ref="D22"/>
+		<nd ref="D23"/>
+	</neighborGroup>
+
+	<neighborGroup id="158">
+		<nd ref="D15"/>
+		<nd ref="D23"/>
+	</neighborGroup>
+
+	<neighborGroup id="159">
+		<nd ref="D16"/>
+		<nd ref="D24"/>
+		<nd ref="D25"/>
+		<nd ref="D36"/>
+	</neighborGroup>
+
+	<neighborGroup id="160">
+		<nd ref="D17"/>
+		<nd ref="D25"/>
+		<nd ref="D37"/>
+	</neighborGroup>
+
+	<neighborGroup id="161">
+		<nd ref="D10"/>
+		<nd ref="D18"/>
+		<nd ref="D38"/>
+	</neighborGroup>
+
+	<neighborGroup id="162">
+		<nd ref="A51"/>
+		<nd ref="A54"/>
+	</neighborGroup>
+
+	<neighborGroup id="163">
+		<nd ref="A54"/>
+		<nd ref="A55"/>
+	</neighborGroup>
+
+	<neighborGroup id="164">
+		<nd ref="A56"/>
+		<nd ref="Y2"/>
+		<nd ref="D26"/>
+	</neighborGroup>
+
+	<neighborGroup id="165">
+		<nd ref="D21"/>
+		<nd ref="D28"/>
+	</neighborGroup>
+
+	<neighborGroup id="166">
+		<nd ref="D19"/>
+		<nd ref="D20"/>
+	</neighborGroup>
+
+	<neighborGroup id="167">
+		<nd ref="D21"/>
+		<nd ref="D44"/>
+	</neighborGroup>
+
+	<neighborGroup id="168">
+		<nd ref="D30"/>
+		<nd ref="D31"/>
+	</neighborGroup>
+
+	<neighborGroup id="169">
+		<nd ref="D31"/>
+		<nd ref="D55"/>
+	</neighborGroup>
+
+	<neighborGroup id="170">
+		<nd ref="D6"/>
+		<nd ref="D31"/>
+		<nd ref="D45"/>
+	</neighborGroup>
+
+	<neighborGroup id="171">
+		<nd ref="D33"/>
+		<nd ref="D34"/>
+	</neighborGroup>
+
+	<neighborGroup id="172">
+		<nd ref="D24"/>
+		<nd ref="D35"/>
+	</neighborGroup>
+
+	<neighborGroup id="173">
+		<nd ref="D25"/>
+		<nd ref="D50"/>
+	</neighborGroup>
+
+	<neighborGroup id="174">
+		<nd ref="A55"/>
+		<nd ref="D26"/>
+	</neighborGroup>
+
+	<neighborGroup id="175">
+		<nd ref="D27"/>
+		<nd ref="D40"/>
+	</neighborGroup>
+
+	<neighborGroup id="176">
+		<nd ref="D19"/>
+		<nd ref="D42"/>
+	</neighborGroup>
+
+	<neighborGroup id="177">
+		<nd ref="D28"/>
+		<nd ref="D29"/>
+	</neighborGroup>
+
+	<neighborGroup id="178">
+		<nd ref="D29"/>
+		<nd ref="D43"/>
+		<nd ref="D44"/>
+		<nd ref="D51"/>
+	</neighborGroup>
+
+	<neighborGroup id="179">
+		<nd ref="D44"/>
+		<nd ref="D51"/>
+	</neighborGroup>
+
+	<neighborGroup id="180">
+		<nd ref="D30"/>
+		<nd ref="D54"/>
+	</neighborGroup>
+
+	<neighborGroup id="181">
+		<nd ref="D45"/>
+		<nd ref="D55"/>
+	</neighborGroup>
+
+	<neighborGroup id="182">
+		<nd ref="D46"/>
+		<nd ref="D56"/>
+	</neighborGroup>
+
+	<neighborGroup id="183">
+		<nd ref="D33"/>
+		<nd ref="D47"/>
+		<nd ref="D56"/>
+		<nd ref="D57"/>
+	</neighborGroup>
+
+	<neighborGroup id="184">
+		<nd ref="D57"/>
+		<nd ref="D62"/>
+	</neighborGroup>
+
+	<neighborGroup id="185">
+		<nd ref="D34"/>
+		<nd ref="D47"/>
+		<nd ref="D58"/>
+		<nd ref="D35"/>
+		<nd ref="D49"/>
+	</neighborGroup>
+
+	<neighborGroup id="186">
+		<nd ref="D59"/>
+		<nd ref="D60"/>
+	</neighborGroup>
+
+	<neighborGroup id="187">
+		<nd ref="D49"/>
+		<nd ref="D60"/>
+	</neighborGroup>
+
+	<neighborGroup id="188">
+		<nd ref="D39"/>
+		<nd ref="D41"/>
+	</neighborGroup>
+
+
+	<neighborGroup id="189">
+		<nd ref="D43"/>
+		<nd ref="D51"/>
+	</neighborGroup>
+
+	<neighborGroup id="190">
+		<nd ref="D52"/>
+		<nd ref="D53"/>
+	</neighborGroup>
+
+	<neighborGroup id="191">
+		<nd ref="D53"/>
+		<nd ref="D54"/>
+	</neighborGroup>
+
+	<neighborGroup id="192">
+		<nd ref="D56"/>
+		<nd ref="D62"/>
+	</neighborGroup>
+
+	<neighborGroup id="193">
+		<nd ref="D59"/>
+		<nd ref="D61"/>
+		<nd ref="D63"/>
+	</neighborGroup>
+
+	<neighborGroup id="194">
+		<nd ref="D63"/>
+		<nd ref="D64"/>
+	</neighborGroup>
+
+	<neighborGroup id="195">
+		<nd ref="D50"/>
+		<nd ref="D64"/>
+	</neighborGroup>
+
+	<neighborGroup id="Y1">
+		<nd ref="A41"/>
+		<nd ref="118"/>
+		<nd ref="120"/>
+		<nd ref="C39"/>
+		<nd ref="119"/>
+	</neighborGroup>
+
+	<neighborGroup id="Y2">
+		<nd ref="A56"/>
+		<nd ref="139"/>
+	</neighborGroup>
+
+	<neighborGroup id="Y3">
+		<nd ref="29"/>
+		<nd ref="30"/>
+		<nd ref="B21"/>
+		<nd ref="50"/>
+	</neighborGroup>
+
+	<neighborGroup id="Y4">
+		<nd ref="B46"/>
+		<nd ref="34"/>
+		<nd ref="B37"/>
+		<nd ref="55"/>
+	</neighborGroup>
+
+	<neighborGroup id="Y5">
+		<nd ref="40"/>
+		<nd ref="57"/>
+		<nd ref="B40"/>
+		<nd ref="C1"/>
+	</neighborGroup>
+
+	<neighborGroup id="Y6">
+		<nd ref="101"/>
+		<nd ref="126"/>
+		<nd ref="C30"/>
+		<nd ref="C43"/>
+	</neighborGroup>
+
+	<neighborGroup id="Y7">
+		<nd ref="130"/>
+		<nd ref="145"/>
+		<nd ref="C46"/>
+		<nd ref="D10"/>
+	</neighborGroup>
+
+	<alleyway id="1">
+		<nd ref="7"/>
+		<nd ref="26"/>
+	</alleyway>
+
+	<alleyway id="2">
+		<nd ref="9"/>
+	</alleyway>
+
+	<alleyway id="3">
+		<nd ref="4"/>
+		<nd ref="11"/>
+	</alleyway>
+
+	<alleyway id="4">
+		<nd ref="3"/>
+		<nd ref="11"/>
+		<nd ref="5"/>
+		<nd ref="12"/>
+	</alleyway>
+
+	<alleyway id="5">
+		<nd ref="4"/>
+		<nd ref="12"/>
+	</alleyway>
+
+	<alleyway id="6">
+		<nd ref="7"/>
+		<nd ref="24"/>
+	</alleyway>
+
+	<alleyway id="7">
+		<nd ref="1"/>
+		<nd ref="6"/>
+		<nd ref="26"/>
+	</alleyway>
+
+	<alleyway id="8">
+		<nd ref="9"/>
+		<nd ref="10"/>
+		<nd ref="28"/>
+		<nd ref="29"/>
+		<nd ref="30"/>
+	</alleyway>
+
+	<alleyway id="9">
+		<nd ref="8"/>
+		<nd ref="10"/>
+		<nd ref="11"/>
+		<nd ref="2"/>
+	</alleyway>
+
+	<alleyway id="10">
+		<nd ref="8"/>
+		<nd ref="9"/>
+		<nd ref="11"/>
+		<nd ref="28"/>
+		<nd ref="29"/>
+		<nd ref="30"/>
+	</alleyway>
+
+	<alleyway id="11">
+		<nd ref="3"/>
+		<nd ref="4"/>
+		<nd ref="9"/>
+		<nd ref="10"/>
+	</alleyway>
+
+	<alleyway id="12">
+		<nd ref="4"/>
+		<nd ref="5"/>
+		<nd ref="13"/>
+		<nd ref="30"/>
+	</alleyway>
+
+	<alleyway id="13">
+		<nd ref="12"/>
+		<nd ref="30"/>
+		<nd ref="14"/>
+		<nd ref="15"/>
+		<nd ref="33"/>
+	</alleyway>
+
+	<alleyway id="14">
+		<nd ref="13"/>
+		<nd ref="15"/>
+		<nd ref="33"/>
+		<nd ref="32"/>
+	</alleyway>
+
+	<alleyway id="15">
+		<nd ref="13"/>
+		<nd ref="14"/>
+		<nd ref="33"/>
+		<nd ref="16"/>
+	</alleyway>
+
+	<alleyway id="16">
+		<nd ref="15"/>
+		<nd ref="17"/>
+		<nd ref="36"/>
+	</alleyway>
+
+	<alleyway id="17">
+		<nd ref="16"/>
+		<nd ref="36"/>
+	</alleyway>
+
+	<alleyway id="18">
+		<nd ref="38"/>
+		<nd ref="39"/>
+		<nd ref="19"/>
+	</alleyway>
+
+	<alleyway id="19">
+		<nd ref="18"/>
+		<nd ref="39"/>
+		<nd ref="20"/>
+		<nd ref="40"/>
+		<nd ref="56"/>
+		<nd ref="57"/>
+	</alleyway>
+
+	<alleyway id="20">
+		<nd ref="19"/>
+		<nd ref="39"/>
+		<nd ref="40"/>
+		<nd ref="56"/>
+		<nd ref="57"/>
+	</alleyway>
+
+	<alleyway id="21">
+		<nd ref="22"/>
+		<nd ref="23"/>
+		<nd ref="42"/>
+	</alleyway>
+
+	<alleyway id="22">
+		<nd ref="21"/>
+		<nd ref="23"/>
+		<nd ref="42"/>
+		<nd ref="58"/>
+		<nd ref="76"/>
+		<nd ref="77"/>
+	</alleyway>
+
+	<alleyway id="23">
+		<nd ref="21"/>
+		<nd ref="22"/>
+		<nd ref="42"/>
+	</alleyway>
+
+	<alleyway id="24">
+		<nd ref="6"/>
+		<nd ref="25"/>
+	</alleyway>
+
+	<alleyway id="25">
+		<nd ref="24"/>
+		<nd ref="44"/>
+	</alleyway>
+
+	<alleyway id="26">
+		<nd ref="1"/>
+		<nd ref="7"/>
+		<nd ref="44"/>
+		<nd ref="28"/>
+	</alleyway>
+
+	<alleyway id="27">
+		<nd ref="26"/>
+		<nd ref="28"/>
+		<nd ref="46"/>
+	</alleyway>
+
+	<alleyway id="28">
+		<nd ref="26"/>
+		<nd ref="27"/>
+		<nd ref="8"/>
+		<nd ref="10"/>
+		<nd ref="29"/>
+		<nd ref="30"/>
+	</alleyway>
+
+	<alleyway id="29">
+		<nd ref="8"/>
+		<nd ref="10"/>
+		<nd ref="28"/>
+		<nd ref="30"/>
+		<nd ref="48"/>
+		<nd ref="49"/>
+	</alleyway>
+
+	<alleyway id="30">
+		<nd ref="8"/>
+		<nd ref="10"/>
+		<nd ref="28"/>
+		<nd ref="29"/>
+		<nd ref="12"/>
+		<nd ref="13"/>
+		<nd ref="31"/>
+		<nd ref="32"/>
+		<nd ref="50"/>
+	</alleyway>
+
+	<alleyway id="31">
+		<nd ref="30"/>
+		<nd ref="32"/>
+		<nd ref="50"/>
+		<nd ref="52"/>
+	</alleyway>
+
+	<alleyway id="32">
+		<nd ref="30"/>
+		<nd ref="31"/>
+		<nd ref="50"/>
+		<nd ref="14"/>
+	</alleyway>
+
+	<alleyway id="33">
+		<nd ref="13"/>
+		<nd ref="14"/>
+		<nd ref="15"/>
+		<nd ref="34"/>
+		<nd ref="54"/>
+	</alleyway>
+
+	<alleyway id="34">
+		<nd ref="33"/>
+		<nd ref="54"/>
+		<nd ref="35"/>
+	</alleyway>
+
+	<alleyway id="35">
+		<nd ref="34"/>
+		<nd ref="36"/>
+		<nd ref="38"/>
+		<nd ref="37"/>
+	</alleyway>
+
+	<alleyway id="36">
+		<nd ref="16"/>
+		<nd ref="17"/>
+		<nd ref="35"/>
+		<nd ref="37"/>
+		<nd ref="38"/>
+	</alleyway>
+
+	<alleyway id="37">
+		<nd ref="35"/>
+		<nd ref="36"/>
+		<nd ref="38"/>
+		<nd ref="39"/>
+		<nd ref="55"/>
+		<nd ref="56"/>
+	</alleyway>
+
+	<alleyway id="38">
+		<nd ref="35"/>
+		<nd ref="36"/>
+		<nd ref="37"/>
+		<nd ref="18"/>
+		<nd ref="39"/>
+	</alleyway>
+
+	<alleyway id="39">
+		<nd ref="18"/>
+		<nd ref="38"/>
+		<nd ref="37"/>
+		<nd ref="55"/>
+		<nd ref="56"/>
+		<nd ref="19"/>
+		<nd ref="20"/>
+		<nd ref="40"/>
+		<nd ref="56"/>
+		<nd ref="57"/>
+	</alleyway>
+
+	<alleyway id="40">
+		<nd ref="19"/>
+		<nd ref="20"/>
+		<nd ref="39"/>
+		<nd ref="56"/>
+		<nd ref="57"/>
+		<nd ref="41"/>
+	</alleyway>
+
+	<alleyway id="41">
+		<nd ref="40"/>
+		<nd ref="42"/>
+	</alleyway>
+
+	<alleyway id="42">
+		<nd ref="41"/>
+		<nd ref="21"/>
+		<nd ref="22"/>
+		<nd ref="23"/>
+		<nd ref="58"/>
+		<nd ref="76"/>
+		<nd ref="77"/>
+	</alleyway>
+
+	<alleyway id="44">
+		<nd ref="25"/>
+		<nd ref="59"/>
+		<nd ref="60"/>
+		<nd ref="79"/>
+		<nd ref="26"/>
+	</alleyway>
+
+	<alleyway id="45">
+		<nd ref="46"/>
+		<nd ref="47"/>
+		<nd ref="48"/>
+		<nd ref="61"/>
+		<nd ref="62"/>
+		<nd ref="79"/>
+		<nd ref="80"/>
+	</alleyway>
+
+	<alleyway id="46">
+		<nd ref="27"/>
+		<nd ref="45"/>
+	</alleyway>
+
+	<alleyway id="47">
+		<nd ref="45"/>
+		<nd ref="48"/>
+		<nd ref="61"/>
+		<nd ref="62"/>
+		<nd ref="79"/>
+		<nd ref="80"/>
+	</alleyway>
+
+	<alleyway id="48">
+		<nd ref="47"/>
+		<nd ref="45"/>
+		<nd ref="61"/>
+		<nd ref="62"/>
+		<nd ref="79"/>
+		<nd ref="80"/>
+		<nd ref="29"/>
+		<nd ref="49"/>
+	</alleyway>
+
+	<alleyway id="49">
+		<nd ref="29"/>
+		<nd ref="48"/>
+		<nd ref="64"/>
+	</alleyway>
+
+	<alleyway id="50">
+		<nd ref="30"/>
+		<nd ref="31"/>
+		<nd ref="32"/>
+		<nd ref="51"/>
+		<nd ref="66"/>
+	</alleyway>
+
+	<alleyway id="51">
+		<nd ref="50"/>
+		<nd ref="66"/>
+		<nd ref="67"/>
+		<nd ref="52"/>
+	</alleyway>
+
+	<alleyway id="52">
+		<nd ref="31"/>
+		<nd ref="51"/>
+		<nd ref="67"/>
+		<nd ref="53"/>
+		<nd ref="54"/>
+	</alleyway>
+
+	<alleyway id="53">
+		<nd ref="52"/>
+		<nd ref="54"/>
+		<nd ref="67"/>
+		<nd ref="84"/>
+		<nd ref="86"/>
+		<nd ref="68"/>
+	</alleyway>
+
+	<alleyway id="54">
+		<nd ref="52"/>
+		<nd ref="53"/>
+		<nd ref="33"/>
+		<nd ref="34"/>
+	</alleyway>
+
+	<alleyway id="55">
+		<nd ref="68"/>
+		<nd ref="37"/>
+		<nd ref="39"/>
+		<nd ref="56"/>
+	</alleyway>
+
+	<alleyway id="56">
+		<nd ref="55"/>
+		<nd ref="37"/>
+		<nd ref="39"/>
+		<nd ref="19"/>
+		<nd ref="20"/>
+		<nd ref="40"/>
+		<nd ref="57"/>
+		<nd ref="69"/>
+		<nd ref="70"/>
+		<nd ref="71"/>
+		<nd ref="72"/>
+		<nd ref="73"/>
+	</alleyway>
+
+	<alleyway id="57">
+		<nd ref="56"/>
+		<nd ref="39"/>
+		<nd ref="19"/>
+		<nd ref="20"/>
+		<nd ref="40"/>
+		<nd ref="69"/>
+		<nd ref="70"/>
+		<nd ref="71"/>
+		<nd ref="72"/>
+		<nd ref="73"/>
+	</alleyway>
+
+	<alleyway id="58">
+		<nd ref="73"/>
+		<nd ref="42"/>
+		<nd ref="22"/>
+		<nd ref="77"/>
+		<nd ref="76"/>
+	</alleyway>
+
+	<alleyway id="59">
+		<nd ref="44"/>
+		<nd ref="79"/>
+		<nd ref="60"/>
+	</alleyway>
+
+	<alleyway id="60">
+		<nd ref="59"/>
+		<nd ref="44"/>
+		<nd ref="79"/>
+		<nd ref="78"/>
+	</alleyway>
+
+	<alleyway id="61">
+		<nd ref="45"/>
+		<nd ref="79"/>
+		<nd ref="80"/>
+		<nd ref="62"/>
+		<nd ref="48"/>
+		<nd ref="47"/>
+	</alleyway>
+
+	<alleyway id="62">
+		<nd ref="45"/>
+		<nd ref="61"/>
+		<nd ref="47"/>
+		<nd ref="48"/>
+		<nd ref="80"/>
+		<nd ref="79"/>
+		<nd ref="82"/>
+		<nd ref="63"/>
+	</alleyway>
+
+	<alleyway id="63">
+		<nd ref="62"/>
+		<nd ref="82"/>
+		<nd ref="64"/>
+		<nd ref="66"/>
+		<nd ref="65"/>
+	</alleyway>
+
+	<alleyway id="64">
+		<nd ref="49"/>
+		<nd ref="63"/>
+		<nd ref="65"/>
+		<nd ref="66"/>
+	</alleyway>
+
+	<alleyway id="65">
+		<nd ref="64"/>
+		<nd ref="63"/>
+		<nd ref="66"/>
+		<nd ref="83"/>
+		<nd ref="99"/>
+		<nd ref="84"/>
+	</alleyway>
+
+	<alleyway id="66">
+		<nd ref="63"/>
+		<nd ref="64"/>
+		<nd ref="65"/>
+		<nd ref="51"/>
+		<nd ref="50"/>
+	</alleyway>
+
+	<alleyway id="67">
+		<nd ref="51"/>
+		<nd ref="52"/>
+		<nd ref="53"/>
+		<nd ref="68"/>
+		<nd ref="86"/>
+		<nd ref="84"/>
+	</alleyway>
+
+	<alleyway id="68">
+		<nd ref="53"/>
+		<nd ref="67"/>
+		<nd ref="84"/>
+		<nd ref="86"/>
+		<nd ref="55"/>
+	</alleyway>
+
+	<alleyway id="69">
+		<nd ref="56"/>
+		<nd ref="57"/>
+		<nd ref="70"/>
+		<nd ref="71"/>
+		<nd ref="72"/>
+		<nd ref="73"/>
+		<nd ref="102"/>
+		<nd ref="103"/>
+		<nd ref="127"/>
+	</alleyway>
+
+	<alleyway id="70">
+		<nd ref="69"/>
+		<nd ref="56"/>
+		<nd ref="57"/>
+		<nd ref="73"/>
+		<nd ref="71"/>
+		<nd ref="72"/>
+		<nd ref="87"/>
+		<nd ref="103"/>
+		<nd ref="129"/>
+		<nd ref="128"/>
+		<nd ref="144"/>
+	</alleyway>
+
+	<alleyway id="71">
+		<nd ref="69"/>
+		<nd ref="70"/>
+		<nd ref="72"/>
+		<nd ref="73"/>
+		<nd ref="57"/>
+		<nd ref="56"/>
+		<nd ref="87"/>
+		<nd ref="88"/>
+		<nd ref="104"/>
+	</alleyway>
+
+	<alleyway id="72">
+		<nd ref="56"/>
+		<nd ref="57"/>
+		<nd ref="69"/>
+		<nd ref="70"/>
+		<nd ref="71"/>
+		<nd ref="73"/>
+		<nd ref="88"/>
+		<nd ref="89"/>
+		<nd ref="105"/>
+	</alleyway>
+
+	<alleyway id="73">
+		<nd ref="56"/>
+		<nd ref="57"/>
+		<nd ref="69"/>
+		<nd ref="70"/>
+		<nd ref="71"/>
+		<nd ref="72"/>
+		<nd ref="74"/>
+	</alleyway>
+
+	<alleyway id="74">
+		<nd ref="73"/>
+		<nd ref="75"/>
+		<nd ref="90"/>
+	</alleyway>
+
+	<alleyway id="75">
+		<nd ref="74"/>
+		<nd ref="90"/>
+		<nd ref="76"/>
+	</alleyway>
+
+	<alleyway id="76">
+		<nd ref="58"/>
+		<nd ref="42"/>
+		<nd ref="22"/>
+		<nd ref="77"/>
+		<nd ref="75"/>
+	</alleyway>
+
+	<alleyway id="77">
+		<nd ref="76"/>
+		<nd ref="58"/>
+		<nd ref="42"/>
+		<nd ref="22"/>
+	</alleyway>
+
+	<alleyway id="78">
+		<nd ref="79"/>
+		<nd ref="60"/>
+		<nd ref="96"/>
+		<nd ref="97"/>
+	</alleyway>
+
+	<alleyway id="79">
+		<nd ref="44"/>
+		<nd ref="59"/>
+		<nd ref="60"/>
+		<nd ref="78"/>
+		<nd ref="45"/>
+		<nd ref="61"/>
+		<nd ref="48"/>
+		<nd ref="62"/>
+		<nd ref="80"/>
+	</alleyway>
+
+	<alleyway id="80">
+		<nd ref="45"/>
+		<nd ref="61"/>
+		<nd ref="47"/>
+		<nd ref="48"/>
+		<nd ref="62"/>
+		<nd ref="79"/>
+		<nd ref="97"/>
+		<nd ref="81"/>
+		<nd ref="117"/>
+		<nd ref="118"/>
+		<nd ref="98"/>
+	</alleyway>
+
+	<alleyway id="81">
+		<nd ref="80"/>
+		<nd ref="98"/>
+		<nd ref="118"/>
+		<nd ref="97"/>
+		<nd ref="117"/>
+	</alleyway>
+
+	<alleyway id="82">
+		<nd ref="62"/>
+		<nd ref="63"/>
+		<nd ref="98"/>
+		<nd ref="83"/>
+		<nd ref="120"/>
+	</alleyway>
+
+	<alleyway id="83">
+		<nd ref="82"/>
+		<nd ref="98"/>
+		<nd ref="120"/>
+		<nd ref="65"/>
+		<nd ref="84"/>
+		<nd ref="99"/>
+	</alleyway>
+
+	<alleyway id="84">
+		<nd ref="65"/>
+		<nd ref="83"/>
+		<nd ref="99"/>
+		<nd ref="67"/>
+		<nd ref="53"/>
+		<nd ref="68"/>
+		<nd ref="86"/>
+	</alleyway>
+
+	<alleyway id="85">
+		<nd ref="100"/>
+		<nd ref="124"/>
+		<nd ref="86"/>
+		<nd ref="101"/>
+		<nd ref="102"/>
+	</alleyway>
+
+	<alleyway id="86">
+		<nd ref="84"/>
+		<nd ref="67"/>
+		<nd ref="53"/>
+		<nd ref="68"/>
+		<nd ref="85"/>
+		<nd ref="101"/>
+		<nd ref="102"/>
+	</alleyway>
+
+	<alleyway id="87">
+		<nd ref="70"/>
+		<nd ref="103"/>
+		<nd ref="128"/>
+		<nd ref="129"/>
+		<nd ref="144"/>
+		<nd ref="71"/>
+		<nd ref="104"/>
+	</alleyway>
+
+	<alleyway id="88">
+		<nd ref="71"/>
+		<nd ref="104"/>
+		<nd ref="72"/>
+		<nd ref="89"/>
+		<nd ref="105"/>
+	</alleyway>
+
+	<alleyway id="89">
+		<nd ref="72"/>
+		<nd ref="88"/>
+		<nd ref="105"/>
+		<nd ref="90"/>
+		<nd ref="91"/>
+	</alleyway>
+
+	<alleyway id="90">
+		<nd ref="74"/>
+		<nd ref="75"/>
+		<nd ref="89"/>
+		<nd ref="91"/>
+	</alleyway>
+
+	<alleyway id="91">
+		<nd ref="89"/>
+		<nd ref="90"/>
+		<nd ref="92"/>
+		<nd ref="107"/>
+	</alleyway>
+
+	<alleyway id="92">
+		<nd ref="91"/>
+		<nd ref="107"/>
+		<nd ref="93"/>
+		<nd ref="109"/>
+	</alleyway>
+
+	<alleyway id="93">
+		<nd ref="94"/>
+		<nd ref="92"/>
+		<nd ref="109"/>
+	</alleyway>
+
+	<alleyway id="94">
+		<nd ref="93"/>
+	</alleyway>
+
+	<alleyway id="95">
+		<nd ref="96"/>
+	</alleyway>
+
+	<alleyway id="96">
+		<nd ref="78"/>
+		<nd ref="97"/>
+		<nd ref="114"/>
+		<nd ref="115"/>
+	</alleyway>
+
+	<alleyway id="97">
+		<nd ref="78"/>
+		<nd ref="96"/>
+		<nd ref="80"/>
+		<nd ref="81"/>
+		<nd ref="118"/>
+		<nd ref="117"/>
+		<nd ref="116"/>
+	</alleyway>
+
+	<alleyway id="98">
+		<nd ref="80"/>
+		<nd ref="81"/>
+		<nd ref="118"/>
+		<nd ref="82"/>
+		<nd ref="83"/>
+		<nd ref="120"/>
+	</alleyway>
+
+	<alleyway id="99">
+		<nd ref="65"/>
+		<nd ref="83"/>
+		<nd ref="84"/>
+		<nd ref="100"/>
+	</alleyway>
+
+	<alleyway id="100">
+		<nd ref="99"/>
+		<nd ref="85"/>
+		<nd ref="124"/>
+		<nd ref="120"/>
+		<nd ref="122"/>
+	</alleyway>
+
+	<alleyway id="101">
+		<nd ref="85"/>
+		<nd ref="86"/>
+		<nd ref="102"/>
+		<nd ref="126"/>
+	</alleyway>
+
+	<alleyway id="102">
+		<nd ref="85"/>
+		<nd ref="86"/>
+		<nd ref="101"/>
+		<nd ref="69"/>
+		<nd ref="127"/>
+	</alleyway>
+
+	<alleyway id="103">
+		<nd ref="69"/>
+		<nd ref="127"/>
+		<nd ref="70"/>
+		<nd ref="87"/>
+		<nd ref="129"/>
+		<nd ref="144"/>
+		<nd ref="128"/>
+	</alleyway>
+
+	<alleyway id="104">
+		<nd ref="71"/>
+		<nd ref="87"/>
+		<nd ref="88"/>
+		<nd ref="129"/>
+		<nd ref="130"/>
+		<nd ref="145"/>
+	</alleyway>
+
+	<alleyway id="105">
+		<nd ref="72"/>
+		<nd ref="88"/>
+		<nd ref="89"/>
+		<nd ref="106"/>
+		<nd ref="130"/>
+		<nd ref="131"/>
+	</alleyway>
+
+	<alleyway id="106">
+		<nd ref="105"/>
+		<nd ref="130"/>
+		<nd ref="131"/>
+		<nd ref="107"/>
+		<nd ref="108"/>
+	</alleyway>
+
+	<alleyway id="107">
+		<nd ref="91"/>
+		<nd ref="92"/>
+		<nd ref="106"/>
+		<nd ref="108"/>
+	</alleyway>
+
+	<alleyway id="108">
+		<nd ref="106"/>
+		<nd ref="107"/>
+		<nd ref="132"/>
+	</alleyway>
+
+	<alleyway id="109">
+		<nd ref="92"/>
+		<nd ref="93"/>
+		<nd ref="110"/>
+	</alleyway>
+
+	<alleyway id="110">
+		<nd ref="109"/>
+		<nd ref="132"/>
+		<nd ref="134"/>
+		<nd ref="111"/>
+	</alleyway>
+
+	<alleyway id="111">
+		<nd ref="110"/>
+		<nd ref="132"/>
+		<nd ref="134"/>
+	</alleyway>
+
+	<alleyway id="112">
+		<nd ref="113"/>
+		<nd ref="135"/>
+	</alleyway>
+
+	<alleyway id="114">
+		<nd ref="113"/>
+		<nd ref="137"/>
+		<nd ref="96"/>
+		<nd ref="115"/>
+	</alleyway>
+
+	<alleyway id="115">
+		<nd ref="96"/>
+		<nd ref="114"/>
+		<nd ref="137"/>
+		<nd ref="138"/>
+		<nd ref="139"/>
+		<nd ref="116"/>
+	</alleyway>
+
+	<alleyway id="116">
+		<nd ref="115"/>
+		<nd ref="137"/>
+		<nd ref="138"/>
+		<nd ref="139"/>
+		<nd ref="97"/>
+		<nd ref="117"/>
+	</alleyway>
+
+	<alleyway id="117">
+		<nd ref="116"/>
+		<nd ref="97"/>
+		<nd ref="80"/>
+		<nd ref="81"/>
+		<nd ref="118"/>
+	</alleyway>
+
+	<alleyway id="118">
+		<nd ref="117"/>
+		<nd ref="97"/>
+		<nd ref="80"/>
+		<nd ref="81"/>
+		<nd ref="98"/>
+		<nd ref="151"/>
+		<nd ref="119"/>
+	</alleyway>
+
+	<alleyway id="119">
+		<nd ref="118"/>
+		<nd ref="151"/>
+		<nd ref="121"/>
+	</alleyway>
+
+	<alleyway id="120">
+		<nd ref="82"/>
+		<nd ref="83"/>
+		<nd ref="98"/>
+		<nd ref="100"/>
+		<nd ref="122"/>
+	</alleyway>
+
+	<alleyway id="121">
+		<nd ref="119"/>
+		<nd ref="123"/>
+		<nd ref="140"/>
+		<nd ref="153"/>
+	</alleyway>
+
+	<alleyway id="122">
+		<nd ref="120"/>
+		<nd ref="100"/>
+		<nd ref="123"/>
+	</alleyway>
+
+	<alleyway id="123">
+		<nd ref="122"/>
+		<nd ref="121"/>
+		<nd ref="153"/>
+		<nd ref="140"/>
+	</alleyway>
+
+	<alleyway id="124">
+		<nd ref="85"/>
+		<nd ref="100"/>
+		<nd ref="125"/>
+		<nd ref="126"/>
+	</alleyway>
+
+	<alleyway id="125">
+		<nd ref="124"/>
+		<nd ref="126"/>
+		<nd ref="155"/>
+		<nd ref="156"/>
+		<nd ref="182"/>
+		<nd ref="183"/>
+	</alleyway>
+
+	<alleyway id="126">
+		<nd ref="124"/>
+		<nd ref="125"/>
+		<nd ref="101"/>
+	</alleyway>
+
+	<alleyway id="127">
+		<nd ref="102"/>
+		<nd ref="69"/>
+		<nd ref="103"/>
+		<nd ref="143"/>
+		<nd ref="128"/>
+	</alleyway>
+
+	<alleyway id="128">
+		<nd ref="127"/>
+		<nd ref="143"/>
+		<nd ref="103"/>
+		<nd ref="70"/>
+		<nd ref="87"/>
+		<nd ref="129"/>
+		<nd ref="144"/>
+	</alleyway>
+
+	<alleyway id="129">
+		<nd ref="70"/>
+		<nd ref="87"/>
+		<nd ref="103"/>
+		<nd ref="128"/>
+		<nd ref="144"/>
+		<nd ref="104"/>
+		<nd ref="145"/>
+	</alleyway>
+
+	<alleyway id="130">
+		<nd ref="104"/>
+		<nd ref="145"/>
+		<nd ref="105"/>
+		<nd ref="106"/>
+		<nd ref="131"/>
+	</alleyway>
+
+	<alleyway id="131">
+		<nd ref="130"/>
+		<nd ref="105"/>
+		<nd ref="106"/>
+		<nd ref="146"/>
+		<nd ref="133"/>
+	</alleyway>
+
+	<alleyway id="132">
+		<nd ref="108"/>
+		<nd ref="110"/>
+		<nd ref="134"/>
+		<nd ref="111"/>
+	</alleyway>
+
+	<alleyway id="133">
+		<nd ref="131"/>
+		<nd ref="146"/>
+		<nd ref="134"/>
+		<nd ref="147"/>
+	</alleyway>
+
+	<alleyway id="134">
+		<nd ref="132"/>
+		<nd ref="110"/>
+		<nd ref="111"/>
+		<nd ref="133"/>
+		<nd ref="147"/>
+	</alleyway>
+
+	<alleyway id="135">
+		<nd ref="112"/>
+		<nd ref="113"/>
+		<nd ref="148"/>
+	</alleyway>
+
+	<alleyway id="136">
+		<nd ref="138"/>
+		<nd ref="148"/>
+		<nd ref="149"/>
+	</alleyway>
+
+	<alleyway id="137">
+		<nd ref="114"/>
+		<nd ref="115"/>
+		<nd ref="116"/>
+		<nd ref="138"/>
+		<nd ref="139"/>
+	</alleyway>
+
+	<alleyway id="138">
+		<nd ref="136"/>
+		<nd ref="137"/>
+		<nd ref="115"/>
+		<nd ref="116"/>
+		<nd ref="139"/>
+	</alleyway>
+
+	<alleyway id="139">
+		<nd ref="138"/>
+		<nd ref="137"/>
+		<nd ref="115"/>
+		<nd ref="116"/>
+		<nd ref="164"/>
+		<nd ref="150"/>
+		<nd ref="175"/>
+		<nd ref="176"/>
+	</alleyway>
+
+	<alleyway id="140">
+		<nd ref="121"/>
+		<nd ref="123"/>
+		<nd ref="153"/>
+		<nd ref="154"/>
+		<nd ref="170"/>
+	</alleyway>
+
+	<alleyway id="141">
+		<nd ref="170"/>
+		<nd ref="155"/>
+	</alleyway>
+
+	<alleyway id="142">
+		<nd ref="143"/>
+		<nd ref="156"/>
+		<nd ref="157"/>
+		<nd ref="158"/>
+	</alleyway>
+
+	<alleyway id="143">
+		<nd ref="127"/>
+		<nd ref="128"/>
+		<nd ref="142"/>
+		<nd ref="158"/>
+		<nd ref="159"/>
+	</alleyway>
+
+	<alleyway id="144">
+		<nd ref="128"/>
+		<nd ref="103"/>
+		<nd ref="70"/>
+		<nd ref="87"/>
+		<nd ref="129"/>
+		<nd ref="159"/>
+	</alleyway>
+
+	<alleyway id="145">
+		<nd ref="129"/>
+		<nd ref="104"/>
+		<nd ref="130"/>
+		<nd ref="160"/>
+		<nd ref="161"/>
+	</alleyway>
+
+	<alleyway id="146">
+		<nd ref="131"/>
+		<nd ref="133"/>
+	</alleyway>
+
+	<alleyway id="147">
+		<nd ref="133"/>
+		<nd ref="134"/>
+	</alleyway>
+
+	<alleyway id="148">
+		<nd ref="135"/>
+		<nd ref="136"/>
+		<nd ref="149"/>
+		<nd ref="162"/>
+	</alleyway>
+
+	<alleyway id="149">
+		<nd ref="148"/>
+		<nd ref="136"/>
+		<nd ref="163"/>
+	</alleyway>
+
+	<alleyway id="150">
+		<nd ref="139"/>
+		<nd ref="164"/>
+		<nd ref="175"/>
+		<nd ref="176"/>
+		<nd ref="151"/>
+	</alleyway>
+
+	<alleyway id="151">
+		<nd ref="150"/>
+		<nd ref="166"/>
+		<nd ref="152"/>
+		<nd ref="153"/>
+	</alleyway>
+
+	<alleyway id="152">
+		<nd ref="151"/>
+		<nd ref="153"/>
+		<nd ref="166"/>
+		<nd ref="167"/>
+		<nd ref="179"/>
+		<nd ref="180"/>
+		<nd ref="191"/>
+	</alleyway>
+
+	<alleyway id="153">
+		<nd ref="151"/>
+		<nd ref="152"/>
+		<nd ref="166"/>
+		<nd ref="121"/>
+		<nd ref="123"/>
+		<nd ref="140"/>
+	</alleyway>
+
+	<alleyway id="154">
+		<nd ref="168"/>
+		<nd ref="140"/>
+		<nd ref="170"/>
+	</alleyway>
+
+	<alleyway id="155">
+		<nd ref="141"/>
+		<nd ref="170"/>
+		<nd ref="125"/>
+		<nd ref="156"/>
+		<nd ref="183"/>
+		<nd ref="182"/>
+	</alleyway>
+
+	<alleyway id="156">
+		<nd ref="125"/>
+		<nd ref="155"/>
+		<nd ref="182"/>
+		<nd ref="183"/>
+		<nd ref="142"/>
+		<nd ref="158"/>
+		<nd ref="157"/>
+	</alleyway>
+
+	<alleyway id="157">
+		<nd ref="156"/>
+		<nd ref="142"/>
+		<nd ref="158"/>
+		<nd ref="171"/>
+	</alleyway>
+
+	<alleyway id="158">
+		<nd ref="142"/>
+		<nd ref="156"/>
+		<nd ref="157"/>
+		<nd ref="143"/>
+		<nd ref="159"/>
+	</alleyway>
+
+	<alleyway id="159">
+		<nd ref="143"/>
+		<nd ref="158"/>
+		<nd ref="172"/>
+		<nd ref="173"/>
+		<nd ref="144"/>
+	</alleyway>
+
+	<alleyway id="160">
+		<nd ref="145"/>
+		<nd ref="161"/>
+	</alleyway>
+
+	<alleyway id="161">
+		<nd ref="145"/>
+		<nd ref="160"/>
+	</alleyway>
+
+	<alleyway id="162">
+		<nd ref="148"/>
+	</alleyway>
+
+	<alleyway id="163">
+		<nd ref="149"/>
+	</alleyway>
+
+	<alleyway id="164">
+		<nd ref="174"/>
+		<nd ref="139"/>
+		<nd ref="150"/>
+		<nd ref="176"/>
+		<nd ref="175"/>
+	</alleyway>
+
+	<alleyway id="165">
+		<nd ref="166"/>
+		<nd ref="176"/>
+		<nd ref="189"/>
+		<nd ref="190"/>
+		<nd ref="177"/>
+	</alleyway>
+
+	<alleyway id="166">
+		<nd ref="151"/>
+		<nd ref="152"/>
+		<nd ref="153"/>
+		<nd ref="165"/>
+		<nd ref="176"/>
+		<nd ref="189"/>
+		<nd ref="190"/>
+	</alleyway>
+
+	<alleyway id="167">
+		<nd ref="152"/>
+		<nd ref="179"/>
+		<nd ref="180"/>
+		<nd ref="191"/>
+		<nd ref="178"/>
+	</alleyway>
+
+	<alleyway id="168">
+		<nd ref="154"/>
+		<nd ref="180"/>
+		<nd ref="169"/>
+	</alleyway>
+
+	<alleyway id="169">
+		<nd ref="180"/>
+		<nd ref="168"/>
+		<nd ref="170"/>
+		<nd ref="181"/>
+	</alleyway>
+
+	<alleyway id="170">
+		<nd ref="140"/>
+		<nd ref="154"/>
+		<nd ref="169"/>
+		<nd ref="181"/>
+		<nd ref="141"/>
+		<nd ref="155"/>
+	</alleyway>
+
+	<alleyway id="171">
+		<nd ref="157"/>
+		<nd ref="183"/>
+	</alleyway>
+
+	<alleyway id="172">
+		<nd ref="185"/>
+		<nd ref="159"/>
+	</alleyway>
+
+	<alleyway id="173">
+		<nd ref="159"/>
+	</alleyway>
+
+	<alleyway id="174">
+		<nd ref="164"/>
+	</alleyway>
+
+	<alleyway id="175">
+		<nd ref="188"/>
+		<nd ref="164"/>
+		<nd ref="139"/>
+		<nd ref="150"/>
+		<nd ref="176"/>
+	</alleyway>
+
+	<alleyway id="176">
+		<nd ref="139"/>
+		<nd ref="150"/>
+		<nd ref="164"/>
+		<nd ref="175"/>
+		<nd ref="166"/>
+		<nd ref="165"/>
+		<nd ref="189"/>
+		<nd ref="190"/>
+	</alleyway>
+
+	<alleyway id="177">
+		<nd ref="165"/>
+		<nd ref="178"/>
+	</alleyway>
+
+	<alleyway id="178">
+		<nd ref="167"/>
+		<nd ref="177"/>
+		<nd ref="189"/>
+		<nd ref="179"/>
+	</alleyway>
+
+	<alleyway id="179">
+		<nd ref="152"/>
+		<nd ref="167"/>
+		<nd ref="180"/>
+		<nd ref="191"/>
+	</alleyway>
+
+	<alleyway id="180">
+		<nd ref="152"/>
+		<nd ref="167"/>
+		<nd ref="179"/>
+		<nd ref="191"/>
+		<nd ref="168"/>
+		<nd ref="169"/>
+	</alleyway>
+
+	<alleyway id="181">
+		<nd ref="169"/>
+		<nd ref="170"/>
+	</alleyway>
+
+	<alleyway id="182">
+		<nd ref="125"/>
+		<nd ref="155"/>
+		<nd ref="156"/>
+		<nd ref="183"/>
+	</alleyway>
+
+	<alleyway id="183">
+		<nd ref="125"/>
+		<nd ref="155"/>
+		<nd ref="156"/>
+		<nd ref="182"/>
+		<nd ref="171"/>
+		<nd ref="185"/>
+	</alleyway>
+
+	<alleyway id="184">
+		<nd ref="192"/>
+		<nd ref="193"/>
+	</alleyway>
+
+	<alleyway id="185">
+		<nd ref="183"/>
+		<nd ref="172"/>
+		<nd ref="186"/>
+		<nd ref="187"/>
+	</alleyway>
+
+	<alleyway id="186">
+		<nd ref="187"/>
+		<nd ref="193"/>
+	</alleyway>
+
+	<alleyway id="187">
+		<nd ref="185"/>
+		<nd ref="186"/>
+		<nd ref="195"/>
+	</alleyway>
+
+	<alleyway id="188">
+		<nd ref="175"/>
+	</alleyway>
+
+	<alleyway id="189">
+		<nd ref="166"/>
+		<nd ref="165"/>
+		<nd ref="176"/>
+		<nd ref="190"/>
+		<nd ref="178"/>
+	</alleyway>
+
+	<alleyway id="190">
+		<nd ref="166"/>
+		<nd ref="165"/>
+		<nd ref="176"/>
+		<nd ref="189"/>
+	</alleyway>
+
+	<alleyway id="191">
+		<nd ref="152"/>
+		<nd ref="167"/>
+		<nd ref="179"/>
+		<nd ref="180"/>
+	</alleyway>
+
+	<alleyway id="192">
+		<nd ref="184"/>
+	</alleyway>
+
+	<alleyway id="193">
+		<nd ref="184"/>
+		<nd ref="186"/>
+		<nd ref="194"/>
+	</alleyway>
+
+	<alleyway id="194">
+		<nd ref="193"/>
+	</alleyway>
+
+	<alleyway id="195">
+		<nd ref="187"/>
+	</alleyway>
+
+</osm>

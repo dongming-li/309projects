@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="StoneageStyle.css">
+	</head>
+	<body class="leaderboard">
+		<h1>This is the leaderboard page</h1>
+		enter name:<input type="text" id="inputdisplay" size="25"/>
+		<button type="button" onclick=" sendMessageToServer()">send to server:</button>
+		<script type="text/javascript">
+			var xmlHttpRequest;
+			if(window.XMLHttpRequest){
+				xmlHttpRequest = new XMLHttpRequest();
+			} else if(window.ActiveXObject){
+				xmlHttpRequest = new ActiveXObject("MICROSOFT.XMLHTTP");
+			}
+			function sendMessageToServer(){
+				xmlHttpRequest.open("POST", "Central?name=" +document.getElementById('inputdisplay').value, true);
+				xmlHttpRequest.send();
+				document.getElementById('inputdisplay').value="";
+			}
+		</script>
+	</body>
+</html>

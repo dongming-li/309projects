@@ -1,0 +1,4 @@
+version: "2"
+services:
+    web-test:
+        image: "toque:build-${CI_COMMIT_REF_NAME}"

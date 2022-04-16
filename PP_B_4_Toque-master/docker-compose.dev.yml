@@ -1,0 +1,30 @@
+version: "2"
+services:
+    mysql:
+        image: mysql:latest
+        container_name: dev-sql
+        ports:
+            - "3306:3306"
+        logging:
+              driver: "none"
+        environment:
+            MYSQL_PASSWORD: "toque-dev"
+            MYSQL_DATABASE: "toque-dev"
+            MYSQL_USER: "toque-dev"
+            MYSQL_ROOT_PASSWORD: "root"
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+
+    web:
+        depends_on:
+            - mysql
+        build: .
+        build:
+            context: .
+            dockerfile: toque.dev.Dockerfile
+        container_name: dev-toque
+        volumes:
+            - .:/toque
+            - /toque/node_modules
+        ports:
+            - "3000:80"
+

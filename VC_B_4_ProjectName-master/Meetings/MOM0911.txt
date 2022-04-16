@@ -1,0 +1,32 @@
+Discussion 09/11 present all, time 12h37
+
+TODO : assign skreen sketches, disuss map layout ( tabs ? )
+
+Start : 
+reminder : 
+- main menu -creative menu - leaderboard - gameplay (2 screen)
+- map editor screen - admin access - social menu 
+map select menu (setting up for game)
+
+back to map game layout : 
+- propose 3 tabs ( A - D - Army ) 
+
+-> agreed on a design for Army tab ( 3 squares : army choice, group choice and who to send for next wave)
+-> agreed on a designe for defense tab. 
+-> agreed on a design for attack tab
+
+
+Alex - (Gameplay)
+Jeremy - Map editor screen , leaderboard
+Joe - Main menu , map editor
+Johan - admin access / menu - social menu - login settings 
+
+After that disucess the rest of the screen sketche things
+Already done by Joe which is good. 
+-> will be reviewed a bit but seems alright
+
+Actor things - jeremy
+non func req - alex
+And table and fields. -johan  
+- > 
+Table fields - db

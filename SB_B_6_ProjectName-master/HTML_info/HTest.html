@@ -1,0 +1,240 @@
+<!doctype html>									<!-- States that its a html -->
+
+<html>											<!-- The opening of html -->
+
+<head>											<!-- Contains information like Title -->
+
+<title> My Test Page </title>					<!-- The title of the html -->
+
+<!--------------------- Meta Elements ------------------------------->
+<meta name="description"content="This is a web test." />	<!-- Appears in search engine for description-->
+
+<meta name="keyword"content="test, 309" />					<!-- Used in search engine keywords-->
+
+<meta http-equiv="author"content="John Doe" />				<!-- Same for above but for authors-->
+
+<meta http-equiv="content-language"content="en-us" />		<!-- Tells what language and country this is in -->
+
+</head>											<!-- End of head container -->
+
+<body>											<!-- The main information -->
+
+<!---------------- Headers and information ----------------------->
+<h1> The Test Site </h1>						<!-- Head1 information -->
+
+<p> Welcome to Test Site One </p>				<!-- Head1 extra -->
+
+<br>											<!-- Space Breaks -->
+<br>
+<br>
+<!---------------------- lists ---------------------------------->
+<ul>											<!-- unordered list | Bullets -->
+	<li> CD </li>
+	<li> DVD </li>
+	<li> Blu Ray </li>
+</ul>
+
+<ol>											<!-- ordered list | Numbers -->
+	<li> CD </li>
+	<li> DVD </li>
+	<li> Blu Ray </li>
+</ol>
+<!---------------------- Tables ---------------------------------->
+<table>											<!-- Start of table Element -->
+
+	<tr>											<!-- Start of Table Rows -->
+		<th> The Planets </th>						<!-- Start of Table Column -->
+		<th> The Oceans </th>
+		<th> The Deserts </th>
+	</tr>
+
+	<tr>
+		<td> Earth </td>							<!-- Rable Data -->
+		<td> Pacific </td>
+		<td> Sahara </td>
+	</tr>
+	
+	<tr>
+		<td> Pluto </td>							<!-- Rable Data -->
+		<td> Alantic </td>
+		<td> Gobi </td>
+	</tr>
+
+</table>
+<!------------------------- Links -------------------------->
+<p> Please click on this link
+
+<a href="https://www.desmos.com/calculator">	<!-- Example: Add your own address here -->
+Desmos Calculator	</a>						<!-- This becomes the link -->
+
+</p>
+<!------------------------- List of Links -------------------------->
+<ul>
+
+	<li>	<a href="#Birds"> Birds Section </a>	</li>	<!-- Links to a location in webpage -->
+	<li>	<a href="#Ducks"> Ducks Section </a>	</li>
+
+</ul>
+
+<br>
+<br>
+<br>
+<br>
+
+<p> <a name="Birds"> This is the article about birds </a> </p> <!-- Location were the link comes to -->
+<p> <a name="Ducks"> This is the article about Ducks </a> </p>
+
+<br>
+<br>
+<br>
+<br>
+<!----------------------------- Image ---------------------------->
+
+<h2> Pic </h2>
+
+<!----------------------------- Resizing Image ---------------------------->
+<!-- **** This means you need to put something here-->
+<p>	<img src="****.jpg" width="450"height="300">	</p>		<!-- Resize with width and height Place the whole name in it-->
+
+<!-------------------- Nested Elements ---------------------------->
+<!-- You possibly already guess it. A nested element is a <***> within another <***> -->
+
+<!----------------- One-line Text Box | Add Labels -------------------------->
+
+<form action="" method="">
+
+<label for="firstname">First Name:</label>							<!-- Declaration for label -->
+<input types="text" id="firstname" name="" size="50">				<!-- :input types: is input text box -->
+<br>																<!-- break puts it into another line -->
+<label for="lastname">Last Name:</label>
+<input types="text" id="lastname" name="">
+
+</form>
+<!--------------- Multi-line Text Box ---------------------------->
+
+<form action="" method="">
+
+Comments: </br>
+<textarea rows ="10" cols="40"></textarea></br>						<!-- large Text box -->
+<input type="submit" value="Submit">								<!-- Changing type to submit-->
+
+</form>
+
+<!--------------------- Radio Button ------------------------------->
+<form action="" method="">
+
+Yes:
+<input type="radio" name="yesorno" value=""> </br>					<!-- buttons for one choice -->
+No:
+<input type="radio" name="yesorno" value "">
+
+</form>
+
+<!--------------------- CheckBox ------------------------------->
+
+<form action="" method="">
+
+Which subjects are you interested in? <br>
+<input type="checkbox" name="" checked="checked"> Football</br>						<!-- buttons for multi choice -->
+<input type="checkbox" name=""> Basketball</br>
+<input type="checkbox" name=""> baseball</br>
+<input type="checkbox" name=""> Hockey</br>
+
+</form>
+
+<!--------------------- CheckBox ------------------------------->
+
+<form action="" method="">
+
+<input type="number">																<!-- Give us a number input box -->
+<br>																				<!-- Only allow numbers		    -->
+<input type="number" win="0" max="20">												<!-- Set a max and min -->
+
+</form>
+
+<!--------------------- Drop-down list ------------------------------->
+
+<form action="" method="">
+
+<select>																			<!-- Creates a drop list for multiple items -->
+
+<option value="Mission">Mission</option>
+<option value="Task">Task</option>
+<option value="Play">Play</option>
+
+</select>
+
+</form>
+
+<!--------------------- Date and Number ------------------------------->
+<!--------------------- Fieldbox and Legend Element ------------------------------->
+<form>
+	<fieldset>																		<!-- Set in fieldset -->
+	<legend>Enter day you want to travel to Cancum:</legend>						<!-- Set in line of fieldset -->
+	<input type="date" name="day">															<!-- Pick a date -->
+	Number of days: <input typ="number" name="numdays" min="1" max="10">
+	<br><br>
+	Name: <input type="text">
+	</fieldset>
+</form>
+
+
+<!--------------------- Escape Characters ------------------------------->
+<!--
+Escape Characters
+&nbsp;			space
+&#8482;			TM
+&amp;			&
+&copy;			(c)
+&it;			<
+&gt;			>
+&#63;			?
+-->
+<p> Information &nbsp;&nbsp;&nbsp; Stuff </p>
+
+<!--------------------- Bold and Italic ------------------------------->
+
+<p> This is a <b>bold element</b>. </p>						<!-- Visual Only-->
+<p> This is a <strong>strong element</strong>. </p>			<!-- Add Extra and ready by programs for blind people -->
+
+<p> this is a <i>italic element</i> </p>							<!-- Visual Only -->
+<p> This is a <em>en element<em> </p>								<!-- Add Extra and ready by programs for blind people -->
+
+<!--------------------- Iframe Element ------------------------------->
+<!-- **** Need something here-->
+<iframe frameborder="1" width="200" height="200"src="****.html" name="ouriframe" id="ouriframe">		<!-- Sets to iframe-->
+
+Do you see this?
+</iframe><br />
+
+<a href="****.html" target="ouriframe">switch to new document</a>		<!-- Points to iframe-->
+
+<!--------------------- Sup and Sub ------------------------------->	<!-- super and subscript -->
+
+<p> The expert said a lot on August 23<sup>rd</sup>. </p>
+
+<p> There is plenty of H<sub>2</sub>O in the lake. </p>
+
+<!--------------------- Title and Alt ------------------------------->
+<!-- **** Need something here, alterate occurs if first fails-->
+	<img src="****.jpg" title="Picture" width="450"height="300" alt="****.jpg">
+	
+<!--------------------- Title and Alt ------------------------------->
+<br>
+<audio controls autoplay loop draggable="true">						<!-- For music sake! autoplay is used to play automatically with of course loop-->
+	<source src="****.mp4"/>										<!-- Draggable may not work...-->
+</audio>
+
+<!--------------------- Video Element ------------------------------->
+<video width="640" height="360" controls>							<!-- Sizeable and set to be controled -->
+	<source src="****.mp4" />										<!-- VIDEOS! -->
+</video>
+
+<!---------------- Headers and information ----------------------->
+<h3> Html Status </h3>
+
+<p> Basic testing <p>
+
+</body>											<!-- End of body container -->
+
+</html>											<!-- End of html -->

@@ -1,0 +1,14 @@
+/bin/
+
+/.idea/*
+
+/out/*
+
+/.metadata/*
+
+
+comsci309/node_modules/
+
+comsci309/chat/node_modules/
+
+*.log

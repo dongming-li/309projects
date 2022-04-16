@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TribesOfCydonia", "TribesOfCydonia\TribesOfCydonia.csproj", "{4E2ED5C4-2509-46D4-A07D-EDEF5F3F14B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TribesOfCydonia.Tests", "TribesOfCydonia.Tests\TribesOfCydonia.Tests.csproj", "{62C1DFC3-EC61-4BF8-8DF2-566B2D0C08E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E2ED5C4-2509-46D4-A07D-EDEF5F3F14B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2ED5C4-2509-46D4-A07D-EDEF5F3F14B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2ED5C4-2509-46D4-A07D-EDEF5F3F14B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2ED5C4-2509-46D4-A07D-EDEF5F3F14B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62C1DFC3-EC61-4BF8-8DF2-566B2D0C08E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62C1DFC3-EC61-4BF8-8DF2-566B2D0C08E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62C1DFC3-EC61-4BF8-8DF2-566B2D0C08E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62C1DFC3-EC61-4BF8-8DF2-566B2D0C08E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76EA5E48-E1FD-4318-BC9D-591543F8E929}
+	EndGlobalSection
+EndGlobal

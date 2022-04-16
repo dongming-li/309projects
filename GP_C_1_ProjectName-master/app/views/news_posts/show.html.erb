@@ -1,0 +1,14 @@
+<p>
+  <strong>Title:</strong>
+  <%= @news_posts.title %>
+  <%= "(Posted on " + @news_posts.created_at.to_s(:long) + ")" %>
+</p>
+
+<p>
+
+  <%= simple_format(@news_posts.body) %>
+</p>
+
+<%= link_to 'Edit', edit_news_post_path(@news_posts) %> |
+<%= link_to 'Delete', @news_posts, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Return to News', '/news_posts' %>

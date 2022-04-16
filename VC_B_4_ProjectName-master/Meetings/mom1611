@@ -1,0 +1,17 @@
+MOM 11/16
+all present 3pm30 to 5pm 
+We need to talk about what is due until demo 4. 
+We will focus on API and Demo as the poster we have an extra week. 
+
+Code : 
+Alex and Joe : figure out real networking. Display of maps ( change between your and enemy map) 
+			 - work on monster desing etc..
+Jeremy : admin screen
+Johan : map editor. ( networking done more or less ) but all the display. 
+
+for API : 
+- we can generate javadoc form android. So we will need to start making some good javadoc..
+- for DATABASE : DBSCHEMA - will look into how to make it look nice and neat. 
+- we need api for PHP server as well. 
+- look into protocol documentation . 
+

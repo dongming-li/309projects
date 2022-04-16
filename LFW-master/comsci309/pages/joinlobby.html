@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class=page>
+
+<head>
+
+    <link rel="stylesheet" href=/css/testindex.css>
+</head>
+
+<body class="body">
+    <div class="bkgd" style="background-color:#e29147;">
+        <h2>letters from whitechapel</h2>
+        <!-- <h1 class=h1>Join Lobby Join Lobby Join Lobby Join Lobby Join Lobby Join Lobby Join Lobby Join Lobby Join Lobby Join Lobby Join
+            Lobby Join Lobby Join Lobby Join Lobby Join Lobby</h1> -->
+
+
+
+        <div class="container">
+            <div class="bg" style="height:100%;background-image:url(pages/imgs/bkgd2.jpg); background-size:cover; background-repeat: no-repeat;background-position: -20vw 0; opacity:.9;border-width:4px;border-style:groove;">
+
+                <div id="lobbylist" style="min-width:460px">
+                    <div id="heading">
+    <table id="jlheading" style="    letter-spacing:2px;
+    font-size:32px;"><tbody><tr><td> Lobby Name </td><td> Host Name </td><td> Max Players </td><td> Game Timer </td><td> Tool Tips </td></tr></tbody></table>
+
+                    </div>
+                    <div id="lobbies" style=" font-size:2em;"><table id="jlheading"><tbody><tr><td>LeTTERS</td><td>division2</td><td>division3</td><td>division4</td><td>division5</td></tr></tbody></table></div>
+                    <div id="lobtions">
+                        <button class="button1" style="height:100%;width:20%;top:0px;">Join Lobby</button>
+                        <table style="overflow:hidden;float:right;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="range" name="points" value="4" min="2" max="6" onchange="showValue(this.value)" style="top:0px;width:180%;">
+
+                                    </td>
+                                    <td></td>
+                                    <td>Players:
+                                        <span id="range">4</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:84px;">
+                                        <input id="cl-text" type="radio" name="lobbyType" value="private">Private
+                                    </td>
+                                    <td>
+                                        <input id="cl-text" type="radio" name="lobbyType" value="public">Public
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input id="cl-text" type="radio" name="moveTimer" value="no">No Timer</td>
+                                    <td>
+                                        <input id="cl-text" type="radio" name="moveTimer" value="15">15 sec
+                                    </td>
+                                    <td>
+                                        <input id="cl-text" type="radio" name="moveTimer" value="30">30 sec</td>
+                                    <td>
+                                        <input id="cl-text" type="radio" name="moveTimer" value="60">60 sec</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    function showValue(newValue) {
+        document.getElementById("range").innerHTML = newValue;
+    }
+</script>
+
+</html>

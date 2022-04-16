@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="username" />
+
+    <EditText
+        android:id="@+id/aUser"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/passwordText"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="password" />
+
+    <EditText
+        android:id="@+id/aPass"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:onClick="CreateAccount"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:text="Create Account"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TextView"
+        android:layout_weight="0.36"
+        android:visibility="gone"/>
+
+</LinearLayout>

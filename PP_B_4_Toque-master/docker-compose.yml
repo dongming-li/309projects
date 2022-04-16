@@ -1,0 +1,12 @@
+version: "2"
+services:
+    web:
+        build: .
+        build:
+            context: .
+            args:
+                DATABASE_URL: ${DATABASE_URL}
+                SECRET: ${SECRET}
+        image: "toque:${CI_COMMIT_REF_NAME}"
+        ports:
+            - "80:80"

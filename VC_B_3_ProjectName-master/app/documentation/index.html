@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>Walk Me Home</h1><p>This is a mobile app that lets users navigate from their current location to whatever destination they choose. The goal of this app is to have someone watching over the user. The user has to walk through a set of waypoints along the way to their destination in a certain amount of time. If they don't get to their waypoint in time, their friends will get alerted so that they can look into what happened.</p>
+<h2>Development Setup</h2><p>To get set up, clone the repo into whatever directory you want the project to live in.</p>
+<p>Next, install <a href="https://nodejs.org/en/">node</a>.</p>
+<h3>App Setup (React Native)</h3><p>The React Native app uses Expo to run locally. For this, Expo must be installed on the device being used to run the app.</p>
+<p>Once Expo has been installed to the device, from the command line, go to <code>&lt;project directory&gt;/app</code> and run <code>npm install</code>. This will install all of the dependencies for the app as specified in the package.json.</p>
+<h3>Backend Setup</h3><p>Move into the backend directory and run <code>npm install</code>. This will install all of the dependencies for the Node Express backend.</p>
+<h3>Database Setup</h3><p>To setup the local database, you will install the MySQL server. First, download it from (here)[https://dev.mysql.com/downloads/mysql/].</p>
+<p>Once you have downloaded the installer, run it. Make sure to document what you use for the user, password, and database. Also, <strong>make sure to set up the database as a process.</strong> This will prevent a lot of headaches later.</p>
+<p>After you have run the installer, you should be able to connect to it. Now you need to update <code>&lt;project directory&gt;/backend/knexfile</code> with the connection information for the database.</p>
+<p>Once the knexfile has been updated, you need to install knex using <code>npm install -g knex</code>. Knex is the library that we use on the backend to interface with the database. Once knex is installed, you need to run our migrations on it. To do this, run <code>knex migrate:latest</code> while inside of the <code>&lt;project directory/backend&gt;</code> directory. This will run any migrations on the database that have yet to be run.</p>
+<h2>Running Code</h2><h3>Running the App Locally (React Native)</h3><p>These steps will depend on if you are using a physical device (recommended) or an emulator.</p>
+<p>If you are using an emulator, <a href="https://facebook.github.io/react-native/docs/getting-started.html">click here to see how to set it up</a>.</p>
+<p>If you are using a physical device, make sure to install Expo.</p>
+<p>Next, go to <code>&lt;project directory&gt;/app</code>, then run <code>npm start</code>. This will start the packager. After a bit of time, a QR code will be printed in the terminal. If you are using a physical device, scan the QR code with the Expo app. Then Expo will compile and run the app on the device. If you are using an Android emulator, after the QR code has printed in the terminal, press <code>a</code>. This will run the app in your emulator.</p>
+<h3>Running the Backend Locally</h3><p>In order for the React Native app to connect to the backend correctly, the IP the app tries to connect to must be updated. To do this, get your local IP address. Then take this and replace the IP address in the root URL in <code>&lt;project directory&gt;/app/helpers/routes.js</code>.</p>
+<p>Next, you will have to configure the database connection information so that the backend can communicate with the database. Open <code>&lt;project directory&gt;/knexfile.js</code>. Here, make sure that the connection information matches what is needed to connect to your local database (most likely, the only things that will need to be changed are the user, password, and database values).</p>
+<p>To run the backend, move into <code>&lt;project directory&gt;/backend</code> and run <code>npm run start</code>. This will start a node webserver on your computer that you can hit at <a href="localhost:8090/">localhost:8090/<route></a>.</p>
+<p>To test that the backend is up and running, you can go to <a href="localhost:8090/">localhost:8090/</a>, and you should see 'Hello World!' in the browser.</p>
+<h2>Database Migrations</h2><p>In order to make changes to the database, we use migrations. These make changes to the database programatically, and can be ran from the command line. As well as making changes to the database, they also serve as records of what has been changed on it. Because of this, they allow us to also undo these changes.</p>
+<p>Also, <strong>never delete a migration in master</strong>. This can and will result in really bad things.</p>
+<h3>Creating a Migration</h3><p>To create a new migration, run <code>npm run create-migration -- [name]</code> from <code>&lt;project directory&gt;/backend</code>. This will create the boilerplate for a new migration. Inside of the migration, make whatever modifications you need to make to the database. Note, <strong>make sure to include both the up and down function</strong>.</p>
+<h3>Running Migrations</h3><p>To run migrations, go to <code>&lt;project directory&gt;/backend</code> in the command line. Then run <code>npm run migrate</code>. This will run any migrations that have not been run on the database.</p>
+<h3>Rolling Back Migrations</h3><p>If you ever need to roll back migrations, you can do so by running <code>npm run rollback</code> from <code>&lt;project directory&gt;/backend</code>. This will reverse all of the changes the migrations have made. Note, this can fail if there have been modifications to the database outside of those by the migrations. In that case, you will have to manually revert everything. The easiest way to do this is to manually delete all tables in the database.</p>
+<h2>Seeding Database</h2><p>There are two seeders in the backend:  one to add users, and one to create the friend relationship between different users. In order to use these, go to <code>&lt;project directory&gt;/backend</code>, then run <code>npm run seed</code>. This will delete any entries inside of the <code>user</code> or <code>friends</code> table, then add its own entries.</p>
+<h2>Backend Endpoints</h2><p>Below is a list of the backend endpoints.</p>
+<h3><code>/</code>:</h3><ul>
+<li>GET</li>
+<li>Used to see if the backend is up</li>
+<li>Response: 'Walk Me Home backend is running!'</li>
+</ul>
+<h3><code>/login</code>:</h3><ul>
+<li>POST</li>
+<li>Used to authenticate a user</li>
+<li>Request Body:<ul>
+<li><code>email</code>: user email</li>
+<li><code>password</code>: user password</li>
+</ul>
+</li>
+<li>Response Body:<ul>
+<li>Success:<ul>
+<li><code>email</code>: user email</li>
+</ul>
+</li>
+<li>Failure:<ul>
+<li>No body</li>
+<li>401 Status</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><code>/getFriends</code>:</h3><ul>
+<li>POST</li>
+<li>Gets a list of the emails of friends related to the given user</li>
+<li>Request Body:<ul>
+<li><code>email</code>: user email</li>
+</ul>
+</li>
+<li>Response Body:<ul>
+<li>Array of friends related to the given user</li>
+</ul>
+</li>
+</ul>
+<h3><code>/getFriendInfo</code>:</h3><ul>
+<li>POST</li>
+<li>Gets detailed user info</li>
+<li>Request Body:<ul>
+<li><code>email</code>: user email</li>
+</ul>
+</li>
+<li>Response Body:<ul>
+<li><code>email</code>: user email</li>
+<li><code>password</code>: user password</li>
+<li><code>firstName</code>: user's first name</li>
+<li><code>lastName</code>: user's last name</li>
+<li><code>status</code>: user status</li>
+</ul>
+</li>
+</ul>
+<h3><code>/register</code>:</h3><ul>
+<li>POST</li>
+<li>Registers a new user</li>
+<li>Request Body:<ul>
+<li><code>email</code>: user email</li>
+<li><code>firstName</code>: user's first name</li>
+<li><code>lastName</code>: user's last name</li>
+<li><code>password</code>: user password</li>
+</ul>
+</li>
+<li>Response Body:<ul>
+<li><code>email</code>: user email<ul>
+<li>Only present if registering the user was successful</li>
+</ul>
+</li>
+<li><code>error</code>: boolean value representing whether there was an error or not</li>
+</ul>
+</li>
+</ul>
+<h2>Running Tests</h2><h3>App Tests</h3><p>The testing framework that we are using is called Jest (you can look at the Jest documentation <a href="https://facebook.github.io/jest/">here</a>).</p>
+<p>To run the test suite, run <code>npm test</code> while inside of the app project directory in the terminal.</p>
+<h2>Accessing AWS Infrastructure Locally</h2><h3>Accessing the Backend Server</h3><p>In order to connect to the backend, you will have to ssh into it. To do this, enter the following command:
+<code>ssh -i &quot;&lt;project path&gt;\aws\wmh-backend.pem&quot; ubuntu@ec2-18-216-1-189.us-east-2.compute.amazonaws.com</code>. Note, this will only work if nobody else is connected to the backend and you have the project cloned locally.</p>
+<p>This will connect you to the backend Ubuntu box as user 'ubuntu'. From there you will have access to the local filesystem.</p>
+<h3>Connecting to the Database</h3><p>To connect to the database, have a database program or MySQL installed. Then when making a new connection, enter <code>wmh-db.cthihu5gp8ac.us-east-2.rds.amazonaws.com</code> for the endpoint, <code>3306</code> for the port, <code>admin</code> for the username, and <code>walkmehome309</code> for the password.</p>
+<h2>Documentation</h2><p>The frontend is documented using <a href="http://usejsdoc.org/">jsdoc</a>. The backend is documented with a custom-built static website.</p>
+<h3>Generating Frontend Documentation</h3><p>If you want to generate new frontend documentation, you must first have jsdoc installed. To do this, run <code>npm install -g jsdoc</code> to install it globally. Once jsdoc has been installed, run <code>npm run document</code> from <code>&lt;project directory&gt;/app</code>. This will generate new documentation inside of the <code>&lt;project directory&gt;/app/documentation</code> directory. Note, if you generate new documentation, git will see these changes, so make sure to commit these.</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:26 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

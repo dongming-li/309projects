@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Account Home</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" type="text/css" href="rating_style.css">
+  <script type="text/javascript">
+
+   function change(docID)
+   {
+      var className=document.getElementById(docID).className;
+      var val=document.getElementById(docID+"_hidden").value;
+      document.getElementById(className+"rating").innerHTML=val;
+
+      for(var i=val;i>0;i--)
+      {
+         document.getElementById(className+i).src="star2.png";
+      }
+      var index=parseInt(val)+1;
+      for(var j=index;j<6;j++)
+      {
+         document.getElementById(className+j).src="star1.png";
+      }
+   }
+
+</script>
+
+    </head>
+    <body>
+
+        <h1>Account Home</h1>
+        <h2>Rate the Game</h2>
+
+        <?php
+    $host="localhost";
+    $username="root";
+    $password="";
+    $databasename="sample";
+
+    $connect=mysql_connect($host,$username,$password);
+    $db=mysql_select_db($databasename);
+
+    $select_rating=mysql_query("select php,asp,jsp from rating");
+    $total=mysql_num_rows($select_rating);
+
+    while($row=mysql_fetch_array($select_rating))
+    {
+	  $phpar[]=$php;
+	  $aspar[]=$asp;
+	  $jspar[]=$jsp;
+
+    }
+    $total_php_rating=(array_sum($phpar)/$total);
+    $total_asp_rating=(array_sum($aspar)/$total);
+    $total_jsp_rating=(array_sum($jspar)/$total);
+
+?>
+
+<form method="post" action="insert_rating.php">
+  <p id="total_votes">Total Votes:<?php echo $total;?></p>
+  <div class="div">
+	  <p>PHP (<?php echo $total_php_rating;?>)</p>
+	  <input type="hidden" id="php1_hidden" value="1">
+	  <img src="images/star1.png" onmouseover="change(this.id);" id="php1" class="php">
+	  <input type="hidden" id="php2_hidden" value="2">
+	  <img src="images/star1.png" onmouseover="change(this.id);" id="php2" class="php">
+	  <input type="hidden" id="php3_hidden" value="3">
+	  <img src="images/star1.png" onmouseover="change(this.id);" id="php3" class="php">
+	  <input type="hidden" id="php4_hidden" value="4">
+	  <img src="images/star1.png" onmouseover="change(this.id);" id="php4" class="php">
+	  <input type="hidden" id="php5_hidden" value="5">
+	  <img src="images/star1.png" onmouseover="change(this.id);" id="php5" class="php">
+  </div>
+
+
+  <input type="hidden" name="phprating" id="phprating" value="0">
+  <input type="submit" value="Submit" name="submit_rating">
+
+</form>
+
+
+
+
+        <p>
+
+        </p>
+
+        <!--
+            GET STARTED WITH YOUR OWN FILES
+        -->
+
+        <h3>Your Ranking against your state</h3>
+        <p>
+
+        </p>
+
+        <!--
+            THE RELATIONSHIP BETWEEN HTML, CSS AND JAVASCRIPT
+        -->
+        <h3>Your Ranking against your country</h3>
+        <p>
+
+        </p>
+
+
+
+        <a href="screenshots/quick-edit.png">
+            <img alt="A screenshot showing CSS Quick Edit" src="screenshots/quick-edit.png" />
+        </a>
+
+
+        <ul>]      </ul>
+
+    </body>
+</html>
+<!--
+
+-->

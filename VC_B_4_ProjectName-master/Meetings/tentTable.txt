@@ -1,0 +1,10 @@
+Tables and fields. 
+
+Need db for : maps / players / playerFriends
+
+Maps : 
+(MapID, CreatorID(referencesPlayerID), List<Byte> map)
+Players : 
+(PlayerID, name, ranking, level)
+PlayerFriend
+(PlayerID(references PlayerID), friends)

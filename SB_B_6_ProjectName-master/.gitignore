@@ -1,0 +1,6 @@
+*.class
+*.docx
+*.o
+*~
+*/testCody/
+testCody/*

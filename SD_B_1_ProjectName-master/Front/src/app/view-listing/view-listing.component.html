@@ -1,0 +1,141 @@
+<p>
+  showing listing info for: {{propID}}
+  <div>
+    <!-- Trigger/Open The Email Modal -->
+    <button id="myBtn">Email Listing Owner</button>
+  </div>
+  <!-- The Email Modal -->
+  <div id="myModal1" class="modal1">
+
+    <!-- Email Modal content -->
+    <div class="modal-content1">
+      <span class="close1">&times;</span>
+      <div class="emailBox">
+        <label>Send Property Owner an Email</label>
+        <div>
+          <textarea required class="txt-area" id="emailSubject" type="text" placeholder="Subject..." rows="1" cols="130"></textarea>
+        </div>
+        <div>
+          <textarea required class="txt-area" id="emailBody" type="text" placeholder="Body..." rows="5" cols="130"></textarea>
+        </div>
+        <div>
+          <button type="button" (click)="email()">send</button>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+
+  <div id="myModal2" class="modal2">
+
+    <!-- Modal content -->
+    <div class="modal-content2">
+      <span class="close2">&times;</span>
+      <p>Email Sent!..</p>
+    </div>
+
+  </div>
+
+  <div *ngIf="isLoaded">
+  	Poster Username: {{currentListing.posterUsername}} <br/>
+
+  	Leasing Agency: {{currentListing.leasingAgency}} <br/>
+
+  	Rent: {{currentListing.rentValue}} <br/>
+
+  	Address: {{currentListing.address}} <br/>
+
+  	Posting Message: {{currentListing.postingMessage}} <br/>
+
+  	Number of bathrooms: {{currentListing.bathroomQuantity}} <br/>
+
+  	Personal Bathroom: {{currentListing.personalBathroom}} <br/>
+
+  	Number of Roommates: {{currentListing.roommateQuantity}} <br/>
+
+    Average Rating: {{avgRating}} {{ratingMessage}}<br/>
+
+  </div>
+
+
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="newMessageForm">
+    <div class="form-group">
+      <input type="text" class="form-control" formControlName="textMessage" required placeholder="Enter Message Here">
+    </div>
+    <div><input type="submit" id="submit" value="Submit"></div>
+  </form>
+
+
+  <label>Rate this property:</label>
+  <div id="rating">
+    <input type="radio" id="one" name="rating"> 1
+    <input type="radio" id="two" name="rating"> 2
+    <input type="radio" id="three" name="rating"> 3
+    <input type="radio" id="four" name="rating"> 4
+    <input type="radio" id="five" name="rating"> 5     
+  </div>
+  
+  <div>
+          <span id="ratingError"></span>
+  </div>
+  
+  <div>
+    <button id="submitRating" type="button" (click)="getRating()">Submit Rating</button>
+  </div>
+
+  <label> {{imageMessage}}</label>
+  <div>
+    <img src="" id="prop0" width="300" height="200"/>
+  </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- The Close Button -->
+    <span class="close">&times;</span>
+
+    <!-- The Next Button -->
+    <span class="next">&times;</span>
+
+    <!-- The Back Button -->
+    <span class="back">&times;</span>
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="img01">
+
+  </div>
+
+
+  
+  <img src="" id="prop1" />
+  <img src="" id="prop2" />
+  <img src="" id="prop3" />
+  <img src="" id="prop4" />
+
+
+  <table>
+    <tr>
+    <th>Poster Username</th>
+    <th>Comment</th>
+    <th>Time</th>
+    
+    <tr *ngFor="let data of commentArray">
+      <td> {{data.commentPosterUsername}}</td>
+      <td> {{data.message}}</td>
+      <td> {{data.timePosted}}</td>
+    </tr>
+  </table>
+
+  <div class="commentBox">
+    <label>Write a comment regarding this property: </label>
+    <div>
+      
+      <textarea required class="txt-area" id="comment" type="text" placeholder="Comment..." rows="5" cols="80"></textarea>
+    </div>
+    <div>
+      <button type="button" (click)="comment()">Comment</button>
+    </div>
+  </div>

@@ -1,0 +1,28 @@
+html
+  head
+    link(href='/bootstrap-theme.min.css', rel='stylesheet')
+    link(href='/bootstrap.min.css', rel='stylesheet')
+    link(href='/css/views/test/theme.css', rel='stylesheet')
+    script(src='/jquery.min.js')
+    script(src='/js/lib/matter.min.js')
+    script(src='/bootstrap.min.js')
+    script(src="/js/lib/socket.io.js")
+    block head-links
+
+body
+  block topNav
+    each navJson in navbars
+      nav.navbar.navbar-inverse
+        .container
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#' + navJson.id, aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          .collapse.navbar-collapse(id=navJson.id)
+            ul(class='nav ' + navJson.left.type)
+              each item in navJson.left.items
+                li
+                  a(href=item.href) #{item.name}
+  .container
+    block content

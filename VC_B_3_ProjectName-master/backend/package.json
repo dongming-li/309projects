@@ -1,0 +1,25 @@
+{
+  "name": "WalkMeHome_Backend",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./dist --copy-files",
+    "start": "npm run build && node dist/index.js",
+    "migrate": "npm run build && knex migrate:latest --knexfile ./dist/knexfile.js",
+    "rollback": "npm run build && knex migrate:rollback --knexfile ./dist/knexfile.js",
+    "seed": "npm run build && knex seed:run --knexfile ./dist/knexfile.js",
+    "create-migration": "npm run build && knex migrate:make --knexfile ./dist/knexfile.js --cwd ."
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "knex": "^0.13.0",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "rimraf": "^2.6.2"
+  }
+}

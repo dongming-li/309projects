@@ -1,0 +1,55 @@
+routes:
+  path:           ''
+  controller:     Index
+  action:         index
+  children:
+  - path:         project
+    controller:   Project
+    action:       index
+    children:
+    - path:       create
+      controller: Project
+      action:     create
+    - path:       room
+      controller: Project
+      action:     room
+    - path:       edit
+      controller: Project
+      action:     edit
+    - path:       view
+      controller: Project
+      action:     view
+    - path:       render
+      controller: Project
+      action:     render
+    - path:       edit-users
+      controller: Project
+      action:     editUsers
+  - path:         user
+    children:
+    - path:       login
+      controller: User
+      action:     login
+    - path:       signup
+      controller: User
+      action:     signup
+  - path:         ecode
+    controller:   Ecode
+    action:       ecode
+managerPipeline:
+- route
+- socket
+- controller
+- globals
+- plugin
+- request
+plugins:
+- test
+- sequelize
+- navbar
+static:
+- matterjs/dist
+- jquery/dist
+- bootstrap/dist/css
+- bootstrap/dist/js
+port:             8080

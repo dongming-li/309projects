@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alex.recitation.MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Complete the fields to send a sms"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="ex: 1234567890"
+            android:inputType="phone" />
+        <EditText
+            android:id="@+id/smsBody"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="30dp"
+            android:hint="Write your sms here...." />
+        <Button
+            android:id="@+id/smsManager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Send the sms by SmsManager" />
+        <Button
+            android:id="@+id/smsSIntent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Send the sms by intent" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

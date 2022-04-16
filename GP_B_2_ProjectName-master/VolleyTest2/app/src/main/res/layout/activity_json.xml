@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/json_object_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JSON Object Request" />
+
+    <Button
+        android:id="@+id/json_array_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="JSON Array Request" />
+
+    <TextView
+        android:id="@+id/json_response"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Repsonse" />
+</LinearLayout>

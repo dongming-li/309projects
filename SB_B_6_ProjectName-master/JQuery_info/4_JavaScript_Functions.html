@@ -1,0 +1,50 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+   </head>
+	
+   <body>
+      <div id="messageDiv"></div>
+	  <script type="text/javascript" language="javascript">
+	  var data = [1, 2, 3, 4, 5];
+	  var temp = "";
+	  for (var i = 0; i < data.length; i++){
+		temp += " " + data[i];
+	  }
+	  console.log(temp);
+	  
+	  data.push(6);
+	  console.log(data[5]);
+	  
+	  console.log(data.pop(5));
+	  
+	  data.reverse();
+	  temp = "";
+	  for (var i = 0; i < data.length; i++){
+		temp += " " + data[i];
+	  }
+	  console.log(temp);
+	  
+	  data.sort();
+	  temp = "";
+	  for (var i = 0; i < data.length; i++){
+		temp += " " + data[i];
+	  }
+	  console.log(temp);
+	  
+	  var data1 = "abc";
+	  var data2 = "def";
+	  
+	  console.log(data1.charAt(2));
+	  console.log(data1.concat(data2));
+	  console.log(data1.toUpperCase());
+	  console.log(data1.toLowerCase());
+	</script>
+   </body>
+	
+</html>

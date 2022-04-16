@@ -1,0 +1,352 @@
+extends template/theme.pug
+block head-links
+  script(src="/js/lib/resurrect.js")
+block content
+  div
+    label(for='name') Code:
+    textarea#code.form-control(rows='15', name='code') #{p_code}
+    button.btn.btn-primary(type='button', id='sbutton') Update Code
+  meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  meta(name='viewport', content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui')
+  meta(name='theme-color', content='#000000')
+  meta(name='msapplication-navbutton-color', content='#000000')
+  meta(name='apple-mobile-web-app-capable', content='yes')
+  meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+  title Matter.js Demo
+  // libs
+  script(type='text/javascript', src='./js/lib/codeedit_files/pathseg.js')
+  // Matter
+  script(src='./js/lib/codeedit_files/matter-dev.js')
+  // MatterTools
+  script(src='./js/lib/codeedit_files/matter-tools.gui.js')
+  script(src='./js/lib/codeedit_files/matter-tools.inspector.js')
+  script(src='./js/lib/codeedit_files/matter-tools.demo.js')
+  // Plugins
+  script(src='./js/lib/codeedit_files/matter-wrap.js')
+  link#matter-demo-style(rel='stylesheet', href='./css/views/ecode/ecode.css')
+
+  script(src='./js/views/ecode.js')
+  // Examples
+  style#matter-demo-style(type='text/css ').
+    /*
+    *	MatterTools.Demo
+    */
+  script(type='text/javascript', src='./js/lib/codeedit_files/Examples.js')
+  style(type='text/css').
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    margin: 0;
+    padding: 0;
+    }
+  body
+  .ins-container
+    input.ins-search-box(type='search', placeholder='search')
+    button.ins-add-button.ins-button +
+    .ins-world-tree.jstree.jstree-2.jstree-default(role='tree', aria-multiselectable='true', tabindex='0', aria-activedescendant='constraints_57', aria-busy='false')
+      ul.jstree-container-ul.jstree-children(role='group')
+        li#composite_118.jstree-node.jstree-node-type-composite.jstree-open(role='treeitem', aria-selected='false', aria-level='1', aria-labelledby='composite_118_anchor', aria-expanded='true')
+          i.jstree-icon.jstree-ocl(role='presentation')
+          a#composite_118_anchor.jstree-anchor(href='http://brm.io/matter-js/demo/#', tabindex='-1', style='touch-action: none;')
+            i.jstree-icon.jstree-themeicon(role='presentation')
+            | Composite 118
+          ul.jstree-children(role='group', style='')
+            li#composites_118.jstree-node.jstree-node-type-composites.jstree-leaf(role='treeitem', aria-selected='true', aria-level='2', aria-labelledby='composites_118_anchor')
+              i.jstree-icon.jstree-ocl(role='presentation')
+              a#composites_118_anchor.jstree-anchor.jstree-clicked(href='http://brm.io/matter-js/demo/#', tabindex='-1')
+                i.jstree-icon.jstree-themeicon(role='presentation')
+                | Composites
+            li#bodies_118.jstree-node.jstree-node-type-bodies.jstree-leaf(role='treeitem', aria-selected='false', aria-level='2', aria-labelledby='bodies_118_anchor')
+              i.jstree-icon.jstree-ocl(role='presentation')
+              a#bodies_118_anchor.jstree-anchor(href='http://brm.io/matter-js/demo/#', tabindex='-1')
+                i.jstree-icon.jstree-themeicon(role='presentation')
+                | Bodies
+            li#constraints_118.jstree-node.jstree-node-type-constraints.jstree-leaf.jstree-last(role='treeitem', aria-selected='false', aria-level='2', aria-labelledby='constraints_118_anchor')
+              i.jstree-icon.jstree-ocl(role='presentation')
+              a#constraints_118_anchor.jstree-anchor(href='http://brm.io/matter-js/demo/#', tabindex='-1')
+                i.jstree-icon.jstree-themeicon(role='presentation')
+                | Constraints
+        li#composite_57.jstree-node.jstree-node-type-composite.jstree-open.jstree-last(role='treeitem', aria-selected='false', aria-level='1', aria-labelledby='composite_57_anchor', aria-expanded='true')
+          i.jstree-icon.jstree-ocl(role='presentation')
+          a#composite_57_anchor.jstree-anchor(href='http://brm.io/matter-js/demo/#', tabindex='-1', style='touch-action: none;')
+            i.jstree-icon.jstree-themeicon(role='presentation')
+            | World 57
+          ul.jstree-children(role='group')
+            li#composites_57.jstree-node.jstree-node-type-composites.jstree-closed(role='treeitem', aria-selected='false', aria-level='2', aria-labelledby='composites_57_anchor', aria-expanded='false')
+              i.jstree-icon.jstree-ocl(role='presentation')
+              a#composites_57_anchor.jstree-anchor(href='http://brm.io/matter-js/demo/#', tabindex='-1')
+                i.jstree-icon.jstree-themeicon(role='presentation')
+                | Composites
+            li#bodies_57.jstree-node.jstree-node-type-bodies.jstree-closed(role='treeitem', aria-selected='false', aria-level='2', aria-labelledby='bodies_57_anchor', aria-expanded='false')
+              i.jstree-icon.jstree-ocl(role='presentation')
+              a#bodies_57_anchor.jstree-anchor(href='http://brm.io/matter-js/demo/#', tabindex='-1')
+                i.jstree-icon.jstree-themeicon(role='presentation')
+                | Bodies
+            li#constraints_57.jstree-node.jstree-node-type-constraints.jstree-closed.jstree-last(role='treeitem', aria-selected='false', aria-level='2', aria-labelledby='constraints_57_anchor', aria-expanded='false')
+              i.jstree-icon.jstree-ocl(role='presentation')
+              a#constraints_57_anchor.jstree-anchor(href='http://brm.io/matter-js/demo/#', tabindex='-1')
+                i.jstree-icon.jstree-themeicon(role='presentation')
+                | Constraints
+  script(src='./js/lib/codeedit_files/Demo.js')
+  .dg.main(style='width: 245px;')
+    ul
+      li.folder
+        .dg
+          ul
+            li.title Metrics
+            li.cr.number
+              div
+                span.property-name fps
+                .c
+                  input(type='text')
+      li.folder
+        .dg
+          ul
+            li.title Add Body
+            li.cr.number.has-slider
+              div
+                span.property-name amount
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 0%;')
+            li.cr.number.has-slider
+              div
+                span.property-name size
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 24.1379%;')
+            li.cr.number.has-slider
+              div
+                span.property-name sides
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 42.8571%;')
+            li.cr.number.has-slider
+              div
+                span.property-name density
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 39.3939%;')
+            li.cr.number.has-slider
+              div
+                span.property-name friction
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 10%;')
+            li.cr.number.has-slider
+              div
+                span.property-name frictionStatic
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 5%;')
+            li.cr.number.has-slider
+              div
+                span.property-name frictionAir
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 10%;')
+            li.cr.number.has-slider
+              div
+                span.property-name restitution
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 0%;')
+            li.cr.number.has-slider
+              div
+                span.property-name chamfer
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 0%;')
+            li.cr.function
+              div
+                span.property-name addBody
+                .c
+                  .button
+      li.folder
+        .dg
+          ul
+            li.title World
+            li.cr.function
+              div
+                span.property-name clear
+                .c
+                  .button
+            li.folder
+              .dg
+                ul
+                  li.title Gravity
+                  li.cr.number.has-slider
+                    div
+                      span.property-name scale
+                      .c
+                        div
+                          input(type='text')
+                        .slider
+                          .slider-fg(style='width: 100%;')
+                  li.cr.number.has-slider
+                    div
+                      span.property-name x
+                      .c
+                        div
+                          input(type='text')
+                        .slider
+                          .slider-fg(style='width: 50%;')
+                  li.cr.number.has-slider
+                    div
+                      span.property-name y
+                      .c
+                        div
+                          input(type='text')
+                        .slider
+                          .slider-fg(style='width: 100%;')
+      li.folder
+        .dg
+          ul
+            li.title Engine
+            li.cr.boolean
+              div
+                span.property-name enableSleeping
+                .c
+                  input(type='checkbox')
+            li.cr.number.has-slider
+              div
+                span.property-name timeScale
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 83.3333%;')
+            li.cr.number.has-slider
+              div
+                span.property-name velocityIterations
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 33.3333%;')
+            li.cr.number.has-slider
+              div
+                span.property-name positionIterations
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 55.5556%;')
+            li.cr.number.has-slider
+              div
+                span.property-name constraintIterations
+                .c
+                  div
+                    input(type='text')
+                  .slider
+                    .slider-fg(style='width: 11.1111%;')
+            li.cr.boolean
+              div
+                span.property-name enabled
+                .c
+                  input(type='checkbox', checked='checked')
+      li.folder
+        .dg
+          ul
+            li.title Render
+            li.cr.boolean
+              div
+                span.property-name wireframes
+                .c
+                  input(type='checkbox', checked='checked')
+            li.cr.boolean
+              div
+                span.property-name showDebug
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showPositions
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showBroadphase
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showBounds
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showVelocity
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showCollisions
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showSeparations
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showAxes
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showAngleIndicator
+                .c
+                  input(type='checkbox', checked='checked')
+            li.cr.boolean
+              div
+                span.property-name showSleeping
+                .c
+                  input(type='checkbox', checked='checked')
+            li.cr.boolean
+              div
+                span.property-name showIds
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showVertexNumbers
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showConvexHulls
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name showInternalEdges
+                .c
+                  input(type='checkbox')
+            li.cr.boolean
+              div
+                span.property-name enabled
+                .c
+                  input(type='checkbox', checked='checked')
+    .close-button(style='width: 245px;') ▲

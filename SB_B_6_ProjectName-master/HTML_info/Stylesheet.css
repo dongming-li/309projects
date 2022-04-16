@@ -1,0 +1,361 @@
+/* This is a information CSS.
+   It is entirely not inorder.
+   Its only purpose is to give understanding
+   of CSS.
+*/
+
+
+/*
+Type of Selectors - select element by types
+h1 {}
+
+ID Selectors - select element with # normally restricted to one
+#para1 {}
+
+Class Selector - select element with . reusable with multiple elements
+.para {}
+
+Combine Selectors
+h2, h3, #para1 {}
+
+Descendant Selector - select element inside another element
+div p {}
+
+Child Selector - selects DIRECT CHILD element
+blockquote.test>b {}
+
+Sibling Selector - select by bordering elements and modify that specifically
+h2+p {}
+h2~p {}
+
+Attribute Selector - modify by the attribute like lang, class, id
+p[lang] {}
+p[lang="fr"] {} select anything in lang with only "fr"
+p[lang^="fr"] {} select anything in lang beginning with "fr"
+p[lang$="o"] {} select anything end in "o"
+p[lang*="us"] {} select anything with the values anywhere in it.
+
+nth Child Selector - A type of Sudo, modify base on given settings
+#right p:nth-child(number) {} any value place in number would be selected, all evens, odds, 2, 5, 3x+400px
+	
+Not Selector - A type of Sudo, exclude elements 
+:not(p) {}	everything change except the one given "p"
+
+First Selector - A type of Sudo, modify the first letter in that element
+p::first-letter {}		Modify the first letter
+p:first-line {}			Modify the first line
+*/
+
+/* Details changes regarding the body element */
+body {
+	color:green;
+	font-family: Verdana, Arial, Geneva, Arial Black;
+	font-weight: normal;
+	background-color: grey;
+	font-size: 25px;
+	border-color: aquamarine;
+	border-width: 4px;
+	border-style: solid;
+}
+/* Details changes regarding the header1 */
+h1 {										
+	border-bottom: 1px solid black;	
+	font-size: 150%;
+	text-align: center;
+}
+/* Details changes regarding the header2, floats interrupts the main flow of html */
+h2 {										
+	text-decoration: underline;	
+	width: 50%;
+	float: left;
+	font-size: 1.2em;
+	text-align: center;
+}
+/* anything in paragraph with "para1" is modified with this */
+p.para1 {
+	color: blue;
+	border: black 2px solid;
+	border-bottom-style: dotted;
+	border-top-color: green;
+}
+/* anything with "para2" is modified with this */
+p.para2 {
+	color: purple;
+	font-size: 15px;
+	line-height: 1.5em;
+}
+/* The border and padding can be modified in details and background image is possible */
+/* "position" can be set to 
+	fixed (Ignore flow and stay in the same spot regardless of scroll up or down)
+	absolute (Ignore flow and elements in the html but will only remain in that location)
+	relative (Shift locations in that specific element that it nest in)
+*/
+p.para3 {
+	color: purple;
+	font-style: italic;
+	background-color: grey;
+	border: black 2px solid;
+	border-radius: 10px;
+	padding: 20px 20px 20px 20px;
+	margin: 0;
+	background-image: url(clouds2.jpg);
+	
+	position: absolute;
+	
+	top: 300px;
+	left:70px;
+	width: 250px;
+	height: 50px;
+}
+
+p.para4 {
+	color: black;
+	font-style: italic;
+	background-color: grey;
+	padding: 20px;
+	border-color: black;
+	border-width: 5px;
+	border-style: ridge;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	margin: 20px;
+	margin-top: 50px;
+	margin-left: 400px;
+	padding-left; 50px;
+
+}
+/* Detailed modification for imaging */
+img.image {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3px;
+	background-color: silver;
+	border-color: black;
+	border-width: 2px;
+	border-style: solid;
+}
+/* Anything nested in DIV class "divmain" with be black unless it has its own color */
+%divmain {
+	color: black;
+}
+/* Anything with class blue with be modified with this */
+.blue {
+	color: blue;
+	font-size: 25px;
+	font-family: Helvetica;
+}
+/* paragraph class "purple" will be modified with this */
+p.purple {
+	color: green;
+	font-size: 25px;
+	font-family: Helvetica;
+}
+
+h3 {
+	
+	color: green;
+	text-decoration: underline;
+}
+/* Sudo coding (yellow colored), it would automatically applies to all regular links */
+a:link {
+	color: blue;
+}
+
+a:visited {
+	color: #purple;
+}
+
+a:hover {
+	color: #F15A51;
+	cursor: wait;
+}
+/* Changes to div "div1" */
+div.div1 {
+	background-color: red;
+	color: white;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+}
+
+div.div2 {
+	background-color: black;
+	color: white;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+
+div.div3 {
+	background-color: black;
+	color: white;
+	position: absolute;
+	top: 70px;
+	left: 10px;
+}
+/* changes to div "vert" */
+#vert ul {
+	list-style:none;
+	padding: 0;
+	margin: 0;
+}
+
+#vert ul li a {
+	text-decoration: none;
+	font-family: Georgia, "Times New Roma";
+	background-color: #5c755e;
+	color: white;
+	display: block;
+	width: 80px;
+	margin: 5px;
+	padding: 10px;
+	text-align: center;
+	height: 25px;
+	line-height: 25px;
+}
+
+#vert ul li a:hover {
+	background-color: #d3d3d3;
+	color: black;
+}
+/* Setting word and color details */
+#nav {
+	background-color: darkgreen;
+	height: 35px;
+	font-size: 25px;
+	font-weight: bold;
+	font: Tahoma;
+}
+/* Expanding box and removing bullets for unordered list */
+#nav ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: center;
+}
+/* Changing default to inline(stack horizontally) and minor */
+#nav li {
+	display: inline;
+	padding:15px;
+	vertical-align:middle;
+}
+/* Removing underline, alter color, expanding padding, and correct location in links */
+#nav a {
+	text-decoration: none;
+	padding: 8px 8px 8px 8px;
+	color: white;
+	vertical-align: middle;
+}
+/* Setting colors when hovering over links */
+#nav a:hover {
+	color: black;
+	background-color: white;
+}
+/* Setting details for class "button" */
+.button {
+	background: #e7e7e7;
+	border: 1px solid;
+	border-radius: 3px;
+	font: 700 13px Hevletica;
+	height: 30px;
+	line-height: 28px;
+	padding: 0 20px;
+	text-align: center;
+	margin-right: 10px;
+	box-sizing: border-box;
+}
+/* Removing color and bullets for ul */
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+/* Setting it to inline(horizontal), default is a block(vertical)*/
+li {
+	display: inline;
+}
+/* Change colors and remove underline */
+a {
+	color: #666;
+	text-decoration: none;
+}
+/* Set to change color when hovering over link */
+a:hover {
+	color: #000;
+	background-color: #dadada;
+}
+/* DIV the main block is set to table */
+#theForm {
+	color: white;
+	display: table;
+	padding: 15px;
+	background-color: #2c8F77;
+	border: solid 2px black;
+}
+/* the nested element is set align with the DIV element */
+.row {
+	display: table-row;
+}
+/* class "row" label is alter to display table-cell */
+.row label {
+	display: table-cell;
+	padding: 2px;
+}
+/* class "row" input is alter to display table-cell */
+.row input {
+	display: table-cell;
+	padding: 2px;
+}
+/* Sets a mixed color with linear-gradient and transparency*/
+#box1 {
+	width: 300px;
+	height: 300px;
+	float: left;
+	padding: 15px;
+	margin: 10px;
+	background: blue;
+	/*background: linear-gradient(to top right,blue,yellow,green);*/
+	/*background: linear-gradient(to bottom left,blue,yellow,green);*/
+	/*background: linear-gradient(to bottom left,blue,yellow,green);*/
+	/*background: linear-gradient(blue,yellow 20%,green 30%);*/
+	/*background: linear-gradient(blue,yellow 50%,green 50%);*/
+	background: linear-gradient(to right, rgba(255,255,0,0.4), rgba(0,0,255,1));
+}
+/* Opacity changes elements transparency good for image */
+#box2 {
+	width: 300px;
+	height: 300px;
+	float: left;
+	padding: 15px;
+	margin: 10px;
+	background-color: blue;
+	opacity: 0.5;
+}
+
+#box2:hover {
+	opacity: 1.0;
+}
+/* Set shadow */
+#text1 {
+	text-align: center;
+	font: bold 60px Helvetica;
+	text-shadow: 3px 3px 5px orange,
+				 6px 6px 10px blue;
+}
+/* Set shadow with transparency */
+#text2 {
+	text-align: center;
+	font: bold 60px Helvetica;
+	text-shadow: 6px 6px 10px rgba(0, 0, 255, 0.2);
+}
+/* Set shadow for box*/
+#box3 {
+	width: 300px;
+	height:300px;
+	background-color:blue;
+	/*box-shadow: 15px 15px 10px 7px orange;*/
+	box-shadow: inset 0 0 15px black;
+}

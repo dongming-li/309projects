@@ -1,0 +1,15 @@
+extends ../template/theme.pug
+block content
+  // libs
+  script(type='text/javascript', src='/js/lib/codeedit_files/pathseg.js')
+  // Matter
+  script(src='/js/lib/codeedit_files/matter-dev.js')
+  // MatterTools
+  script(src='/js/lib/codeedit_files/matter-tools.gui.js')
+  script(src='/js/lib/codeedit_files/matter-tools.inspector.js')
+  script(src='/js/lib/codeedit_files/matter-tools.demo.js')
+  // Plugins
+  script(src='/js/lib/codeedit_files/matter-wrap.js')
+  h1 Render Project
+  script(src="/js/views/test/render.js")
+  canvas#rCanvas

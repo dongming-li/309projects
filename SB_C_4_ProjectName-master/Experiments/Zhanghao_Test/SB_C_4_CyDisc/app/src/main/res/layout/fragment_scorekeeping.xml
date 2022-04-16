@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvHole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newGame"
+        android:layout_alignStart="@+id/newGame"
+        android:layout_below="@+id/tvLobbyId"
+        android:layout_marginTop="45dp"
+        android:text="HOLE # : 1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <EditText
+        android:id="@+id/etScore"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHole"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="Enter Score"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/bPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etScore"
+        android:layout_alignBottom="@+id/etScore"
+        android:layout_alignLeft="@+id/bGear"
+        android:layout_alignStart="@+id/bGear"
+        android:text="Prev" />
+
+    <Button
+        android:id="@+id/bNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHole"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/etScore"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etScore"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/bGear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newGame"
+        android:layout_toLeftOf="@+id/bTips"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="20dp"
+        android:text="GEAR" />
+
+    <Button
+        android:id="@+id/bTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/newGame"
+        android:layout_marginTop="120dp"
+        android:text="TIPS" />
+
+    <Button
+        android:id="@+id/openScorecard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bTips"
+        android:layout_alignBottom="@+id/bTips"
+        android:layout_alignLeft="@+id/bNext"
+        android:layout_alignStart="@+id/bNext"
+        android:text="SCORECARD" />
+
+    <TextView
+        android:id="@+id/tvLobbyId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/submitGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/openScorecard"
+        android:layout_marginBottom="29dp"
+        android:layout_toLeftOf="@+id/bNext"
+        android:layout_toStartOf="@+id/bNext"
+        android:text="Save Game" />
+
+</RelativeLayout>

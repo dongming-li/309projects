@@ -1,0 +1,31 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+   </head>
+	
+   <body>
+      <div id="messageDiv"></div>
+	  <script type="text/javascript" language="javascript">
+	  
+		 $(document).ready(function(){
+			$("#messageDiv").html(employee.name + ", Salary: " + employee.getSalary());
+			$("#messageDiv").click(function(event){
+				console.log("clicked: " + event.target);
+			});
+		 });
+         var employee = {
+			name: "Tom Turner",
+			emp_id: 1,
+		getSalary: function(){
+			return 1000;
+		}
+		};
+	</script>
+   </body>
+	
+</html>

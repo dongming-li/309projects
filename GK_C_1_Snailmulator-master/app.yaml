@@ -1,0 +1,9 @@
+env: flex
+runtime: nodejs
+env_variables:
+  SQL_USER: postgres
+  SQL_PASSWORD: Snailmulator309
+  SQL_DATABASE: postgres
+  INSTANCE_CONNECTION_NAME: physimulator:us-central1:physimulator
+beta_settings:
+  cloud_sql_instances: physimulator:us-central1:physimulator

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="whiteboarder.whiteboarder.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <!-- Banner from: https://www.shareicon.net/writing-white-education-whiteboard-tools-tool-board-write-804473 -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:layout_margin="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/whiteboarder_banner"/>
+
+                <Button
+                    android:id="@+id/scanQRButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/menu_button_shape"
+                    android:text="Scan QR" />
+
+            </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

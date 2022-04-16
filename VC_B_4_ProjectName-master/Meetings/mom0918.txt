@@ -1,0 +1,24 @@
+Meeting 09/18 1220
+All present 
+
+Topics : 
+who codes what
+
+We need to get UI going, basic login, basic UI skeleton. 
+
+in terms of code : 
+- Layouts coded for : login screen, main menu, settings menu, game lobby, leaderboard, social menu
+						ban menu, friend pop, friend "image", map / race selection, map popup. 
+						
+- Option to log in (if the player exists) 
+- Option to create a player. 
+- Map class / enum 
+- Option to edit your settings. 
+
+Joe : map and game play menu 
+Jeremy : settings and leaderboard
+Alex : main menu and linking. 
+Johan : Option to log in create player and edit settings. login screen. 
+
+
+backlog : game lobby, social menu, ban menu, friend pop , friend "image", map/race selection, map popup. 

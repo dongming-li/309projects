@@ -1,0 +1,45 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  Event are actions triggered	bind(eventtType[eventData], handler)
+	  Mouse click					eventType - click, submit
+	  Web page loaded				eventData - map od data to passed to handler
+	  Hover							Handler - function to be executed
+	  Form submit
+	  Key submit
+	  
+	  */
+		$(document).ready(function(){
+			$("li").eq(0).bind("click", function(event){
+				$("#messageDiv").text($(this).text());
+			});
+			$("li").eq(1).click(function(event){
+				$("#messageDiv").text($(this).text());
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+	  <div></div>
+	  <div id="testDiv">
+		<ul>
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+			<li>list item 5</li>
+			<input type="test"></input>
+			<span id="messageDiv">Hellow World!</span>
+		</ul>
+	  </div>
+   </body>
+	
+</html>

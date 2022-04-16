@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/add-friends.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/add-friends.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module add-friends
+ */
+
+import React, { Component } from 'react';
+import {
+    Text,
+    StyleSheet,
+    View,
+    TextInput,
+    TouchableOpacity
+} from 'react-native';
+
+import Colors from '../helpers/colors';
+import Routes from '../helpers/routes';
+import MessageTypes from '../helpers/message-types';
+import { AddFriendsErrors } from '../helpers/error-messages';
+
+/**
+ * Add Friends menu component
+ */
+export default class AddFriends extends Component {
+    /**
+     * Creates the Add Friends menu
+     * @param {object} props Props passed to the component
+     */
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            friendEmail: '',
+            message: '',
+            error: false
+        };
+
+        this.changeState = this.changeState.bind(this);
+        this.changeMessage = this.changeMessage.bind(this);
+        this.searchFriend = this.searchFriend.bind(this);
+    }
+
+    /**
+     * Change the given field inside of state with the given value
+     * @param {string} field Field inside of state to modify
+     * @param {*} value Value to be put inside of state
+     */
+    changeState(field, value) {
+        this.setState(previousState => {
+            return Object.assign({}, previousState, {
+                [field]: value
+            });
+        });
+    }
+
+    /**
+     * Change the message displayed to the user
+     * @param {string} message 
+     */
+    changeMessage(message) {
+        this.changeState('message', message);
+    }
+
+    /**
+     * Attempts to send a friend request to the given user
+     */
+    searchFriend() {
+        this.changeMessage('');
+
+        fetch(Routes.sendMessage, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                type: MessageTypes.friendRequest,
+                sender: this.props.user,
+                sendee: this.state.friendEmail,
+                timestamp: Date.now()
+            })
+        }).then(response => {
+            return response.json();
+        }).then(body => {
+            if (body.error) {
+                switch(body.message) {
+                    case AddFriendsErrors.userDoesNotExistCode:
+                        this.changeMessage(AddFriendsErrors.userDoesNotExist(this.state.friendEmail));
+                        break;
+                    case AddFriendsErrors.duplicateMessageCode:
+                        this.changeMessage(AddFriendsErrors.duplicateMessage(this.state.friendEmail));
+                        break;
+                    default:
+                        console.log(`[DEBUG] Unrecognized error with adding friends: ${body.message}`);
+                }
+            } else {
+                const successMessage = `${this.state.friendEmail} has been sent a friend request!`;
+                this.changeMessage(successMessage);
+            }
+
+            this.changeState('error', body.error)
+        });
+    }
+
+    /**
+     * Renders the component
+     */
+    render() {
+        const {
+            message,
+            error
+        } = this.state;
+
+        return (
+            &lt;View
+                style={styles.addFriendsContainer}
+            >
+                &lt;Text
+                    style={styles.addFriendText}
+                >
+                    Please enter your friend's email below
+                &lt;/Text>
+                &lt;TextInput
+                    style={styles.input}
+                    placeholder={`Friend's Email`}
+                    placeholderTextColor={Colors.getNeutral(700)}
+                    keyboardType='email-address'
+                    selectionColor={Colors.getBlue(500)}
+                    underlineColorAndroid={Colors.getBlue(500)}
+                    onChangeText={value => this.changeState('friendEmail', value)}
+                />
+                &lt;TouchableOpacity
+                    style={styles.searchFriendButton}
+                    onPress={this.searchFriend}
+                >
+                    &lt;Text
+                        style={styles.searchFriendButtonText}
+                    >
+                        ADD FRIEND
+                    &lt;/Text>
+                &lt;/TouchableOpacity>
+                &lt;View
+                    style={styles.addFriendMessageContainer}
+                >
+                    &lt;Text
+                        style={error ? styles.addFriendError : styles.addFriendSuccess}
+                    >
+                        {this.state.message}
+                    &lt;/Text>
+                &lt;/View>
+            &lt;/View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    addFriendsContainer: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center'
+    },
+    addFriendText: {
+        paddingTop: 12,
+        color: Colors.getNeutral(900)
+    },
+    addFriendMessageContainer: {
+        margin: 12,
+        height: 25
+    },
+    addFriendError: {
+        color: Colors.getRed(),
+        textAlign: 'center'
+    },
+    addFriendSuccess: {
+        color: Colors.getGreen(),
+        textAlign: 'center'
+    },
+    input: {
+        height: 40,
+        width: 225,
+        marginBottom: 10,
+        paddingHorizontal: 10,
+        color: Colors.getBlue(500)
+    },
+    searchFriendButton: {
+        backgroundColor: Colors.getBlue(500),
+        paddingVertical: 10,
+        borderRadius: 5,
+        width: 125
+    },
+    searchFriendButtonText: {
+        textAlign: 'center',
+        color: Colors.getNeutral(100)
+    }
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:25 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

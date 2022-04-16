@@ -1,0 +1,13 @@
+Tasks given by TA on monday : 
+
+Algorithmic :  
+	-A* : shortest path (Not going to use.) 
+	
+
+- Look into views/layouts
+
+Team Roles : (TDB)
+Schedule Lead : 
+Repo Lead : 
+Test Lead : 
+Tech Lead : 

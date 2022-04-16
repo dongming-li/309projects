@@ -1,0 +1,570 @@
+body,
+html {
+    overflow: hidden;
+
+    min-height: 100%;
+     min-width: 100%;
+    margin: 0;
+}
+html {
+    /* background-image:url(../pages/imgs/loginfinal.jpg); */
+    background-image:url(../pages/imgs/acs.jpg);
+    background-size: cover;
+}
+
+
+bkgd {overflow:hidden;}
+
+@keyframes fade {
+    0% {
+        opacity: .3;
+    }
+    30% {
+        opacity: .5;
+    }
+    50% {
+        opacity: .85;
+    }
+    80% {
+        opacity: .5;
+    }
+    100% {
+        opacity: .3
+    }
+}
+
+@keyframes focus {
+    0% {
+        opacity: .5
+    }
+    50% {
+        opacity: .9
+    }
+    100% {
+        opacity: .8
+    }
+}
+
+.loginfo {
+    background-color: indianred;
+    /* border-style: inset;
+    border-width: medium;
+    border-color: brown; */
+}
+
+input[type=text]:focus {
+
+}
+
+.button {
+    width: 12vw;
+    font-size: 3vw;
+    background-color: white;
+}
+
+p {
+    margin: 0;
+    font-family: sans-serif;
+  
+}
+
+/*
+stuff above this line is bad!*/
+
+.login-container {
+    
+    background-image: url(/pages/imgs/border.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 440px;
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 5vw;
+    left: 35%;
+}
+.login-menu {
+    margin: auto;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    background-color: #00000080;
+    height: 230px;
+    text-align: center;
+}
+.logininput {
+    margin: 3px;
+    width: 90%;
+}
+
+body {overflow:hidden;}
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vw;
+    width: 100%;
+}
+#bkgd {
+    background-image: url(/pages/imgs/loginfinal.jpg);
+    background-size: cover;
+    background-repeat:repeat-y;
+    opacity:.6;
+    animation: linear menufade 6s alternate infinite;
+}
+input {
+    
+    /* background-color: darksalmon; */
+ 
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.loginbtn {
+    margin: 3px;
+    color: white;
+    border-color: white;
+    background-color: darksalmon;
+    font-variant: small-caps;
+    font-style: italic;
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.25em;   
+    width: 95%;
+    cursor:pointer;
+   
+}
+.logincontainer{
+    display:contents;
+    padding-top:10px;
+    padding-left:10px;
+    padding-bottom:0px;
+    height:18vw;
+    max-height:220px;
+    background-color:darkred;
+    width:100px;
+    margin-top:0px;
+    margin-left:30vw;
+    display:grid;
+    z-index:9999999999;
+}
+.loginmenu {
+    border-width:thin;
+    border-style:solid;
+    border-color:#b70c0c;
+    position: absolute;
+    opacity: .6;
+    transform:scale(8)rotate(180deg);
+    
+    background-image:url(../pages/imgs/waxseal.png);
+    background-position: 50% 50%;
+    background-size:10vw 10vw;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    border-radius: 1000px;
+    z-index: 1;
+    margin-top: 8%;
+    margin-left: 35%;
+    width:2vw;
+    height:2vw;
+    padding-left: 1vw;
+    padding-top:1vw;
+    display: grid;
+}
+
+.button {
+    color: white;
+    padding: 2px 32px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.8s;
+    cursor: pointer;
+}
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+}
+.button1:hover {
+    background-color: lightsteelblue;
+    opacity: .8;
+}
+
+/*css animations*/
+/**/
+@keyframes exit{
+    from{opacity:.8}
+    to{opacity:0}
+}
+@keyframes menufade{
+    from{opacity:.4}
+    to{opacity:1}
+}
+@keyframes login {
+    from{display:inherit};
+    to{display:block};
+    0% {transform:scale:(4);
+        opacity: .5;
+        
+    }
+    50%{
+        opacity:.7;
+            transform:scale(10)rotate(90deg);
+        
+    }
+    70% {
+        opacity: 0.8;
+    }
+    
+    99% {
+     
+        transform:scale(16)rotate(180deg);
+        opacity: 1;
+    }
+ 
+}
+
+
+/*
+@media screen and (min-width:740px){
+    .moblogin, .mloginfo{animation: mobile 1s reverse;}
+}
+@media screen and (max-width: 800px) {
+    .logincontainer, .loginmenu, .loginfo{
+        animation: mobile 1s reverse;
+        opacity:0;
+        width:0;
+        height:0;
+    }
+    .moblogin{
+        opacity:1;
+    }
+}
+*/
+
+.page {
+    height: 100%;
+    width: 100%;
+    background-image: url(../pages/imgs/acs.jpg);
+    background-size: cover;
+}
+
+.menu {
+    animation: menufade 2s forwards;
+    overflow:hidden;
+    opacity:.7;
+    background-image: url(../pages/imgs/waxseal.png);
+    background-size: contain;
+    z-index: 99999;
+    background-repeat: no-repeat;
+    background-position: -6vw -16vw;
+    padding-left: 12vw;
+    padding-top: 20vw;
+    padding-bottom: 26vw;
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    margin-left: 0vw;
+}
+
+/*NAVBAR CSS STYLZ*/
+@keyframes slide {
+    from {
+        left: 0px;
+    }
+    
+    to {
+        left: -20vw;
+    }
+    
+    0% {
+        opacity: .0;
+    }
+    
+    10% {
+        opacity: .02
+    }
+    
+    25% {
+        opacity: .45;
+    }
+    
+    50% {
+        opacity: .9
+    }
+    
+    75% {
+        opacity: .45;
+    }
+    
+    90% {
+        opacity: .02
+    }
+    
+    100% {
+        opacity: .0
+    }
+}
+@keyframes fades {  
+    from{
+        color:black;
+    }
+    to{
+        color:white;
+    }
+    0% {
+        opacity: .0;
+    }
+    
+    10% {
+        opacity: .18
+    }
+    
+    25% {
+        opacity: .25;
+    }
+    
+    50% {
+        opacity: 1
+    }
+    
+    75% {
+        opacity: .25;
+    }
+    
+    90% {
+        opacity: .18
+    }
+    
+    100% {
+        opacity: .0
+    }
+}
+h2 {
+    animation:linear fades 5s forwards infinite;
+    margin-left: 1.0vw;
+    margin-top: 0vw;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: .8;
+    font-size: 8vw;
+    letter-spacing: 2px;
+    color: ghostwhite;
+    font-variant: small-caps;
+    font-style: italic;
+}
+h1 {
+    z-index:0;
+    animation: linear slide 7s forwards infinite;
+    font-variant: small-caps;
+    font-style: italic;
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    border-width: medium;
+    border-style: ridge;
+    border-color: white;
+    position: relative;
+    background-color: #991000;
+    opacity: .4;
+    font-size: 2vw;
+    letter-spacing: 2px;
+    color: white;
+}
+li {
+
+    display: inline;
+}
+
+.page {
+    overflow: hidden;
+}
+.line {
+    display: inline;
+}
+/* @keyframes letter{
+    0%{background-position:-300vw; width:100%;height:100%;}
+    90%{background-position:100vw; width:100%;height:100%;}
+    100%{background-position:120vw;width:0%;height:0%;}
+} */
+#loginbtn:active{
+    /* f */
+}
+#letter{
+    z-index:9999;
+    /* animation: letter 4s forwards; */
+    background-image: url(pages/imgs/login2.jpg);
+    background-position-x:-300vw;
+    background-position-y:-40vw;
+    height: 900px;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 0%;
+    background-size: cover;
+    /* background-position: center; */
+}
+
+/*CHAT CSS STYLINGZ*/
+#message-container {
+    background-color: bisque;
+    height: 26vh;
+    min-height: 260px;
+    width: 22vw;
+}
+#msg {
+    background-color: rgb(255, 183, 95);
+    opacity: .8;
+    width: 100%;
+overflow:hidden;
+}
+
+/* JoinLobby stylingz */
+
+#jlheading{
+
+    color:white;
+
+}
+#lobbylist{
+
+    border-width:medium;
+    border-style:inset;
+    border-color:#b70c0c;
+}
+#lobbylist{
+    margin-top:4vw;
+    margin-left:1vw;
+    min-height:400px;
+width:50vw;
+height:30%;
+background-color:darkgrey;
+opacity:.7;
+}
+
+#heading{
+    min-width:460px;
+width:50vw;
+max-width:100%;
+height:20%;
+color:white;
+text-align:center;
+font-size:1.5vw;
+overflow:hidden;
+white-space: space nowrap;
+background-color:#b97272;
+opacity:1;
+}
+
+#lobbies{
+    min-width:460px;
+width:100%;
+    height:60%;
+     background-color: rgb(190, 143, 89);
+    opacity:1;
+}
+#lobtions{
+    min-width:460px;
+    height:20%;
+    width:100%;
+    bottom:10px;
+    background-color:white;
+    display:inline-block;
+}
+
+/* achievementspage stylinz */
+
+#achs{
+ align-content:center;
+ margin-top:2vw;
+
+}
+.achtitle{
+    font-size:2.5vw;
+    color:firebrick;
+    letter-spacing:2px;
+}
+#box1, #box2, #box3, #box4 {
+    border-width:thick;
+    border-color:rgb(255, 183, 95);
+    border-style: inset;
+    width: 7vw;
+    margin:1vw;
+    height:7vw;
+    background-color:darkred;
+    opacity:1;
+
+}
+#ach1, #ach2, #ach3, #ach4 {
+    color:rgb(179, 32, 32);
+    font-size:1.5vw;
+    border-width:thick;
+    border-color:darkred;
+    border-style: inset;
+    margin-left:6vw;
+    margin-top:0vw;
+    width: 44vw;
+    height: 6vw;
+    min-height:24px;
+background-color:rgb(255, 183, 95);
+opacity:1;
+}
+#ach1img, #ach2img, #ach3img, #ach4img{
+    position:fixed;
+    margin-right:.5vw;
+    margin-bottom:.5vw;
+    background-color:white;
+    border-width:medium;
+    border-color:rgb(255, 183, 95);
+    border-style: inset;
+    width:6vw;
+    height:6vw;
+}
+#divider{
+    border-width:thick;
+    border-color:rgb(255, 183, 95);
+    border-style: inset;
+    width: 1vw;
+    height: 78vw;
+    position: absolute;
+    margin-left: 60vw;
+    margin-top: -2vw;
+    z-index: 9999999999;
+    background-color: rgb(185, 37, 0);
+    opacity:.6;
+}
+/* 
+Profile Page Stylez */
+
+.un, .l, .w{
+    text-align:center;
+    border-width:thick;
+    border-style:inset;
+    border-color:firebrick;
+    font-size:40px;
+    width:80%;
+    margin:2vw;
+    height:60px;
+    background-color:rgb(255, 183, 95);
+
+}
+.pach{
+    text-align:center;
+    border-width:thick;
+    border-style:inset;
+    border-color:firebrick;
+    height:200px;
+    width:80%;
+    margin:2vw;
+    background-color:rgb(255, 183, 95);
+}

@@ -1,0 +1,56 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  edit Element		remove Element		Insert Element
+	  html()			remove()			after(content)
+	  text()			empty()				append(content)
+	  val()									before(content)
+	  replaceWith()							insertAfter(selector)
+											insertBefore(selector)
+											prepend(content)
+											prependTo(selector)
+	  */
+		$(document).ready(function(){
+			$("li").eq(0).html("This is <b>item no 1</b>");
+			$("li").eq(1).text("This is item no 2");
+			$("li").eq(2).replaceWith("<li>This is item no 3</li>");
+			$("input").val("Hellow World!");
+		});
+		/*$(document).ready(function(){
+			$("li").click(function(){
+				$(this).remove( );
+			});
+		});*/
+		$(document).ready(function(){
+			$("li").click(function(){
+				$(this).before('<li>list item added before!</li>');
+				$(this).after('<li>list item added after!</li>');
+				$(this).insertAfter('#messageDiv');
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+	  <div></div>
+	  <div id="testDiv">
+		<ul>
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+			<li>list item 5</li>
+			<input type="test"></input>
+			<span id="messageDiv">Hellow World!</span>
+		</ul>
+	  </div>
+   </body>
+	
+</html>

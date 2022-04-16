@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.matthewburke.partyat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".HomeScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MakePromotion" />
+        <activity android:name=".PromotionsList" />
+        <activity android:name=".FriendsList" />
+        <activity android:name=".InsertUser" />
+        <activity android:name=".CheckUserName" />
+        <activity android:name=".CheckUserPassword" />
+        <activity android:name=".MenuScreen" />
+        <activity android:name=".NearbyEstablishments" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".AccountType" />
+        <activity android:name=".InsertBusiness" />
+        <activity android:name=".CheckBusinessName" />
+        <activity android:name=".UserType" />
+        <activity android:name=".CheckBusinessPassword" />
+        <activity android:name=".BusinessMenuScreen" />
+        <activity android:name=".BusinessProfile" />
+        <activity android:name=".AddFriend" />
+        <activity android:name=".CurrentPlace" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBCetiwQ4Dh4ZbSouQACXLluBZAdthW1gY" />
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+<div class="card">
+        <div class="card-body">
+
+<p>
+  <strong>Title:</strong>
+  <%= @announcement.title %>
+  <%= "(Posted on " + @announcement.created_at.to_s(:long) + ")" %>
+</p>
+
+<p>
+
+  <%= simple_format(@announcement.body) %>
+</p>
+</div>
+</div>
+
+<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
+<%= link_to 'Delete', @announcement, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Return to Announcements', announcements_path %>

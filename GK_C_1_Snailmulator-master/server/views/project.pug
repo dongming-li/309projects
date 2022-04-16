@@ -1,0 +1,29 @@
+extends template/theme.pug
+
+block head-links
+  link(href="/css/socket/style.css", rel="stylesheet")
+  script(src="/js/views/ProjectView.js")
+block content
+  h1 Project List
+
+  div
+    table.table
+      thead
+        th Action
+        th Project Name
+        th Date Created
+      tbody
+        each project in projects
+          tr
+            td
+              a.btn.btn-primary(href="/project/view?p=" + project.id, style='margin:2px;') View
+              a.btn.btn-success(href="/project/render?p=" + project.id, style='margin:2px;') Render
+              a.btn.btn-warning(href="/ecode?p=" + project.id, style='margin:2px;') Edit
+              a.btn.btn-danger(href="/project/render?p=" + project.id, style='margin:2px;') Delete
+              a.btn.btn-danger(href="/project/room?p=" + project.id, style='margin:2px;') Join
+            td #{project.name}
+            td #{project.createdAt}
+            tr
+              th
+              th(colspan="4")
+                p(style='display: none;' word-wrap: 'break-word;') Description: #{project.desc}

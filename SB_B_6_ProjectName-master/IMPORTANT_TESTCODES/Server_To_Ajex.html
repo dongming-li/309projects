@@ -1,0 +1,48 @@
+<!doctype html>	
+<!--
+This piece of code is primarily to receive data from JSP
+to Ajax
+
+Its still needs to be tested and verified.
+
+The Goal of this test is to recieve an input from JSP.
+
+I advice that the Tester remove all comments for proper function. Sometimes the comments can cause buggy codes.
+-->
+<html>
+
+   <head>
+      <title>The AJAX Reciever</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+		Look at other AJAX code for info on the code. The comments are mostly there.
+	  */
+		$(document).ready(function(){
+			$("#loadButton").click(function(event){
+				var name = $("#name").val();
+				$.ajax({
+					type: "GET",									//The only difference between recieve and send is this "GET" or "POST"
+					url: "Example.jsp",
+					data: {name: name},								//The Parameter [name] will be use this time for JSP to send data, normally targets the function in JSP for sending data.
+					success: function(response){					//The response is the the data send from JSP.
+						alert(response);
+						name = response.name;
+						$("#dataDiv").html(name);					//Should change the emty [dataDiv] to the string variable [name]
+					},
+					error: function(){
+						$.alert("failed to complete request: ");
+					}
+				});
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<p>Click on the button to receive Example.jsp with name</p>
+		<input type="button" id="loadButton" value="Load Data"/>
+		<div id="dataDiv"></div>
+   </body>
+	
+</html>

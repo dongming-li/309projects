@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="coms309.sb_c_4_cydisc.NewGame">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/newGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="144dp"
+            android:text="New Game" />
+
+        <Button
+            android:id="@+id/joinGame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/newGame"
+            android:layout_alignLeft="@+id/newGame"
+            android:layout_alignStart="@+id/newGame"
+            android:layout_marginBottom="98dp"
+            android:text="Join Game" />
+
+        <TextView
+            android:id="@+id/tvLobbyId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp" />
+
+        <EditText
+            android:id="@+id/etLobbyId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/joinGame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="29dp"
+            android:ems="10"
+            android:inputType="text|textPersonName"
+            android:text="Enter Lobby ID Here" />
+    </RelativeLayout>
+
+</FrameLayout>

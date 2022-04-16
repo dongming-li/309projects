@@ -1,0 +1,71 @@
+MOM 09/14 start 15.30 present all 
+
+-Present and discuss screen sketches - modify if needed
+-Present tables and fields -modify if needed 
+-Present actor model - modify if needed
+-Present non-functionnal requirements - modify if needed
+-Put things togeteher for our screen sketch assignment. 
+- decide what functionnality(features, etc..) we want in the software.(and stick to that list until end of semester)
+- Decide what part of the project we want to start work on and handle out the work. 
+
+-----------------------------
+
+Screen sketches 
+- All good except minor changes - need 2 more for Map editor menu and Game Lobby
+- settings will be just a list of options
+- tables and fields we agree to have all files stored locally. 
+- actors okay need drawing. 
+
+
+- Performance 
+- Scalability
+- Maintainbility 
+
+Map editing, leaderboards, 3 gameplay screens, admin screen, main menu, social menu, 
+login menu, settings, friend pop up... Map editing menu, Player Options menu. -- need to be done. 
+
+- Screen flow - okay 
+- Fields and table - ok needs editing
+- Requirement add some text
+
+
+
+-------------
+-2v2 . 1vs(7) AI
+	- AI has a map premade and monster pseudo randomly
+		- AI can build towers
+-Leaderboards - sort by , see the player to compare , search player. 
+-
+
+
+-----------------------
+Gameplay
+-Time
+-Ticks
+-WinCondition
+-Algorithm to compress. (RLE)
+
+
+Units. 
+
+---Alex
+
+Tower. 
+
+-Standard
+-HP
+-Position
+-range
+-Speed
+-Decorator for upgrade
+
+Maps. 
+-Define type of terrain
+-Define size of the map. (fixed)
+
+
+--------------STOP at 17-----
+
+
+
+

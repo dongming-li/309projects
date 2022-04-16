@@ -1,0 +1,65 @@
+.username_box
+{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.username_text
+{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.password_box
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+input[type="text"]
+{
+  position: absolute;
+  transform: translate(-50%,-54%);
+  font-size: 40pt;
+  width: 480px;
+  height:77px;
+  background-color: black;
+  color: white;
+  border-width: 0;
+  outline-width: 0;
+  text-transform: uppercase;
+  font-family: exocet;
+}
+
+input[type="password"]
+{
+  animation: fadeIn 4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-54%);
+  font-size: 40pt;
+  width: 480px;
+  height: 77px;
+  background-color: black;
+  color: white;
+  border-width: 0;
+  outline-width: 0;
+  font-family: exocet;
+}
+
+[placeholder]:focus::-webkit-input-placeholder
+{
+  visibility: hidden;
+}
+
+@font-face
+{
+  font-family: exocet;
+  src: url(exocet.TTF);
+}

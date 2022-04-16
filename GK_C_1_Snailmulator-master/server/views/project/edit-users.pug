@@ -1,0 +1,16 @@
+extends template/theme.pug
+
+block head-links
+  link(href="/css/socket/style.css", rel="stylesheet")
+  script(src="/js/views/edit.js")
+block content
+  h1 Edit User Access
+  br
+  br
+  div
+    table
+      thead
+        tr
+         th User Name
+         th Role
+      tbody

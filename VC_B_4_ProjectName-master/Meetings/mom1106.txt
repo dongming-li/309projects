@@ -1,0 +1,22 @@
+Meeting 06/11
+present all. 
+After demo everyone shows the code they have done for the demo we read it to see how it works and understand it.
+Joe and Alex will keep workingon the game. 
+-We should try to get the networking going so the game can be displayed on 2 clients. 
+-then get it to interact. 
+
+- Solo mode AI. ( Hardcode it )
+- 1v2. 
+- 1vM. 
+
+Map editing : 
+- allow to create your own map 
+- allow to modify exisiting map. 
+- store your maps. 
+Johan will work on it. 
+
+Jeremy will work on how the upgrade system of tower and on the admin screen. 
+
+
+
+We should all work on finding assets. 

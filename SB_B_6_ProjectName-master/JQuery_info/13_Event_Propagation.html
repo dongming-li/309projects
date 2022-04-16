@@ -1,0 +1,51 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  Event Propagates
+	  preventDefault
+	  isDefaultPrevented
+	  stopPropagation
+	  isPropagationStopped
+	  stopImmidiatePropagation
+	  isImmidiatePropagationStopped
+	  
+	  */
+		$(document).ready(function(){
+			$("a").click(function(event){
+				
+				if(event.isDefaultPrevented()){
+					alert("Default behavior is disabled - 1");
+				} else{
+					alert("Default behavior is enabled - 1");
+				}
+				event.preventDefault();
+				
+				if(event.isDefaultPrevented()){
+					alert("Default behavior is disabled - 2");
+				} else{
+					alert("Default behavior is enabled - 2");
+				}
+			});
+			
+			$("div").click(function(event){
+				alert($(this).text());
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+	  <a href="http://www.google.com">GOOGLE Inc</a>
+	  <div style="background-color: yellow;"> Outer Div
+			<div style="background-color: green;">Inner Div</div>
+	  </div>
+   </body>
+	
+</html>

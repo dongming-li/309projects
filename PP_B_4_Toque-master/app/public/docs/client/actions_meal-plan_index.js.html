@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: actions/meal-plan/index.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: actions/meal-plan/index.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {post, get, delete as del} from 'axios';
+import Cookies from 'universal-cookie';
+const cookie = new Cookies();
+import {
+    MEALPLANS_REQUEST,
+    MEALPLANS_FAILURE,
+    MEALPLANS_SUCCESS,
+    MEALPLAN_CREATE_FAILURE,
+    MEALPLAN_CREATE_SUCCESS,
+    MEALPLAN_CREATE_REQUEST,
+    MEALPLAN_EDIT_REQUEST,
+    MEALPLAN_EDIT_SUCCESS,
+    MEALPLAN_EDIT_FAILURE,
+    MEALPLAN_DELETE_REQUEST,
+    MEALPLAN_DELETE_SUCCESS,
+    MEALPLAN_DELETE_FAILURE,
+    MEALPLAN_RECIPE_SEARCH_REQUEST,
+    MEALPLAN_RECIPE_SEARCH_SUCCESS,
+    MEALPLAN_RECIPE_SEARCH_FAILURE
+} from '../../actionTypes';
+
+/**
+ * Indicates MealPlan request was sent to server.
+ * @param query
+ * @returns {{type, query: *}}
+ */
+function mealPlansRequest(query) {
+    return {
+        type: MEALPLANS_REQUEST,
+        query
+    }
+}
+
+/**
+ * Indicates MealPlan request was successful.
+ * @param mealPlans
+ * @returns {{type, mealPlans}}
+ */
+function mealPlansSuccess(mealPlans) {
+    return {
+        type: MEALPLANS_SUCCESS,
+        mealPlans
+    }
+}
+/**
+ * Indicates MealPlan request was unsuccessful.
+ * @param error
+ * @returns {{type, error: *}}
+ */
+function mealPlansFailure(error) {
+    return {
+        type: MEALPLANS_FAILURE,
+        error
+    }
+}
+/**
+ * Indicates MealPlan create request was sent to the server.
+ * @param mealPlan
+ * @returns {{type, mealPlan: *}}
+ */
+function mealPlanCreateRequest(mealPlan) {
+    return {
+        type: MEALPLAN_CREATE_REQUEST,
+        mealPlan
+    }
+}
+/**
+ * Indicates MealPlan create request was successful.
+ * @param mealPlan
+ * @returns {{type, mealPlan: *}}
+ */
+function mealPlanCreateSuccess(mealPlan) {
+    return {
+        type: MEALPLAN_CREATE_SUCCESS,
+        mealPlan
+    }
+}
+/**
+ * Indicates the MealPlan create request was unsuccessful.
+ * @param error
+ * @returns {{type, error: *}}
+ */
+function mealPlanCreateFailure(error) {
+    return {
+        type: MEALPLAN_CREATE_FAILURE,
+        error
+    }
+}
+
+/**
+ * Indicates the MealPlan edit request was sent to the server.
+ * @param mealPlan
+ * @returns {{type, mealPlan: *}}
+ */
+function mealPlanEditRequest(mealPlan) {
+    return {
+        type: MEALPLAN_EDIT_REQUEST,
+        mealPlan
+    }
+}
+/**
+ * Indicates the MealPlan edit request was successful.
+ * @param mealPlan
+ * @returns {{type, mealPlan: *}}
+ */
+function mealPlanEditSuccess(mealPlan) {
+    return {
+        type: MEALPLAN_EDIT_SUCCESS,
+        mealPlan
+    }
+}
+/**
+ * Indicates the MealPlan edit request was unsuccessful.
+ * @param error
+ * @returns {{type, error: *}}
+ */
+function mealPlanEditFailure(error) {
+    return {
+        type: MEALPLAN_EDIT_FAILURE,
+        error
+    }
+}
+/**
+ * Indicates the MealPlan delete request was sent to the server.
+ * @param mealPlan
+ * @returns {{type, mealPlan: *}}
+ */
+function mealPlanDeleteRequest(mealPlan) {
+    return {
+        type: MEALPLAN_DELETE_REQUEST,
+        mealPlan
+    }
+}
+/**
+ * Indicates the MealPlan delete request was successful.
+ * @param mealPlan
+ * @returns {{type, mealPlan: *}}
+ */
+function mealPlanDeleteSuccess(mealPlan) {
+    return {
+        type: MEALPLAN_DELETE_SUCCESS,
+        mealPlan
+    }
+}
+/**
+ * Indicates the MealPlan delete request was unsuccessful.
+ * @param error
+ * @returns {{type, error: *}}
+ */
+function mealPlanDeleteFailure(error) {
+    return {
+        type: MEALPLAN_DELETE_FAILURE,
+        error
+    }
+}
+/**
+ * Indicates the MealPlan search request was sent to the server.
+ * @param searchQuery
+ * @returns {{type, searchQuery: *}}
+ */
+function recipeSearchRequest(searchQuery) {
+    return {
+        type: MEALPLAN_RECIPE_SEARCH_REQUEST,
+        searchQuery
+    }
+}
+/**
+ * Indicates the MealPlan search was successful.
+ * @param recipes
+ * @returns {{type, recipes: *}}
+ */
+function recipeSearchSuccess(recipes) {
+    return {
+        type: MEALPLAN_RECIPE_SEARCH_SUCCESS,
+        recipes
+    }
+}
+/**
+ * Indicates the MealPlan search was unsuccessful.
+ * @param error
+ * @returns {{type, error: *}}
+ */
+function recipeSearchFailure(error) {
+    return {
+        type: MEALPLAN_RECIPE_SEARCH_FAILURE,
+        error
+    }
+}
+
+/**
+ * Gets all the MealPlans between the start date and end date
+ * @param startDate Date
+ * @param endDate Date
+ * @returns {Promise}
+ */
+export function getMealPlans(startDate, endDate) {
+    let query = null;
+
+    if (startDate &amp;&amp; endDate) {
+        query = {startDate, endDate};
+    }
+    const token = cookie.get('token');
+    return (dispatch) => {
+        dispatch(mealPlansRequest(query));
+        if(!token){
+            return Promise.resolve(dispatch(mealPlansFailure({error: "User must be signed in!"})));
+        }
+
+        return get(query ? '/api/meal-plan?startDate=' + query.startDate + '&amp;endDate=' + query.endDate : '/api/meal-plan',
+            {
+                headers: {
+                    toque_token: token,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => {
+                dispatch(mealPlansSuccess(response.data));
+            })
+            .catch((error) => {
+                dispatch(mealPlansFailure(error));
+            })
+    }
+}
+/**
+ * Creates a MealPlan based upon the supplied data.
+ * @param mealPlan
+ * @returns {Promise}
+ */
+export function createMealPlan(mealPlan) {
+    const token = cookie.get('token');
+    return (dispatch) => {
+        dispatch(mealPlanCreateRequest(mealPlan));
+        if(!token){
+            return Promise.resolve(dispatch(mealPlanCreateFailure({error: "User must be signed in!"})));
+        }
+        return post('/api/meal-plan',
+            mealPlan,
+            {
+                headers: {
+                    toque_token: token,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => {
+                dispatch(mealPlanCreateSuccess(response.data));
+            })
+            .catch((error) => {
+                dispatch(mealPlanCreateFailure(error));
+            })
+    }
+}
+
+/**
+ * Edits a MealPlan based upon the supplied data.
+ * @param mealPlan
+ * @returns {Promise}
+ */
+export function editMealPlan(mealPlan) {
+    const token = cookie.get('token');
+    return (dispatch) => {
+        dispatch(mealPlanEditRequest(mealPlan));
+        if(!token){
+            return Promise.resolve(dispatch(mealPlanEditFailure({error: "User must be signed in!"})));
+        }
+        const id = mealPlan.id;
+        delete mealPlan.id;
+        return post('/api/meal-plan/' + id,
+            mealPlan,
+            {
+                headers: {
+                    toque_token: token,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => {
+                dispatch(mealPlanEditSuccess(response.data));
+            })
+            .catch((error) => {
+                dispatch(mealPlanEditFailure(error));
+            })
+    }
+}
+
+/**
+ * Deletes the supplied MealPlan from the server.
+ * @param mealPlan
+ * @returns {Promise}
+ */
+export function deleteMealPlan(mealPlan) {
+    const token = cookie.get('token');
+    return (dispatch) => {
+        dispatch(mealPlanDeleteRequest(mealPlan));
+        if(!token){
+            return Promise.resolve(dispatch(mealPlanDeleteFailure({error: "User must be signed in!"})));
+        }
+        return del('/api/meal-plan/' + mealPlan.id,
+            {
+                headers: {
+                    toque_token: token,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => {
+                dispatch(mealPlanDeleteSuccess(response.data));
+            })
+            .catch((error) => {
+                dispatch(mealPlanDeleteFailure(error));
+            })
+    }
+}
+
+/**
+ * Searches for Recipes with the given query.
+ * @param searchQuery
+ * @returns {Promise}
+ */
+export function searchRecipes(searchQuery) {
+    const token = cookie.get('token');
+    return (dispatch) => {
+        dispatch(recipeSearchRequest(searchQuery));
+        if(!token){
+            return Promise.resolve(dispatch(recipeSearchFailure({error: "User must be signed in!"})));
+        }
+        return get('/api/recipe',
+            {
+                headers: {
+                    toque_token: token,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => {
+                console.log(response.data);
+                dispatch(recipeSearchSuccess(response.data));
+            })
+            .catch((error) => {
+                dispatch(recipeSearchFailure(error));
+            })
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CreateGroceryList.html">CreateGroceryList</a></li><li><a href="CreateMealPlanModal.html">CreateMealPlanModal</a></li><li><a href="CreateRecipeForm.html">CreateRecipeForm</a></li><li><a href="GroceryLister.html">GroceryLister</a></li><li><a href="Home.html">Home</a></li><li><a href="IngredientList.html">IngredientList</a></li><li><a href="LogForm.html">LogForm</a></li><li><a href="MealPlanner.html">MealPlanner</a></li><li><a href="MultiGroceryList.html">MultiGroceryList</a></li><li><a href="Navbar.html">Navbar</a></li><li><a href="RecipeList.html">RecipeList</a></li><li><a href="RegForm.html">RegForm</a></li><li><a href="Splash.html">Splash</a></li></ul><h3>Global</h3><ul><li><a href="global.html#authenticate">authenticate</a></li><li><a href="global.html#authFailure">authFailure</a></li><li><a href="global.html#authRequest">authRequest</a></li><li><a href="global.html#authSuccess">authSuccess</a></li><li><a href="global.html#createGroceryList">createGroceryList</a></li><li><a href="global.html#createIngredient">createIngredient</a></li><li><a href="global.html#createIngredientFailure">createIngredientFailure</a></li><li><a href="global.html#createIngredientRequest">createIngredientRequest</a></li><li><a href="global.html#createIngredientSuccess">createIngredientSuccess</a></li><li><a href="global.html#createMealPlan">createMealPlan</a></li><li><a href="global.html#createRecipe">createRecipe</a></li><li><a href="global.html#createRecipeFailure">createRecipeFailure</a></li><li><a href="global.html#createRecipeRequest">createRecipeRequest</a></li><li><a href="global.html#createRecipeSuccess">createRecipeSuccess</a></li><li><a href="global.html#deleteMealPlan">deleteMealPlan</a></li><li><a href="global.html#editMealPlan">editMealPlan</a></li><li><a href="global.html#getGroceryList">getGroceryList</a></li><li><a href="global.html#getGroceryLists">getGroceryLists</a></li><li><a href="global.html#getIngredients">getIngredients</a></li><li><a href="global.html#getIngredientsSuccess">getIngredientsSuccess</a></li><li><a href="global.html#getMealPlans">getMealPlans</a></li><li><a href="global.html#getRecipes">getRecipes</a></li><li><a href="global.html#getRecipesFailure">getRecipesFailure</a></li><li><a href="global.html#getRecipesRequest">getRecipesRequest</a></li><li><a href="global.html#getRecipesSuccess">getRecipesSuccess</a></li><li><a href="global.html#groceryListCreateFailure">groceryListCreateFailure</a></li><li><a href="global.html#groceryListCreateRequest">groceryListCreateRequest</a></li><li><a href="global.html#groceryListCreateSuccess">groceryListCreateSuccess</a></li><li><a href="global.html#groceryListFailure">groceryListFailure</a></li><li><a href="global.html#groceryListRequest">groceryListRequest</a></li><li><a href="global.html#groceryListSuccess">groceryListSuccess</a></li><li><a href="global.html#ingredientSearchFailure">ingredientSearchFailure</a></li><li><a href="global.html#ingredientSearchRequest">ingredientSearchRequest</a></li><li><a href="global.html#ingredientSearchSuccess">ingredientSearchSuccess</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#loginFailure">loginFailure</a></li><li><a href="global.html#loginRequest">loginRequest</a></li><li><a href="global.html#loginSuccess">loginSuccess</a></li><li><a href="global.html#logout">logout</a></li><li><a href="global.html#logoutFailure">logoutFailure</a></li><li><a href="global.html#logoutRequest">logoutRequest</a></li><li><a href="global.html#logoutSuccess">logoutSuccess</a></li><li><a href="global.html#mapDispatchToProps">mapDispatchToProps</a></li><li><a href="global.html#mapStateToProps">mapStateToProps</a></li><li><a href="global.html#mealPlanCreateFailure">mealPlanCreateFailure</a></li><li><a href="global.html#mealPlanCreateRequest">mealPlanCreateRequest</a></li><li><a href="global.html#mealPlanCreateSuccess">mealPlanCreateSuccess</a></li><li><a href="global.html#mealPlanDeleteFailure">mealPlanDeleteFailure</a></li><li><a href="global.html#mealPlanDeleteRequest">mealPlanDeleteRequest</a></li><li><a href="global.html#mealPlanDeleteSuccess">mealPlanDeleteSuccess</a></li><li><a href="global.html#mealPlanEditFailure">mealPlanEditFailure</a></li><li><a href="global.html#mealPlanEditRequest">mealPlanEditRequest</a></li><li><a href="global.html#mealPlanEditSuccess">mealPlanEditSuccess</a></li><li><a href="global.html#mealPlansFailure">mealPlansFailure</a></li><li><a href="global.html#mealPlansRequest">mealPlansRequest</a></li><li><a href="global.html#mealPlansSuccess">mealPlansSuccess</a></li><li><a href="global.html#recipeSearchFailure">recipeSearchFailure</a></li><li><a href="global.html#recipeSearchRequest">recipeSearchRequest</a></li><li><a href="global.html#recipeSearchSuccess">recipeSearchSuccess</a></li><li><a href="global.html#register">register</a></li><li><a href="global.html#registerFailure">registerFailure</a></li><li><a href="global.html#registerRequest">registerRequest</a></li><li><a href="global.html#registerSuccess">registerSuccess</a></li><li><a href="global.html#searchIngredients">searchIngredients</a></li><li><a href="global.html#searchRecipes">searchRecipes</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 19:43:30 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

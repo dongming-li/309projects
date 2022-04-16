@@ -1,0 +1,44 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  Contains properties relative to event generator
+	  Target		screenY
+	  Type			altKey
+	  keyCode		ctrlKey
+	  screenX		Timestamp
+	  
+	  */
+		$(document).ready(function(){
+			$("li").eq(0).bind("click", function(event){
+				$("#messageDiv").text(event.target.innerHTML);
+			});
+			$("li").eq(1).click(function(event){
+				$("#messageDiv").text(event.type);
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+	  <div></div>
+	  <div id="testDiv">
+		<ul>
+			<li>list item 1</li>
+			<li>list item 2</li>
+			<li>list item 3</li>
+			<li>list item 4</li>
+			<li>list item 5</li>
+			<input type="test"></input>
+			<span id="messageDiv">Hello World!</span>
+		</ul>
+	  </div>
+   </body>
+	
+</html>

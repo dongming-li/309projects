@@ -1,0 +1,8 @@
+Meeting 10/19
+Joe works on making a pathing algorithm. 
+Now got the graph ready. -> will work on improving the efficiency. 
+Alex working on gameplay still and how to display. 
+Jeremy is on the leaderboards server side. 
+Johan is working on the display of friends and the server side. 
+We spend most of the time just coding as there is no main issue that has been coming up. 
+Most of us have been very busy with midterms so we have been coding a little less. 

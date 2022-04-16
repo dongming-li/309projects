@@ -1,0 +1,83 @@
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Account Home</title>
+  <meta name="description" content="An interactive getting started guide for Brackets.">
+
+  <link rel="stylesheet" type="text/css" href="ac.css">
+
+
+
+  <!--
+  The purpose of this file is to create an account home page for the Battle of the Bands website.
+  The account home page will have the following:
+  1. A profile picture along with the name.
+  2. A rating widgit
+  4. A player rating widget that displays their rank
+  5. A button to get to character selection
+
+-->
+
+
+</head>
+
+<body>
+  <center><h1>
+    ACCOUNT HOME
+  </h1>
+
+
+  <h3>
+    <img src="img/mystery-person-205x148.jpg" alt="Profile"/>
+  </h3>
+
+
+  <h3>
+    <div class="boxed">
+    <div id="edit" contenteditable="true" value=content>
+      Name
+    </div>
+    </div>
+    <p>
+
+    </p>
+    <input type="button" id="save_Name" name="Save Name" value="Save">
+  </h3>
+
+
+  <h3>
+    Current Level
+    <div class="boxed2">
+      Level:
+    </div>
+  </h3>
+
+
+  <center><h3>
+    Game rating
+  </h3>
+  <center><h3>
+    <center><fieldset class="rating" id="select_star" value=content.value>
+    <legend>Rate Us!</legend>
+    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Excellent">5 stars</label>
+    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Very Good">4 stars</label>
+    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Good">3 stars</label>
+    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Poor">2 stars</label>
+    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Terrible">1 star</label>
+    </fieldset>
+  <center></h3>
+
+
+  <center><h4>
+  <p>
+
+  </p>
+  <input class= "star_submit" type="submit" id= "star_submit" value="Submit">
+</h4>
+
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+Meeting 09/28 present all : time 30min
+
+- need to do friends pop-up
+- Alex working on the game. 
+- Jeremy on the leaderboards
+- Joe working lobby menu drag and drop. 
+- Johan client/server how to do it ? php - java
+
+- How to display leaderboards ? -> baseadapter. 
+- exploring android drag and drop. 
+- Still need to do the linking of all layout. 
+
+
+-> we are all working on our part of the code. It is progressing well. Not many new tasks to do
+- everyone will keep on working on their part. 

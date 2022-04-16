@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+    Username: <input type = "text" id = "username"></form>   
+<form>
+    Password:  <input type = "text" id = "password"></form>
+<form>
+    New Password:  <input type = "text" id = "newpassword"></form>
+<button onclick = ajax("check")>Login</button>
+<button onclick = ajax("create")>Create</button>
+<button onclick = ajax("update")>Update</button>
+<button onclick = ajax("delete")>Delete</button>
+    
+<p id = "demo"></p>    
+<script>
+    
+function ajax(type){
+    var xhttp;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var newpassword = document.getElementById("newpassword").value;
+    if(username.length == 0 || password.length == 0){
+        document.getElementById("demo").innerHTML = "empty username or password";
+        return;
+    }else{
+        if(window.XMLHttpRequest){
+            xhttp = new XMLHttpRequest();
+        }else{
+            xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xhttp.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                document.getElementById("demo").innerHTML = this.responseText;
+                
+            }
+        };
+        if(type === "check" || type === "create" || type === "delete"){
+            xhttp.open("GET","User.php?t="+ type + "&u=" + username + "&p="+password, true);
+        }else if(type === "update"){
+            xhttp.open("GET","User.php?t="+ type + "&u=" + username + "&p="+password
+                       + "&n="+ newpassword, true);     
+                 }
+        
+        xhttp.send();
+    }
+}   
+    
+    
+    
+    
+    
+    
+    
+    
+</script>    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>

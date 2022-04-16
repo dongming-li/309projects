@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: actions/auth/index.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: actions/auth/index.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {post, get} from 'axios';
+import Cookies from 'universal-cookie';
+const cookie = new Cookies();
+import {
+    LOGIN_REQUEST,
+    LOGIN_SUCCESS,
+    LOGIN_FAILURE,
+    REGISTER_REQUEST,
+    REGISTER_SUCCESS,
+    REGISTER_FAILURE,
+    LOGOUT_REQUEST,
+    LOGOUT_SUCCESS,
+    LOGOUT_FAILURE,
+    AUTH_REQUEST,
+    AUTH_SUCCESS,
+    AUTH_FAILURE
+} from '../../actionTypes';
+
+/**
+ * Indicates a login was requested
+ * @param {*} identifier
+ * @return {object}  contains action and identifier
+ */
+function loginRequest(identifier) {
+    return {
+        type: LOGIN_REQUEST,
+        identifier
+    }
+}
+
+/**
+ * Indicates login success
+ * @param {user} user
+ * @return {object}  containing action and user
+ */
+function loginSuccess(user) {
+    return {
+        type: LOGIN_SUCCESS,
+        user
+    }
+}
+
+/**
+ * Indicates login failure
+ * @param {error} error
+ * @return {object} containing action and error
+ */
+function loginFailure(error) {
+    return {
+        type: LOGIN_FAILURE,
+        error
+    }
+}
+
+/**
+ * Indicates a registration request
+ * @param {string} username
+ * @param {string} email
+ * @param {string} password
+ * @return {object} containing action, username, email, password
+ */
+function registerRequest(username, email, password) {
+    return {
+        type: REGISTER_REQUEST,
+        username,
+        email,
+        password
+    }
+}
+
+/**
+ * Indicates registration success
+ * @param {string}  username
+ * @param {string}  email
+ * @param {string}  password
+ * @return {object}  contains action, username, email, password
+ */
+function registerSuccess(username, email, password) {
+    return {
+        type: REGISTER_SUCCESS,
+        username,
+        email,
+        password
+    }
+}
+
+/**
+ * Indicates registration failure
+ * @param {error} error
+ * @return {object} contains action and error
+ */
+function registerFailure(error) {
+    return {
+        type: REGISTER_FAILURE,
+        error
+    }
+}
+
+/**
+ * Indates a logout request
+ * @return {object} contains action
+ */
+function logoutRequest() {
+    return {
+        type: LOGOUT_REQUEST,
+    }
+}
+
+/**
+ * Indicates logout succeess
+ * @return {object} contains action
+ */
+function logoutSuccess() {
+    return {
+        type: LOGOUT_SUCCESS,
+    }
+}
+
+/**
+ * Indicates logout failure
+ * @param {error} error
+ * @return {object} contains action and error
+ */
+function logoutFailure(error) {
+    return {
+        type: LOGOUT_FAILURE,
+        error
+    }
+}
+
+/**
+ * Indicates an auth request
+ * @returns {object} contains action
+ */
+function authRequest() {
+    return {
+        type: AUTH_REQUEST,
+    }
+}
+
+/**
+ * Indicates auth success
+ * @param {user} user
+ * @return {object} contains user and action
+ */
+function authSuccess(user) {
+    return {
+        type: AUTH_SUCCESS,
+        user
+    }
+}
+
+/**
+ * Indicates auth failure
+ * @param {error} error
+ * @return {object} contains action and error
+ */
+function authFailure(error) {
+    return {
+        type : AUTH_FAILURE,
+        error
+    }
+}
+/**
+ *
+ * @returns {Promise}
+ */
+export function authenticate() {
+    const token = cookie.get('token');
+    return (dispatch) => {
+        dispatch(authRequest());
+        if(!token){
+            return Promise.resolve(dispatch(authFailure({error: "There is no auth token!"})));
+        }
+        return post('/api/authenticate',
+            null, //No Body Parameters
+            {
+                headers: {
+                    toque_token: token,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => {
+                dispatch(authSuccess(response.data.user));
+            })
+            .catch((error) => {
+                dispatch(authFailure(error));
+            })
+    }
+}
+/**
+ * Login a user
+ * @param {string}  identifier
+ * @param {string}  password
+ * @returns {Promise}
+ */
+export function login(identifier, password) {
+    return (dispatch) => {
+        dispatch(loginRequest(identifier));
+        return post('/api/login', {
+                identifier,
+                password
+            })
+            .then((response) => {
+                cookie.set('token', response.data.token);
+                dispatch(loginSuccess(response.data.user));
+            })
+            .catch((error) => {
+                dispatch(loginFailure(error));
+            })
+    }
+}
+/**
+ * Register a new user
+ * @param {string}  username
+ * @param {string}  email
+ * @param {string}  password
+ * @returns {Promise}
+ */
+export function register(username, email, password) {
+    return (dispatch) => {
+        dispatch(registerRequest(username, email, password));
+        return post('/api/register', {
+            username,
+            email,
+            password
+        })
+            .then((response) => {
+                dispatch(registerSuccess());
+            })
+            .catch((error) => {
+                dispatch(registerFailure(error));
+                console.log(error);
+            })
+    }
+}
+/**
+ * Logout a logged in user
+ * @returns {Promise}
+ */
+export function logout() {
+    return (dispatch) => {
+        dispatch(logoutRequest());
+        return get('/api/logout')
+            .then((response) => {
+                cookie.remove('token');
+                dispatch(logoutSuccess());
+            })
+            .catch((error) => {
+                dispatch(logoutFailure(error));
+            })
+    }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="CreateGroceryList.html">CreateGroceryList</a></li><li><a href="CreateMealPlanModal.html">CreateMealPlanModal</a></li><li><a href="CreateRecipeForm.html">CreateRecipeForm</a></li><li><a href="GroceryLister.html">GroceryLister</a></li><li><a href="Home.html">Home</a></li><li><a href="IngredientList.html">IngredientList</a></li><li><a href="LogForm.html">LogForm</a></li><li><a href="MealPlanner.html">MealPlanner</a></li><li><a href="MultiGroceryList.html">MultiGroceryList</a></li><li><a href="Navbar.html">Navbar</a></li><li><a href="RecipeList.html">RecipeList</a></li><li><a href="RegForm.html">RegForm</a></li><li><a href="Splash.html">Splash</a></li></ul><h3>Global</h3><ul><li><a href="global.html#authenticate">authenticate</a></li><li><a href="global.html#authFailure">authFailure</a></li><li><a href="global.html#authRequest">authRequest</a></li><li><a href="global.html#authSuccess">authSuccess</a></li><li><a href="global.html#createGroceryList">createGroceryList</a></li><li><a href="global.html#createIngredient">createIngredient</a></li><li><a href="global.html#createIngredientFailure">createIngredientFailure</a></li><li><a href="global.html#createIngredientRequest">createIngredientRequest</a></li><li><a href="global.html#createIngredientSuccess">createIngredientSuccess</a></li><li><a href="global.html#createMealPlan">createMealPlan</a></li><li><a href="global.html#createRecipe">createRecipe</a></li><li><a href="global.html#createRecipeFailure">createRecipeFailure</a></li><li><a href="global.html#createRecipeRequest">createRecipeRequest</a></li><li><a href="global.html#createRecipeSuccess">createRecipeSuccess</a></li><li><a href="global.html#deleteMealPlan">deleteMealPlan</a></li><li><a href="global.html#editMealPlan">editMealPlan</a></li><li><a href="global.html#getGroceryList">getGroceryList</a></li><li><a href="global.html#getGroceryLists">getGroceryLists</a></li><li><a href="global.html#getIngredients">getIngredients</a></li><li><a href="global.html#getIngredientsSuccess">getIngredientsSuccess</a></li><li><a href="global.html#getMealPlans">getMealPlans</a></li><li><a href="global.html#getRecipes">getRecipes</a></li><li><a href="global.html#getRecipesFailure">getRecipesFailure</a></li><li><a href="global.html#getRecipesRequest">getRecipesRequest</a></li><li><a href="global.html#getRecipesSuccess">getRecipesSuccess</a></li><li><a href="global.html#groceryListCreateFailure">groceryListCreateFailure</a></li><li><a href="global.html#groceryListCreateRequest">groceryListCreateRequest</a></li><li><a href="global.html#groceryListCreateSuccess">groceryListCreateSuccess</a></li><li><a href="global.html#groceryListFailure">groceryListFailure</a></li><li><a href="global.html#groceryListRequest">groceryListRequest</a></li><li><a href="global.html#groceryListSuccess">groceryListSuccess</a></li><li><a href="global.html#ingredientSearchFailure">ingredientSearchFailure</a></li><li><a href="global.html#ingredientSearchRequest">ingredientSearchRequest</a></li><li><a href="global.html#ingredientSearchSuccess">ingredientSearchSuccess</a></li><li><a href="global.html#login">login</a></li><li><a href="global.html#loginFailure">loginFailure</a></li><li><a href="global.html#loginRequest">loginRequest</a></li><li><a href="global.html#loginSuccess">loginSuccess</a></li><li><a href="global.html#logout">logout</a></li><li><a href="global.html#logoutFailure">logoutFailure</a></li><li><a href="global.html#logoutRequest">logoutRequest</a></li><li><a href="global.html#logoutSuccess">logoutSuccess</a></li><li><a href="global.html#mapDispatchToProps">mapDispatchToProps</a></li><li><a href="global.html#mapStateToProps">mapStateToProps</a></li><li><a href="global.html#mealPlanCreateFailure">mealPlanCreateFailure</a></li><li><a href="global.html#mealPlanCreateRequest">mealPlanCreateRequest</a></li><li><a href="global.html#mealPlanCreateSuccess">mealPlanCreateSuccess</a></li><li><a href="global.html#mealPlanDeleteFailure">mealPlanDeleteFailure</a></li><li><a href="global.html#mealPlanDeleteRequest">mealPlanDeleteRequest</a></li><li><a href="global.html#mealPlanDeleteSuccess">mealPlanDeleteSuccess</a></li><li><a href="global.html#mealPlanEditFailure">mealPlanEditFailure</a></li><li><a href="global.html#mealPlanEditRequest">mealPlanEditRequest</a></li><li><a href="global.html#mealPlanEditSuccess">mealPlanEditSuccess</a></li><li><a href="global.html#mealPlansFailure">mealPlansFailure</a></li><li><a href="global.html#mealPlansRequest">mealPlansRequest</a></li><li><a href="global.html#mealPlansSuccess">mealPlansSuccess</a></li><li><a href="global.html#recipeSearchFailure">recipeSearchFailure</a></li><li><a href="global.html#recipeSearchRequest">recipeSearchRequest</a></li><li><a href="global.html#recipeSearchSuccess">recipeSearchSuccess</a></li><li><a href="global.html#register">register</a></li><li><a href="global.html#registerFailure">registerFailure</a></li><li><a href="global.html#registerRequest">registerRequest</a></li><li><a href="global.html#registerSuccess">registerSuccess</a></li><li><a href="global.html#searchIngredients">searchIngredients</a></li><li><a href="global.html#searchRecipes">searchRecipes</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 19:43:30 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

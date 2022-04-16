@@ -1,0 +1,16 @@
+Meeting 09/10
+All present 
+Jeremy will keep on working on the leaderboards. -> added information on the trello
+Joe will go back on the map. Need to figure out on how to represent it better
+Alex : clean up the networking
+Johan : figure out all the race conditoin look into onStart-onCreate
+
+Try to comment the code a bit more. It makes it really hard to understand what is going on. 
+
+Johan will go back to the friends list. 
+
+Look into JSONArray to make a list. 
+Start thinking about the assets the map/towers/creatures -> 
+Look into website
+
+[0,0,0,0,1,1,2,3,4]

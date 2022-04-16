@@ -1,0 +1,60 @@
+Discussion 08/31 present : all start 3pm30
+
+Agenda : Team roles, features, meeting wiht TA tuesday, graph
+
+Schedule Lead : Alex
+Repo Lead : Joe
+Tech lead : Jeremy
+Test Lead : Johan 
+
+Features : 
+- Leaderboard (Local and Global)
+- Many vs 1. 
+- Races ( Perks, Default, - ) 
+- Facebook OAuth 
+- Friends 
+- 2 v 2 
+- upgrade your towers/monster
+- flying/ground burrow
+- barricade
+
+Animation : 
+- sliding 
+- tracking for bullets 
+- 
+
+
+Units attacking : 
+- Ground
+- Air
+- Underground
+
+Races : 
+- Human 
+- Dwarf
+- Elves
+- Goblin
+- Dragon
+- Undead
+- Orc
+
+Towers : 
+- Classical ( Arrow ) 
+- Artillery ( catapult ) 
+- Continuous (fire, electricity ) 
+- Crowd - control 
+- Oily -> fire 
+- synergy 
+- poisoning 
+
+Database : 
+- Leaderboard
+(PlayerID, %win, Level, games played, longuest survival, ranking) 
+- Map Creation
+(MapID, CreatorID(PlayerID), Map(Seq ?)
+- Friends (locally) 
+
+
+Game computed by the server and then sent to player at each tick
+
+

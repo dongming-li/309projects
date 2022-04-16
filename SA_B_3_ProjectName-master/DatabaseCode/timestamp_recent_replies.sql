@@ -1,0 +1,1 @@
+select r.* FROM replies r WHERE (TIMESTAMPDIFF(MINUTE, r.creation, NOW())) <= 10

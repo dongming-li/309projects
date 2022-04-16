@@ -1,0 +1,32 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+	  <style>
+		.error {
+			color: red;
+		}
+	  </style>
+	  
+	  <script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+			var temp = $("p").attr("title");
+			$("#messageDiv").html(temp);
+			$("#messageDiv").attr("class","error");
+		});
+	  </script>
+   </head>
+	
+   <body>
+      <div style="display:none">
+         <p title="This is first Tile">This is a paragraph.</p>
+      </div>
+	  <div id="messageDiv"></div>
+   </body>
+	
+</html>

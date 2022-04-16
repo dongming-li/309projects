@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+        <style type ="text/css">
+    #numPlayers, #cl-text{
+        font-size:1.4vw;
+        color:white;
+    }
+    </style>
+      <link rel="stylesheet" href=/css/testindex.css>
+</head>
+<body class="body">
+    <div style="background-color:#e29147">
+     <h2>letters from whitechapel</h2>
+    <!-- <h1 class=h1>Create Lobby Create Lobby Create Lobby Create Lobby Create Lobby Create Lobby Create Lobby Create Lobby Create Lobby Create Lobby Create Lobby </h1>
+     -->
+<div class="bkgd" style=background-color:#e29147;>
+    
+    <div class="container" >
+       
+
+         
+            <div class="bg" style="height:100vw;background-image:url(pages/imgs/clobby.jpg); background-size:cover; background-repeat: no-repeat;background-position: -30vw -40vw; opacity:.8;border-width:4px;border-style:groove;">
+            
+                <div id=options style="width:15%;margin-top:10%;margin-left:40%;padding:10px;background-color:gray;border-style:solid;border-color:darkgray">
+                    <!-- Radio buttons for Number of Players option -->
+                   <form id=numPlayers >
+                       <p>Number of Players</p>
+                       <input id ="cl-text" type="radio" name="numPlayers" value="1" >1
+                       <input id ="cl-text" type="radio" name="numPlayers" value="2" >2
+                       <input id ="cl-text" type="radio" name="numPlayers" value="3" >3
+                       <input id ="cl-text" type="radio" name="numPlayers" value="4" >4
+                       <input id ="cl-text" type="radio" name="numPlayers" value="5" >5
+                       <input id ="cl-text" type="radio" name="numPlayers" value="6" >6
+                       <br><br>
+                       <p id ="cl-text">Lobby Type</p>
+                       <input id ="cl-text"type="radio" name="lobbyType" value="private">Private
+                       <input id ="cl-text" type="radio" name="lobbyType" value="public">Public
+                       <br><br>
+                       <p id ="cl-text">Tool Tips</p>
+                       <input id ="cl-text" type="radio" name="toolTips" value="on">On
+                       <input id ="cl-text" type="radio" name="toolTips" value="off">Off
+                       <br><br>
+                       <p id ="cl-text">Enter Lobby Name</p>
+                       <input type="text" id="lobbyName" size="26" style="width:100%">
+                       <br><br>
+                       <p id ="cl-text" >Move Timer</p>
+                       <input id ="cl-text" type="radio" name="moveTimer" value="15">15 sec
+                       <input id ="cl-text" type="radio" name="moveTimer" value="30">30 sec
+                       <input id ="cl-text" type="radio" name="moveTimer" value="60">60 sec
+                       <input id ="cl-text" type="radio" name="moveTimer" value="no">No Timer
+                       <br><br>
+                       <input type="button" onclick="createLobby()" value="Get this show on the road" style="width:100%;>
+                       <p id = "message" style="margin-left:40%;opacity:0;"></p> 
+                   </form>
+            </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script src="createLobby.js"></script>

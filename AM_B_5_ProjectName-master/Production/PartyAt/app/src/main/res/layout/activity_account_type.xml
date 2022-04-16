@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.matthewburke.partyat.AccountType">
+
+
+    <Button
+        android:id="@+id/insertNewUser"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="New User Account"
+        android:layout_marginTop="182dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/insertNewBusiness"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="New Business Account"
+        android:layout_below="@+id/insertNewUser"
+        android:layout_alignStart="@+id/insertNewUser" />
+
+</RelativeLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/dungeon_wallpaper"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/createRoomsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:text="Create Rooms"
+            android:textSize="20sp"
+            app:layout_constraintRight_toLeftOf="@+id/constraintLayout"
+            android:layout_marginRight="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.021"
+            app:layout_constraintVertical_bias="0.978"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <GridLayout
+            android:id="@+id/characterInfoContainer"
+            android:name="mainmenu.CharacterValueFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.229"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            android:layout_marginEnd="8dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="280dp"
+            android:layout_height="350dp"
+            app:layout_constraintLeft_toRightOf="@+id/characterInfoContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintHorizontal_bias="0.807"
+            android:layout_marginEnd="8dp"
+            android:id="@+id/constraintLayout">
+
+            <TextView
+                android:id="@+id/invisData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="TextView"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <Button
+                android:id="@+id/game1Button"
+                android:layout_width="130dp"
+                android:layout_height="48dp"
+                android:text="Join Game"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/game2Button"
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Join Game"
+                app:layout_constraintTop_toBottomOf="@+id/game1Button"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/game3Button"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="0dp"
+                android:text="Join Game"
+                app:layout_constraintTop_toBottomOf="@+id/game2Button"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/game4Button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:text="Join Game"
+                app:layout_constraintTop_toBottomOf="@+id/game3Button"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/game5Button"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="0dp"
+                android:text="Join Game"
+                app:layout_constraintTop_toBottomOf="@+id/game4Button"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/game6Button"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                android:text="Join Game"
+                app:layout_constraintTop_toBottomOf="@+id/game5Button"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/game1Details"
+                android:layout_width="145dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Game Lobby 1\nNumber of Players: 0"
+                app:layout_constraintRight_toLeftOf="@+id/game1Button"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/game2Details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:text="Game Lobby 2\nNumber of Players: 0"
+                app:layout_constraintRight_toLeftOf="@+id/game2Button"
+                app:layout_constraintTop_toBottomOf="@+id/game1Details" />
+
+            <TextView
+                android:id="@+id/game3Details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:text="Game Lobby 3\nNumber of Players: 0"
+                app:layout_constraintTop_toBottomOf="@+id/game2Details"
+                app:layout_constraintRight_toLeftOf="@+id/game3Button" />
+
+            <TextView
+                android:id="@+id/game4Details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:text="Game Lobby 4\nNumber of Players: 0"
+                app:layout_constraintRight_toLeftOf="@+id/game4Button"
+                app:layout_constraintTop_toBottomOf="@+id/game3Details" />
+
+            <TextView
+                android:id="@+id/game5Details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:text="Game Lobby 5\nNumber of Players: 0"
+                app:layout_constraintRight_toLeftOf="@+id/game5Button"
+                app:layout_constraintTop_toBottomOf="@+id/game4Details" />
+
+            <TextView
+                android:id="@+id/game6Details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:text="Game Lobby 6\nNumber of Players: 0"
+                app:layout_constraintRight_toLeftOf="@+id/game6Button"
+                app:layout_constraintTop_toBottomOf="@+id/game5Details" />
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Game"
+                android:visibility="invisible"
+                android:layout_marginRight="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+{
+  "name": "lfw",
+  "version": "1.0.0",
+  "description": "lfw webapp",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.6",
+    "moment": "^2.19.1",
+    "request": "^2.83.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "scripts": {
+    "start": "node chat-server.js > dev.log",
+    "start-dev": "nodemon chat-server.js"
+  },
+  "author": "vcb2",
+  "license": "ISC",
+  "nodemonConfig": {
+    "ignore": [
+      "test/*"
+    ],
+    "delay": "500"
+  }
+}

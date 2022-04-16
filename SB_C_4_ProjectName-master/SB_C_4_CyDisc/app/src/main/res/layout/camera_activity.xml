@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="coms309.sb_c_4_cydisc.CameraFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="500px"
+        android:layout_height="500px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView11"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="Capture" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView11"
+        android:layout_alignStart="@+id/imageView11"
+        android:layout_below="@+id/button2"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="76dp"
+        android:text="TextView" />
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<h1>Welcome To Overhead!</h1>
+
+<h6>A WebApp developed by Group GP_C_1 </h6>
+
+
+<div class="card">
+  <div class="card-body">
+<table>
+  <thead>
+    <tr>
+      <th>Announcements</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @announcements.each do |announcement| %>
+      <tr>
+
+        <td><%= announcement.title.truncate(20, separator: /\s/) %></td>
+        <td><%= announcement.body.truncate(140, omission: '...(continued)') %></td>
+        <td>  <%= link_to 'View', announcement, :class => 'btn text-white btn-info' %> </td>
+        <!--<%= link_to 'Edit', edit_announcement_path(announcement) %>
+        <%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+
+<%= link_to 'All Announcements', announcements_path, :class => 'btn text-white btn-info' %>
+
+
+
+<div class="card">
+  <div class="card-body">
+<table>
+  <thead>
+    <tr>
+      <th>News</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @news_posts.each do |news| %>
+      <tr>
+
+        <td><%= news.title.truncate(20, separator: /\s/) %></td>
+        <td><%= news.body.truncate(140, omission: '...(continued)') %></td>
+        <td><%= link_to 'View', news, :class => 'btn text-white btn-info' %></td>
+        <!-- <td><= link_to 'Edit', edit_news_path(news), :class => 'btn btn-info' %></td>
+        <td><%= link_to 'Delet', news, :class => 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<%= link_to 'All News', news_posts_path, :class => 'btn text-white btn-info' %>

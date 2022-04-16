@@ -1,0 +1,9 @@
+#Packages
+
+*.dmg
+*.gz
+*.jar
+*.tar
+*.zip
+*.c
+*.c++

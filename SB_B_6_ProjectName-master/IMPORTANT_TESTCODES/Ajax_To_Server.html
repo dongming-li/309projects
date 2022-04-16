@@ -1,0 +1,62 @@
+<!doctype html>	
+<!--
+This piece of code is primarily to send data from ajax JQuery
+to JSP.
+
+Its still needs to be tested and verified.
+
+The Goal of this test is to Send an input to the JSP and it will send a response back.
+
+I advice that the Tester remove all comments for proper function. Sometimes the comments can cause buggy codes.
+-->
+
+<html>
+
+   <head>
+      <title>AJAX Testing</title>
+	  <!--
+	  This is the JQuery source codes. Its is considered as a part of the library.
+	  -->
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  
+	  <script type="text/javascript" language="javascript">
+	  /*
+		Every ajax methos has a parameter data which can be used to pass data to server
+		This is the most optimal or to use and easy to understand, though its a bit large.
+		
+		This "$" sign is a shorten version of the word "JQuery"
+		
+		The [document] is the html or jsp file itself, the .ready(); means that it is active when the file is compiled and active
+		
+		This " $(SELECTED) " is a selector. You can use to modify [document] or any of the HTML elements like [div], [p], [body], or others.
+		To do so, you first need to give it the specifics. These two following are examples.
+		$("#divName") - use the elements [id] name
+		$(".bodyName") - use the elements [class] name
+	  */
+		$(document).ready(function(){
+			$("#loadButton").click(function(event){					//Click is a trigger event in all html and jsp
+				var name = $("#name").val();
+				$.ajax({											//Ajax Setting
+					type: "POST",									//The type is set to either "POST" for sending and "GET" for receiving.
+					url: "Example.jsp",								//This is the location of the file itself, mostly in either .html or .jsp (Example.jsp needs receiving codes)
+					data: {name: name},								//This is the data sent. The first [name] is the Parameter located in "Example.jsp", the second is the variable in this program
+					success: function(response){					//Response is the what the JSP file prints out and sent to us.
+						alert(response);							//I set it to alert us if the function was successfully sent.
+					},
+					error: function(){
+						$.alert("failed to complete request: ");	//SUPPOSED to tell us if it fails but its sort of not working.
+					}
+				});
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<p>Click on the button to load Example.jsp with name</p>
+		<input type="input" id="name" size="40" value="Hello World"/><br />
+		<input type="button" id="loadButton" value="Load Data"/>
+		<div id="dataDiv"></div>
+   </body>
+	
+</html>

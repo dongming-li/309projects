@@ -1,0 +1,21 @@
+<h1>News</h1>
+
+<div class="card">
+  <div class="card-body">
+    <% @news_posts.each do |news_post| %>
+
+
+        <h5><%= news_post.title.truncate(40, separator: /\s/) %></h5>
+        <p><%= news_post.body.truncate(200, omission: '...(continued)') %></p>
+        <%= link_to 'Read More', news_post %></td>
+      <!--  <= link_to 'Edit', edit_news_path(news) %>
+        <= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+
+    <% end %>
+</div>
+</div>
+
+<br>
+
+<%= link_to 'Create News Post', new_news_post_path, :class => 'btn text-white btn-info' %>
+<%= link_to 'Return To Home', home_path, :class => 'btn text-white btn-info' %>

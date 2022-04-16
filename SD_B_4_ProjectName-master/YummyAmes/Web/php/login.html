@@ -1,0 +1,32 @@
+<?php include("verification.php");?>
+<!DOCTYPE HTML>  
+<html>   
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<link rel="stylesheet" type="text/css" href="css/register.css" />  
+<title>register</title>  
+</head>  
+  
+  
+<body>    
+<span style="white-space:pre">    </span>  <form  name="form1"  method="post" action="add.php">  
+<span style="white-space:pre">    </span>  <div>  
+<span style="white-space:pre">    </span>      <ul>  
+<span style="white-space:pre">        </span>      <li><input name="nickname" type="text"  placeholder ="name：Numbers, letters, underscores"/></li>  
+<span style="white-space:pre">            </span>  <li><input name="studentid" type="text" placeholder ="ID number：at least 9 number"/></li>  
+<span style="white-space:pre">        </span>      <li><input name="password" type="password" placeholder ="password：at least six number"/></li>  
+<span style="white-space:pre">        </span>      <li><input name="confirm" type="password"  placeholder ="confirm password"/></li>  
+<span style="white-space:pre">        </span>      <li><input name="emailaddress" type="text"  placeholder ="email address"/></li>  
+<span style="white-space:pre">            </span>  <li><input name="verification" type="text"  placeholder ="Security code"/></li>  
+<span style="white-space:pre">        </span>  </ul>  
+<span style="white-space:pre">            </span>  <div id="text11"><img name="validate" onclick="validate.src+='?' + Math.random();"   
+<span style="white-space:pre">            </span>  <src="verification.php"  alt="refresh">  
+<span style="white-space:pre">            </span>  </div><span style="white-space:pre">    </span>    
+<span style="white-space:pre">        </span>     <input type="reset" value="Reset" />  
+<span style="white-space:pre">            </span>  <input type="submit" value="submit" />    
+<span style="white-space:pre">        </span>    </div>  
+<span style="white-space:pre">        </span>    
+<span style="white-space:pre">    </span>  </form><span style="white-space:pre">   </span>    
+   </div>   
+</body>  
+</html>  

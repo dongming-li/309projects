@@ -1,0 +1,61 @@
+General Overview of Gameplay Screens
+
+Out project is a player versus player turret defense game where both players pit themselves against one another creating units to destroy the enemy base and turrets to defend themselves
+from the offending units sent by their opponent.
+
+The game has several different displays: base, army, and enemy's base. These screens display seperately and can be swapped between by the player. These different screens have different
+functionality assigned to them but there is common functionality shared among them as well.
+
+Common Functionality Between Screens
+
+Building turrets and units as well as upgrading them costs resources. The game generates resources over time for the player to spend. The player's current amount of resources
+is clearly displayed in the top left hand of the screen. This tab is visible on all screens.
+
+The game operates in waves. Players will assign units to waves, these assigned units will attack the enemy when a wave start, a wave starts at the end of some fixed time. 
+This time is displayed in the top right hand corner of the screen. This tab is visible on all screens.
+
+Next to the time display is a small gear icon this displays an in game menu where the player can adjust their settings or exit their current game.
+	
+There are two buttons located in the top left-of-center part of the screen. These buttons allow the player to navigate between screens these buttons change depending on what screen they are
+on.
+
+1. Base
+	a. This screen is the first screen a player will see when starting a game
+	b. Here we see the main play area for this player, their base, where they can interact with the field of play to build and upgrade turrets which will protect their base from 
+	   enemy units
+	c. At the bottom of the screen there is a Buildables Bar on it this is from where players can select the buildable they wish to construct and drag in into position. Once placed
+	   the appropriate amount of resources will be deducted from their resource pool. In the top center of this bar there is an up arrow above text which reads, "Upgrades." Tapping this
+	   arrow will bring the bar up over the screen as a semi-transparent overlay. See 2. Upgrades Overlay Menu for more on this
+
+2. Base Upgrades Overlay Menu 
+	a. If a player taps on the up arrow of the Buildables Bar then this overlay will come up taking up most the screen.
+	b. This screen displays upgrade trees for all buildables and the associated costs with each upgrade.
+	c. Once paid for the upgrade is applied to all current turrets on the map and all future turrets.
+	d. This overlay will return to its original off screen position if the player taps the down arrow button located just above the "Upgrades" text.
+
+3. Army Tab
+	a. This tab allows the player to view your army, construct units, commit troops to the next wave, and upgrade your units.
+	b. A player can construct units using the Units Bar located at the bottom of the screen which displays available units and their associated costs.
+	c. The player can commit units to the next wave by operating the up and down arrows on the menu located on the right side of the screen. When the next wave starts the units committed
+	   to the next wave will be release at the enemy's base at the players selected spawn point and will target structures according to their set priority.
+	
+4. Army Upgrades Overlay
+	a. If a player taps on the up arrow of the Units Bar then this overlay will come up taking up most the screen.
+	b. This screen displays upgrade trees for all Units and the associated costs with each upgrade.
+	c. Once paid for the upgrade is applied to all existing Units and all future units.
+	d. This overlay will return to its original off screen position if the player taps the down arrow button located just above the "Upgrades" text.
+
+5. Enemy Base
+	a. Should a player navigate to this screen they will see the layout of their enemy's base.
+	b. They cannot however see what units their enemy has constructed or thosse that will be sent towards them.
+	c. The player can set spawn points, prioritize targets, the path their units will take, and direct digger units to construct new
+	   roads.
+
+6. Enemy Base In Game Menu
+	a. Shold a player tap the small gear icon located in the top right of all screens an In-Game-Menu Overlay will pop up
+	b. This menu allows the player to do adjust their in game settings or exit the game
+
+
+
+
+

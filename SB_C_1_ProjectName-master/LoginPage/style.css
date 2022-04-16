@@ -1,0 +1,113 @@
+.title
+{
+  pointer-events: none;
+  user-select: none;
+}
+
+.username_box
+{
+  animation: fadeIn 4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.password_box
+{
+  animation: fadeIn 4s;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+@font-face
+{
+  font-family: exocet;
+  src: url(exocet.TTF);
+}
+
+[placeholder]:focus::-webkit-input-placeholder
+{
+  visibility: hidden;
+}
+
+input[type="text"]
+{
+  animation: fadeIn 4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-54%);
+  font-size: 40pt;
+  width: 480px;
+  height:77px;
+  background-color: black;
+  color: white;
+  border-width: 0;
+  outline-width: 0;
+  text-transform: uppercase;
+  font-family: exocet;
+}
+
+input[type="image"]
+{
+  animation: fadeIn 4s;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  outline-color: black;
+  transform: translate(-50%,-50%);
+  width: 240px;
+  height:50px;
+  border-width: 0;
+  outline-width: 0;
+}
+
+input[type="password"]
+{
+  animation: fadeIn 4s;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-54%);
+  font-size: 40pt;
+  width: 480px;
+  height: 77px;
+  background-color: black;
+  color: white;
+  border-width: 0;
+  outline-width: 0;
+  font-family: exocet;
+}
+
+.new_user
+{
+  animation: fadeIn 4s;
+  text-align: center;
+  padding: 400px 0px;
+  font-family: exocet;
+}
+
+a
+{
+  color: darkorange;
+  text-decoration: none;
+}
+
+@keyframes fadeIn
+{
+  from
+  {
+    opacity: 0;
+  }
+  to
+  {
+    opacity: 1;
+  }
+}

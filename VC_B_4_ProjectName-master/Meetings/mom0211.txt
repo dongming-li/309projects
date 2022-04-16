@@ -1,0 +1,15 @@
+Meeting 02/11
+present everyone 4-5
+Use cases discussion
+- friends ( add, remove edit etc..) is working
+- edit information is working 
+- menu navigation is working 
+- see leaderboards should be done by saturday ( Jeremy ) 
+- The display of the game on two client has been shown on last demo but we will make it more updated. 
+- Display of a theoretical game is on the way and done by Alex with Help of Joe. 
+- Joe has been working on the path finding and map. 
+- We mainly spend the time showing where our code is at. 
+- Alex and Joe discuss how to display the map. 
+
+
+We are discussing what use cases are done and what is the position

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SB_C_4_CyDisc.iml" filepath="$PROJECT_DIR$/SB_C_4_CyDisc.iml" />
+      <module fileurl="file://E:\class\coms309\final\SB_C_4_ProjectName\SB_C_4_CyDisc.v.1.0\SB_C_4_CyDisc\SB_C_4_CyDisc.iml" filepath="E:\class\coms309\final\SB_C_4_ProjectName\SB_C_4_CyDisc.v.1.0\SB_C_4_CyDisc\SB_C_4_CyDisc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\class\coms309\final\SB_C_4_ProjectName\SB_C_4_CyDisc.v.1.0\SB_C_4_CyDisc\app\app.iml" filepath="E:\class\coms309\final\SB_C_4_ProjectName\SB_C_4_CyDisc.v.1.0\SB_C_4_CyDisc\app\app.iml" />
+    </modules>
+  </component>
+</project>

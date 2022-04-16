@@ -1,0 +1,45 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The AJAX Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  JQuery provides multiple methods for AJAX
+	  load - Load HTML from a remote file and inject it into the DOM
+	  get - Load a remote page using an HTTP GET request
+	  ajax - Load a remote page using an HTTP request
+	  ajaxSetup - Setup global settings for AJAX request
+	  getJson - Load JSON data using an HTTP GET request
+	  getScript - Loads and executes a JavaScript file using an HTTP Get request
+	  post - Load a remote page using an HTTP POST request
+	  
+	  Getting data from Server
+	  load(url[data][callback]) - Used to get data from the server
+			url - server side url to which request is to be sent.
+			Data - data to be passed to server
+			Callback - function to be invoked when server response is complete.
+	  get(url[data][callback][type]) - Used to get data using HTTP Get Method
+	  post(url[data][callback][type]) - Used to get data using HTTP POST method
+	  getJSON(url[data][callback]) - Used to get JSON data
+	  getScript(url[callback]) - Used to get JavaScript and execute it
+	  aja(options) - load HTML page using HTTP Request
+	  */
+		$(document).ready(function(){
+			$("#loadButton").click(function(event){
+				$('#dataDiv').load('Example.html');
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<p>Click on the button to load Example.html file</p>
+		<input type="button" id="loadButton" value="Load Data" />
+		<div id="dataDiv"></div>
+   </body>
+	
+</html>

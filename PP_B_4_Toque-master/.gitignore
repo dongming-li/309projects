@@ -1,0 +1,8 @@
+node_modules
+*-log.txt
+*bundle.js
+*bundle.js.map
+local.config.js
+*.idea
+npm-debug.log
+*.xml

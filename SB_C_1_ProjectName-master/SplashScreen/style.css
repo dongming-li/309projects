@@ -1,0 +1,51 @@
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+.title
+{
+  pointer-events: none;
+  user-select: none;
+}
+
+.center
+{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.swords
+{
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.ring
+{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 DarkOrange;
+  background: transparent;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate
+{
+  0%
+  {
+    transform: rotate(0deg);
+  }
+  100%
+  {
+    transform: rotate(360deg);
+  }
+}

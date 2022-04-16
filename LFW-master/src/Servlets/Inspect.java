@@ -1,0 +1,59 @@
+package Servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Set;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import Mapping.BoardMap;
+import Players.Inspector;
+import db.*;
+
+/**
+ * Servlet called by an Inspector player to find the nodes which that inspector can inspect or look for Jack
+ * @author sauerbreiale
+ *
+ */
+public class Inspect extends HttpServlet {
+	
+	//Holds the map for logic to be done on the nodes of the map
+	BoardMap map = new BoardMap(BoardMap.serverpath + "board.xml");
+	
+	/**
+	 * Method used to show the nodes an Inspector player is able to investigate
+	 * 
+	 * @param request - the HTTPRequest from the client that holds the information for the logic
+	 * @param response - the HTTPResponse that holds how to communicate back to the client
+	 */
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException
+	{
+		//Establishes a database connection
+		DB db = new DB();
+		//Gets the game that the current user is in
+		Game game = db.getGame(request.getParameter("username"));
+		//gets the position of the player in the current game
+		String position = game.getPosition();
+		
+		//Sets the content type for writing back to the client
+		response.setContentType("text/html");
+		PrintWriter HTMLout = response.getWriter();
+		
+		//create a new inspector object that is at the position in the database
+		Inspector ins = new Inspector(map.getNode(position));
+		//gets the inspectable nodes that the player can move to
+		Set<String> inspectableNodes= ins.getInspectableNodes().keySet();
+		//prints out the inspectable nodes as buttons for HTML
+		for(String node : inspectableNodes)
+		{
+			HTMLout.print("<button id=\""+node+"\" type=\"button\" class=\"btn btn-danger\" onclick=\"activateI(this)\">"+node+"</button>");
+		}
+		
+		//closes the database connection
+		db.deleteDB();
+		
+	}
+
+}

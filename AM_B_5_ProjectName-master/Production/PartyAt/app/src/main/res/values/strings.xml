@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PartyAt</string>
+    <string name="login">Log In</string>
+    <string name="password">Password</string>
+    <string name="next">Next</string>
+    <string name="username">User Name</string>
+    <string name="USERNAME">USERNAME</string>
+    <string name="USERID">USERID</string>
+    <string name="USERTYPE">USERTYPE</string>
+    <string name="PREFERENCES">preferences_file</string>
+    <string name="profile_user_name">Username</string>
+    <string name="profile_first_name">First Name</string>
+    <string name="profile_last_name">Last Name</string>
+    <string name="profile_phone_number">Phone #</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_check_in">Check In</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="profile_save_changes">Save Changes</string>
+    <string name="profile_current_location">Current Location</string>
+    <string name="default_none">None</string>
+    <string name="title_activity_check_business_name">CheckBusinessName</string>
+    <string name="title_activity_map_current_loc">Current Location</string>
+</resources>

@@ -1,0 +1,29 @@
+<% @forums.each do |forum| %>
+  <div class="card">
+    <div class="card-body">
+    <h1><%= forum.name %>
+
+      <%= link_to 'Edit', edit_forum_path(forum), :class => 'btn btn-default' %>
+
+         <%= link_to 'delet', forum_path(forum),
+                                      method: :delete,
+                                      data: { confirm: 'delet this??'},
+                                      :class => 'btn btn-danger' %></h1>
+
+    <% forum.posts.each do |post| %>
+      <div class="card">
+        <div class="card-body">
+        <h3><%= post.title %></h3>
+        <p><%= post.body.truncate(200, omission: '...(continued)') %></p>
+        <%= link_to "Read More", post_path(post), :class => 'btn btn-default' %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<% end %>
+<% if user_signed_in? %>
+<%= link_to "New Post", '/posts/new', :class => 'btn card text-white bg-secondary' %>
+<%= link_to "New Forum", '/forum/new', :class => 'btn card text-white bg-secondary' %>
+
+<% end %>

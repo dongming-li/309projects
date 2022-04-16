@@ -1,0 +1,77 @@
+Meeting 08/24/17 at 3:30pm finish at 
+Members : All
+
+Team competency of the team : 
+
+Johan : 
+4 semester college / programming
+2 classses in java
+2 classes in scala
+1 / 1 class project in c
+3 classes vhdl
+1 class processing
+2 projects -> games
+1 project -> filesystem
+OO, func
+
+Jeremy : 
+5 years java - 2 classes 
+1 semester c/cpp
+OO
+
+Alex : 
+2 sem java
+3 sem c 
+eclipse/xionlinx/embedde hardware / software dev kit
+senior(super)
+OO , embeded, 
+
+Joe : 
+2 semesterjava
+1 semester c 
+1 semester verilog
+OO
+
+Language/ platform : java, android studio
+
+Project : 
+Discussion 30min everyone exposses idea. 
+4 finalist 
+TBS
+TD
+AR
+Runner
+
+--> Choose "Tower defense"
+
+Tower Defense : 
+
+- Attack/Defense
+- Map editor
+- PVP (1v1)
+- PVE
+- 
+
+
+
+Description :
+Fantasy Defense is a tower defense game. You can either play against an IA, but where the 
+real fun comes at is when you duel your friends! You and your friend each take the role of
+attacker (and defender !). 
+A player can also create his own maps. They can put their maps online and then you can vote if
+its a good attacking map/defending map. 
+Adminstritator can kick players/moderator. 
+
+
+Players will be either attack or defense. Map editing is an entire different game mode. 
+You play online real time so both player have to be on their phone at the same time. 
+Map is grid based. (2D array of cells and subcells). The environment can be allowing construction or not. 
+
+
+6. 
+- GUI
+- Android based
+- Multiplayer (server) 
+- Map editing -> database to hold the maps
+- Complex game mechanics
+

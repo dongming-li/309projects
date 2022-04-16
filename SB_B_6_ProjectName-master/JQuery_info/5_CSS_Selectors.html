@@ -1,0 +1,44 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+	  <script type="text/javascript" language="javascript">
+	  $(document).ready(function() {
+            var paragraphs = $("p");
+			var temp = "";
+			for(i = 0;i<paragraphs.length;i++){
+				temp += paragraphs[i].innerHTML;
+			}
+			$("#messageDiv").html(temp);
+         });
+		 
+		 /*
+		 $('*') - Selects all the elements
+		 $('ul li:first') - selects first li of a ul
+		 $('li:even') - selects even indexed li
+		 $('tr:odd') - selects odd indexed tr
+		 $('li:first') - selects first li
+		 $('li:last') - selects last li
+		 $('li:eq(2)') - selects second li
+		 $('li:lt(3)') - selects first two li
+		 $(':parent') - selects parent
+		 */
+	  </script>
+	  
+   </head>
+	
+   <body>
+      <div id="parentDiv" style="display:none">
+         <p>This is a paragraph.</p>
+         <p>This is second paragraph.</p>
+         <p>This is third paragraph.</p>
+      </div>
+	  <div id="messageDiv"></div>
+   </body>
+	
+</html>

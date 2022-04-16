@@ -1,0 +1,105 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .titlefont {
+   font-size: 26px;
+ }
+
+ .userfont{
+   font-size: 20px;
+ }
+
+ .border-between > [class*='col-']:before,
+ .border-between > [class*='col-']:after {
+     background: #b2b2b2;
+     bottom: 0;
+     content: " ";
+     position: absolute;
+     width: 1px;
+     top: 0;
+ }
+ .border-between > [class*='col-']:before {
+     left: 0;
+ }
+ .border-between > [class*='col-']:after {
+     right: -1px;
+ }
+ .border-between > [class*='col-']:first-child:before,
+ .border-between > [class*='col-']:last-child:after {
+     display: none;
+ }
+
+.body-background {
+  background-color: rgb(222, 222, 222);
+}
+
+
+/*
+ *navbar.css custom styling
+ */
+body {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 120px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+body.body-background {
+    margin-bottom: 70px;
+}

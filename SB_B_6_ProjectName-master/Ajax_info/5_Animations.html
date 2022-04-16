@@ -1,0 +1,53 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The AJAX Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <style>
+		#dataDiv{
+			background-color: #bca;
+			width:100px;
+			border:1px solid green;
+		}
+	  </style>
+	  <script type="text/javascript" language="javascript">
+	  /*
+		Animate (params, [duration, easing, callback])
+		Params - map of CSS properties that animation will move toward
+		Duration - Optional parameter representing how long the animation will run
+		Easing - Optional parameter representing which easing functino to use for transition
+		Optional - Optional parameter representing a function to call once the animation is complete
+	  */
+		$(document).ready(function(){
+			$("#animateOutButton").click(function(){
+				$("#dataDiv").animate({
+					width: "70%",
+					opacity: 0.4,
+					marginLeft: "0.6in",
+					fontSize: "3em",
+					borderWidth: "10px"
+				}, 1500);
+			});
+			$("#animateInButton").click(function(){
+				$("#dataDiv").animate({
+					width: "100",
+					opacity: 1.0,
+					marginLeft: "0in",
+					fontSize: "100%",
+					borderWidth: "1px"
+				}, 1500);
+			});
+		});
+	  </script>
+   </head>
+	
+   <body>
+		<input type="button" id="animateOutButton" value="Zoom In"/>
+		<input type="button" id="animateInButton" value="Zoom Out"/>
+		<div id="dataDiv">Hello World!</div>
+   </body>
+	
+</html>

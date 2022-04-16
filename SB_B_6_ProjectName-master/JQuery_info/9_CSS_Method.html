@@ -1,0 +1,51 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  css()
+	  height()
+	  width()
+	  position()
+	  scrollLeft()
+	  scrollTop()
+	  offset()
+	  outerHeight()
+	  outerWidth()
+	  */
+		$(document).ready(function(){
+			$("li").eq(2).css({"color" : "red" , "background-color" : "yellow"});
+			$("div:first").width(100);
+			$("div:first").css("background-color" , "blue");
+		});
+	  </script>
+	  <style>
+		div {
+			width: 200px;
+			height: 200px;
+			margin: 5pz;
+			background: red;
+			cursor: pointer;
+		}
+	  </style>
+   </head>
+	
+   <body>
+	  <div></div>
+	  <div id="testDiv">
+		<ul>
+			<li class="rop">list item 1</li>
+			<li class="middle0">list item 2</li>
+			<li class="middle1">list item 3</li>
+			<li class="middle2">list item 4</li>
+			<li class="bottom">list item 5</li>
+		</ul>
+	  </div>
+   </body>
+	
+</html>

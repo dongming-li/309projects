@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql5-15e4a35e260-74e885218938e07f" provider="mysql" driver="mysql5" name="MySQL - db309trb3" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="localhost" port="8080" server="" database="db309trb3" url="jdbc:mysql://localhost:8080/db309trb3" user="root" password="AQsJNCGi" type="dev">
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="false">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<data-source id="mysql5-15e4a40dc72-31f5a8a806c99613" provider="mysql" driver="mysql5" name="MySQL - 309trb3" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="localhost" port="8080" server="" database="309trb3" url="jdbc:mysql://localhost:8080/309trb3" user="root" password="AQsJNCGi" type="dev">
+			<property name="connectTimeout" value="20000"/>
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="false">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>

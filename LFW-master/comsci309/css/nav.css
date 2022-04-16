@@ -1,0 +1,54 @@
+/* Navigation menu overlay styles */
+
+.navbar1 {
+    position: relative;
+    margin: 0;
+    padding: 4px;
+    background-color: darksalmon;
+    display: inline;
+}
+.navbutton1 {
+    text-align: center;
+    text-decoration: none;
+    /* display: inline; */
+    min-height:20px;
+    font-size: 1.4em;
+    transition-duration: 0.5s;
+    white-space:nowrap;
+    cursor: pointer;
+   
+    margin: 0vw;
+    padding:2%;
+    color: white;
+    overflow: hidden;
+    
+    padding-bottom: .0vw;
+    border: 2px solid #e7e7e7;
+}
+.navbutton1:hover {
+    background-color: lemonchiffon;
+    color: steelblue;
+    opacity: .8;
+}
+
+.nav1 {
+    background-repeat:no-repeat;
+    display: none;
+    padding-top:0px;
+    border-style:inset;
+    border-width:medium;
+    border-color:white;
+    min-height:30px;
+    height:0px;
+    /* width:100%; */
+    /*      background-image:url(../pages/imgs/haze.png);
+        background-size:cover;
+        background-size:100% 400px;*/
+    
+    background-color: #bc0c00;
+    list-style: none;
+    z-index:9999999;
+    margin: 0;
+    padding: 0;
+    white-space:nowrap;
+}

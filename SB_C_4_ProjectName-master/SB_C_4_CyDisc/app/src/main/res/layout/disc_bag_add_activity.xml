@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="coms309.sb_c_4_cydisc.DiscBagAddFragment">
+
+
+    <EditText
+        android:id="@+id/etBrand"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_actionbar"
+        android:selectAllOnFocus="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Disc Brand" />
+
+    <EditText
+        android:id="@+id/etModel"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etBrand"
+        android:layout_alignRight="@+id/etBrand"
+        android:layout_below="@+id/etBrand"
+        android:layout_marginTop="@dimen/control_spacing_normal"
+        android:selectAllOnFocus="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Disc Model" />
+
+    <EditText
+        android:id="@+id/etSpeed"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etModel"
+        android:layout_alignRight="@+id/etModel"
+        android:layout_below="@+id/etModel"
+        android:selectAllOnFocus="true"
+        android:layout_marginTop="@dimen/control_spacing_normal"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Disc Speed Rating" />
+
+    <EditText
+        android:id="@+id/etGlide"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etSpeed"
+        android:layout_alignRight="@+id/etSpeed"
+        android:layout_below="@+id/etSpeed"
+        android:selectAllOnFocus="true"
+        android:layout_marginTop="@dimen/control_spacing_normal"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Disc Glide Rating" />
+
+    <EditText
+        android:id="@+id/etTurn"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etGlide"
+        android:layout_alignRight="@+id/etGlide"
+        android:layout_below="@+id/etGlide"
+        android:selectAllOnFocus="true"
+        android:layout_marginTop="@dimen/control_spacing_normal"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Disc Turn Rating" />
+
+    <EditText
+        android:id="@+id/etFade"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etTurn"
+        android:layout_alignStart="@+id/etTurn"
+        android:layout_centerVertical="true"
+        android:selectAllOnFocus="true"
+        android:layout_below="@+id/etTurn"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginTop="@dimen/control_spacing_normal"
+        android:text="Disc Fade Rating" />
+
+    <Button
+        android:id="@+id/btnAddDisc"
+        android:layout_width="@dimen/login_username_password"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etFade"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/control_spacing_normal"
+        android:text="Add Disc" />
+</RelativeLayout>

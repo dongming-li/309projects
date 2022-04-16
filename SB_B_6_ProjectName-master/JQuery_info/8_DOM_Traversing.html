@@ -1,0 +1,52 @@
+<!doctype html>	
+<!-- Using jQuert Tutorial Training -->
+
+<html>
+
+   <head>
+      <title>The jQuery Example</title>
+      <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+	  <style>
+		.error {
+			color: red;
+		}
+		.selected {
+			color: blue;
+		}
+		.highlight {
+			background-color: yellow;
+		}
+	  </style>
+	  
+	  <script type="text/javascript" language="javascript">
+	  /*
+	  Get by Index
+	  $("#testDiv li").eq(0).addClass("selected");
+	  Get by filter
+	  $("#testDiv li").filter('.middle').addClass("hightlight");
+	  Get by find
+	  $("#testDiv li").find('span').addClass("error");
+	  */
+		$(document).ready(function(){
+			$("#testDiv li").eq(0).addClass("selected");
+			$("#testDiv li").filter('.middle').addClass("highlight");
+			$("#testDiv li").find('span').addClass("error");
+		});
+	  </script>
+   </head>
+	
+   <body>
+	  <div id="testDiv">
+		<ul>
+			<li class="rop">list item 1</li>
+			<li class="middle">list item 2</li>
+			<li class="middle">list item 3</li>
+			<li class="middle">list item 4</li>
+			<li class="middle">list item 5</li>
+			<li class="bottom"><span>list item 6</span></li>
+		</ul>
+	  </div>
+   </body>
+	
+</html>

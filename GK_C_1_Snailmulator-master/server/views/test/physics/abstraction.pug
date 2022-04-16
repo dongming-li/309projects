@@ -1,0 +1,12 @@
+extends ../../template/theme.pug
+
+block head-links
+  script(src='/js/plugin/matter.js')
+  script(src='/js/views/test/physics/abstraction.js')
+
+block content
+  .row
+    .col-sm-3
+      h1 Hello World
+    .col-sm-9
+      #canvas

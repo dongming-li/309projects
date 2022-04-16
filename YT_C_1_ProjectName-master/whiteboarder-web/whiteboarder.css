@@ -1,0 +1,102 @@
+
+body {
+    background: #ddd;
+    font-family: 'Quicksand', sans-serif;
+}
+
+label {
+	width: 25%;
+	margin: 0 auto;
+	background-color: #343a40;
+}
+
+#toolsDiv label {
+	width: 50%;
+}
+
+#main-container {
+	min-width: 70%;
+}
+
+.card {
+	margin: 0.3rem;
+}
+
+#welcome-image {
+	margin: 1rem;
+}
+
+.jumbotron-fluid {
+	background: white;
+	padding: 2rem;
+	margin-bottom: 8rem;
+}
+
+#qrcode {
+	margin: 10px auto;
+	text-align: center;
+	width: 140px;
+	height: 140px;
+}
+
+#section-welcome {
+	display: none;
+}
+
+#section-connected {
+	display: none;
+}
+
+#imagebox {
+	height: 27.25rem;
+}
+
+#messagebox {
+	height: 16rem;
+}
+
+#image {
+	width: 95%;
+	height: 25rem;
+	position: absolute;
+}
+
+#canvas {
+	width: 95%;
+	height: 25rem;
+	position: absolute;
+}
+
+#message-submit {
+	width: 15%;
+	margin: 0;
+	float: right;
+}
+
+#message-input {
+	width: 85%;
+	margin: 0;
+	float: left;
+}
+
+#joined-members {
+	height: 12rem;
+}
+
+.namestamp {
+	float: left;
+	font-size: .8rem;
+	color: gray;
+	max-width: 60%;
+}
+
+.timestamp {
+	float: right;
+	font-size: .8rem;
+	color: gray;
+	max-width: 40%;
+}
+
+.msgmeta {
+	width: 100%;
+}

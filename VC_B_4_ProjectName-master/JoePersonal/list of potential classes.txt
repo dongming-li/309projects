@@ -1,0 +1,36 @@
+--------------------Client Classes--------------------
+MainMenuActivity
+LoginActivity
+RegisterActivity
+Map
+SettingsActivity
+PlayMenuActivity
+LobbyActivity
+TerrainEnum
+MapEditor
+Unit + subclasses
+PlayerClass
+MapCreator
+CustomMap
+ConnectionHandler
+Report
+LeaderboardActivity
+FriendsActivity
+Tower
+GameLogic/GameState
+PlayerClass
+Upgrade
+GameMode
+RequestID
+SharedPreferenceManager
+VolleySingleton
+GamePainter/View
+
+
+--------------------Server Classes--------------------
+Server
+MethodEnum
+RequestID
+DatabaseHandler
+RequestPlayer
+PlayerHandler

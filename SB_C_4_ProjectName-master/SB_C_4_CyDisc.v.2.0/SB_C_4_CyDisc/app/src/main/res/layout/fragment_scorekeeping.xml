@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background = "@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvHole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLobbyId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="HOLE # : 1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+    <EditText
+        android:id="@+id/etScore"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHole"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:ems="10"
+        android:hint="Enter Score"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/bPrevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/etScore"
+        android:background="@color/colorPrimaryDark"
+        android:text="Prev" />
+
+    <Button
+        android:id="@+id/bNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/etScore"
+        android:background="@color/colorPrimaryDark"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bPrevious"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="113dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/openScorecard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/submitGame"
+        android:layout_alignStart="@+id/submitGame"
+        android:layout_below="@+id/submitGame"
+        android:layout_marginTop="19dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="SCORECARD" />
+
+    <TextView
+        android:id="@+id/tvLobbyId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <Button
+        android:id="@+id/submitGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/newGame"
+        android:layout_alignStart="@+id/newGame"
+        android:layout_below="@+id/newGame"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Save Game" />
+
+</RelativeLayout>

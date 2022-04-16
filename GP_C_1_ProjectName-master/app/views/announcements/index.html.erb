@@ -1,0 +1,22 @@
+<h1>Announcements</h1>
+
+<div class="card">
+  <div class="card-body">
+    <% @announcements.each do |announcement| %>
+
+
+        <h5><%= announcement.title.truncate(40, separator: /\s/) %></h5>
+        <p><%= announcement.body.truncate(200, omission: '...(continued)') %></p>
+        <%= link_to 'Read More', announcement %>
+        <!--<%= link_to 'Edit', edit_announcement_path(announcement) %>
+        <%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+
+    <% end %>
+</div>
+</div>
+
+<br>
+
+<%= link_to 'Create New Announcement', new_announcement_path, :class => 'btn text-white btn-info' %>
+
+<%= link_to 'Return To Home', home_path, :class => 'btn text-white btn-info' %>

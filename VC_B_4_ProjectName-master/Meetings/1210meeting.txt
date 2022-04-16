@@ -1,0 +1,23 @@
+meeting 10/12 all present
+-Discussion about block diagram 
+- Multiple client,, 
+layers into the components. 
+In the database tables for : player, map info, map itself, friends, reports, 
+	-> leaderboards etc constructed into the db
+	-> Client side handles most of the processing so that we limit internet communication
+	Server will receive updates of the state of the game every seconds. 
+	Since we have hTTP no need to worry about losing data. 
+	-> put hierarchy in the compoments. 
+
+Design disucssion : 
+- Example of how a game work. 
+- How the editor works
+- How the client downloads a map 
+- 
+
+Alex gives access to all of us to an iml file that makes it easier to draw the block diagram 
+
+Joe is done with Lobby. 
+Alex is working UI for the game.
+Jeremy is investing into the Loader to help. Work into the assets. 
+Johan will work on pulling the map from database, creating on the client. 

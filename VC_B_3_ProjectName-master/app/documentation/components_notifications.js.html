@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/notifications.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/notifications.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module notifications
+ */
+
+import React, { Component } from 'react';
+import {
+    Text,
+    StyleSheet,
+    View,
+    ScrollView
+} from 'react-native';
+
+import FriendRequest from './friend-request';
+import FriendRequestAccepted from './friend-request-accepted';
+import FriendRequestRejected from './friend-request-rejected';
+
+import Routes from '../helpers/routes';
+import MessageTypes from '../helpers/message-types';
+import Colors from '../helpers/colors';
+
+/**
+ * Notifications/Messages menu component
+ */
+export default class Notifications extends Component {
+    /**
+     * Creates the notifications/messages menu
+     * @param {object} props Props passed to the component
+     */
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            hasMessages: false,
+            messages: []
+        }
+
+        this.displayMessages = this.displayMessages.bind(this);
+        this.retrieveMessages = this.retrieveMessages.bind(this);
+        this.changeState = this.changeState.bind(this);
+    }
+
+    /**
+     * Change the given field inside of state with the given value
+     * @param {string} field Field inside of state to modify
+     * @param {*} value Value to be put inside of state
+     */
+    changeState(field, value) {
+        this.setState(previousState => {
+            return Object.assign({}, previousState, {
+                [field]: value
+            });
+        });
+    }
+
+    /**
+     * Retrieves a user's messages
+     */
+    retrieveMessages() {
+        fetch(Routes.retrieveMessages, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user: this.props.user
+            })
+        }).then(response => {
+            return response.json();
+        }).then(body => {
+            this.changeState('messages', body);
+            this.changeState('hasMessages', true);
+        });
+    }
+
+    /**
+     * Display the user's messages
+     */
+    displayMessages() {
+        if (this.state.hasMessages) {
+            if (!this.state.messages.length)
+                return (
+                    &lt;Text
+                        style={styles.noMessagesText}
+                    >
+                        You have no notifications right now!
+                    &lt;/Text>
+                );
+
+            const messages = this.state.messages.map(message => {
+                switch (message.type) {
+                    case MessageTypes.friendRequest:
+                        return (
+                            &lt;FriendRequest
+                                sender={message.sender}
+                                timestamp={message.timestamp}
+                                user={this.props.user}
+                                key={message.id}
+                            />
+                        );
+                    case MessageTypes.friendRequestAccepted:
+                        return (
+                            &lt;FriendRequestAccepted
+                                sender={message.sender}
+                                timestamp={message.timestamp}
+                                user={this.props.user}
+                                key={message.id}
+                            />
+                        );
+                    case MessageTypes.friendRequestRejected:
+                        return (
+                            &lt;FriendRequestRejected
+                                sender={message.sender}
+                                timestamp={message.timestamp}
+                                user={this.props.user}
+                                key={message.id}
+                            />
+                        );
+                    default:
+                        console.log('[ERROR] Unsupported message type');
+                }
+            });
+
+            return (
+                &lt;ScrollView>
+                    {messages}
+                &lt;/ScrollView>
+            );
+        }
+
+        this.retrieveMessages();
+
+        return (
+            &lt;Text>Please wait while we get your messages&lt;/Text>
+        );
+    }
+
+    /**
+     * Render the component
+     */
+    render() {
+        return (
+            &lt;View
+                style={styles.messagesMenuContainer}
+            >
+                {this.displayMessages()}
+            &lt;/View>
+        );
+    }
+}
+
+const styles = StyleSheet.create({
+    messagesMenuContainer: {
+        flex: 1,
+        flexDirection: 'column'
+    },
+    noMessagesText: {
+        color: Colors.getNeutral(800),
+        fontSize: 18,
+        textAlign: 'center',
+        paddingHorizontal: 10,
+        paddingTop: 12
+    }
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-error-messages.html">error-messages</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-message-types.html">message-types</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-routes.html">routes</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li><li><a href="module-view.html">view</a></li></ul><h3>Classes</h3><ul><li><a href="module-add-friends.html">add-friends</a></li><li><a href="module-app.html">app</a></li><li><a href="module-colors.html">colors</a></li><li><a href="module-friend-entry.html">friend-entry</a></li><li><a href="module-friend-request.html">friend-request</a></li><li><a href="module-friend-request-accepted.html">friend-request-accepted</a></li><li><a href="module-friend-request-rejected.html">friend-request-rejected</a></li><li><a href="module-geocoder.html">geocoder</a></li><li><a href="module-login.html">login</a></li><li><a href="module-map.html">map</a></li><li><a href="module-menu.html">menu</a></li><li><a href="module-navigation.html">navigation</a></li><li><a href="module-notifications.html">notifications</a></li><li><a href="module-register.html">register</a></li><li><a href="module-settings.html">settings</a></li><li><a href="module-toolbar.html">toolbar</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Dec 08 2017 23:44:25 GMT-0600 (Central Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

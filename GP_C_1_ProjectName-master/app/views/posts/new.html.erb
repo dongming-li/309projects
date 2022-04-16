@@ -1,0 +1,33 @@
+<h1>Add Topic</h1>
+<%= form_for :post, url: posts_path do |f| %>
+  <%if @post.errors.any? %>
+    <% @post.errors.full_messages.each do |msg| %>
+      <div class="alert alert-danger"><%= msg %></div>
+    <% end %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :forum %><br>
+    <%= f.collection_select :forum_id, Forum.all, :id, :name %>
+  </div>
+
+<!--
+  <p>
+    <%= f.label :username %><br>
+    <%= f.text_field(:username, {:class => 'form-control'}) %>
+  </p>
+-->
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field(:title, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area(:body, {:class => 'form-control'}) %>
+  </p>
+
+  <p>
+    <%= f.submit({:class => 'btn btn-secondary'}) %>
+  </p>
+<% end %>

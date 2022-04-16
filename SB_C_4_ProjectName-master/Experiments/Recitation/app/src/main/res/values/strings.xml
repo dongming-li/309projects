@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Recitation</string>
+    <string name="title_activity_home">home</string>
+    <string name="title_activity_toasat">Toasat</string>
+</resources>

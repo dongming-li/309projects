@@ -1,0 +1,136 @@
+<div class="container">
+	<h1>Create New Property Listing</h1>
+	
+	<form (ngSubmit)="onSubmit()" novalidate [formGroup]="newAddressForm">	
+		
+		<label>Housing Type: </label>
+		<div id="rates">
+		  	<input type="radio" id="apartment" name="housingType"> Apartment
+		  	<input type="radio" id="house" name="housingType"> House
+		  	 
+		</div>
+
+		<div>
+			Personal Bathroom:
+			<input type="checkbox" id="personalBath" formControlName="personalBathroom">
+		</div>
+		
+		<div>
+			Number of Bathrooms:
+  			<input type="number" id="numBaths" formControlName="bathroomQuantity" min="0" max="10">
+		</div>
+
+		<div>
+			Number of current roommates:
+  			<input type="number" id="numRoommates" formControlName="roommateQuantity" min="0" max="10">
+		</div>
+		
+		<div class="row">
+			
+			<div class="column">
+				<label>Street Address: </label>
+				<div class="form-group" [ngClass]="{
+					'has-danger': streetAddress.invalid && streetAddress.dirty,
+					'has-success': streetAddress.valid && streetAddress.dirty}">
+					<input type="text" class="form-control" formControlName="streetAddress" required placeholder="Enter Street Address">
+				</div>
+			</div>
+
+			<div class="column">
+				<label>City: </label>
+				<div class="form-group" [ngClass]="{
+					'has-danger': city.invalid && city.dirty,
+					'has-success': city.valid && city.dirty}">
+					<input type="text" class="form-control" formControlName="city" required placeholder="Enter City">
+					
+				</div>
+			</div>
+
+			<div class="column">
+				<label>State: </label>
+				<div class="form-group" [ngClass]="{
+					'has-danger': state.invalid && state.dirty,
+					'has-success': state.valid && state.dirty}">
+					<input type="text" class="form-control" formControlName="state" required placeholder="Enter State (i.e MN, IA, Ca)">
+					
+				</div>
+			</div>
+
+			<div class="column">
+				<label>Zip Code: </label>
+				<div class="form-group" [ngClass]="{
+					'has-danger': zip.invalid && zip.dirty,
+					'has-success': zip.valid && zip.dirty}">
+					<input type="text" class="form-control" formControlName="zip" required placeholder="Enter Zip Code">
+					
+				</div>
+			</div>
+		</div>
+	</form>	
+	<form (ngSubmit)="onSubmit()" novalidate [formGroup]="newPropertyForm">
+
+		<div class="row">
+			<div class="column">
+				<label>Leasing Agency: </label>
+				<div class="form-group" [ngClass]="{
+					'has-danger': leasingAgency.invalid && leasingAgency.dirty,
+					'has-success': leasingAgency.valid && leasingAgency.dirty}">
+
+					<input type="text" class="form-control" formControlName="leasingAgency" required placeholder="Enter leasing agency (i.e 23Twenty)">
+				</div>	
+			</div>
+
+			<div class="column">
+				<label>Requested Rent: </label>
+				<div class="form-group" [ngClass]="{
+					'has-danger': rentValue.invalid && rentValue.dirty,
+					'has-success': rentValue.valid && rentValue.dirty}">	
+					<input required class="form-control" formControlName="rentValue" type="number" step="0.01"  placeholder="Enter desired rent amount">
+				</div>	
+			</div>
+		</div>
+		<label>Give a short description of the property: </label>
+		<div class="form-group" [ngClass]="{
+			'has-danger': postingMessage.invalid && postingMessage.dirty,
+			'has-success': postingMessage.valid && postingMessage.dirty}">
+			
+			<textarea required class="txt-area" formControlName="postingMessage" type="text" placeholder="Description" rows="5" cols="80"></textarea>
+			
+		</div>
+
+		<label>Test Pic upload</label>
+		<div>
+			<span id="tooMany"></span>
+		</div>
+		<input id="previewImage" type="file" (change)="imagePreview();" />
+		
+		<div class="row">
+			<div class="column">
+					
+				<button type="button" id="clearButt" class="btn btn-success btn-s" style="display: none;" (click)="clear()">
+					Clear
+				</button>
+				
+				<div id="previewPic" class="container2">
+					<label id="previewLabel" style="display: none;"> Picture Preview:</label>
+					<img src="" id="preview0" />
+					<img src="" id="preview1" />
+					<img src="" id="preview2" />
+					<img src="" id="preview3" />
+					<img src="" id="preview4" />
+				</div>
+			</div>		
+		
+			<div class="column">
+				<div>
+					<span id="errorMsg"></span>
+				</div>
+				<div>
+					<button type="submit" class="btn btn-primary" >Submit</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- <pre>{{newAddressForm.value | json}}</pre>
+      <router-outlet></router-outlet> -->

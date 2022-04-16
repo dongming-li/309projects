@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+<component name="libraryTable">
+  <library name="rules-0.5">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/d149b717d4c7a45847e60ee81a4c5d29a379dc80/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/d149b717d4c7a45847e60ee81a4c5d29a379dc80/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/test/rules/0.5/rules-0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+=======
+<component name="libraryTable">
+  <library name="rules-0.5">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/2a157cd3d888153e3e1612daa64ac2bb0495e6cc/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/2a157cd3d888153e3e1612daa64ac2bb0495e6cc/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/test/rules/0.5/rules-0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+>>>>>>> 27ac6d91efbe991245010c58e86331b2e3667715
+</component>

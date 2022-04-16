@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.sae1.raisehand">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name="Activities.VolleyMainActivityHandler"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="Activities.LoginActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="Teacher.TeacherClasses"/>
+        <activity android:name="Teacher.TeacherHomePage"/>
+        <activity android:name="Teacher.TeacherNotifications"/>
+        <activity android:name="Teacher.TeacherSettings"/>
+        <activity android:name="Teacher.TeacherStudents"/>
+        <activity android:name="Teacher.TeacherQuestions"/>
+        <activity android:name="Teacher.TeacherTopics"/>
+        <activity android:name="Activities.SignupActivity"/>
+        <activity android:name="Student.StudentNotifications"/>
+        <activity android:name="Student.StudentSettings"/>
+        <activity android:name="Student.StudentClasses"/>
+        <activity android:name="Student.StudentHomePage"/>
+        <!-- <activity android:name="utils.QuestionActivity"></activity> -->
+        <activity android:name="Student.StudentTopics"/>
+        <activity android:name="Student.StudentQuestions"/>
+        <activity android:name="Activities.MakeQuestion"/>
+        <activity android:name="Activities.MakeReply"/>
+        <activity android:name="Teacher.TeacherReplies"/>
+        <activity android:name="Student.StudentReplies"/>
+        <activity android:name="Teacher.TeacherRepliesReply"/>
+        <activity android:name="Activities.MakeReplyReply"/>
+        <activity android:name="Activities.ResetPassword"/>
+        <activity android:name="Activities.ForgotPassword"/>
+        <activity android:name="Activities.LiveFeed"/>
+        <activity android:name="Student.StudentRepliesReply"/>
+        <activity android:name="Activities.SelectClassForLiveFeed"/>
+        <activity android:name="Activities.AddClass"/>
+        <activity android:name="Teacher.TeacherUpvotedQuestions">
+        </activity>
+        <activity android:name="Activities.MakeLiveFeedQuestion">
+        </activity>
+    </application>
+
+</manifest>

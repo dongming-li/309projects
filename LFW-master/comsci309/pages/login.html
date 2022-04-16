@@ -1,0 +1,34 @@
+<script type="text/javascript">
+
+</script>
+<h2 style="position:absolute;margin-top:0vw;font-size:7.5vw;animation-direction:alternate-reverse;z-index: 1000;">Letters From Whitechapel </h2>
+<div class="login-container">
+    <div class="login-menu">
+        <br>
+        <p style=" margin: 0;
+        font-family: sans-serif;
+        color: white; font-size:20px;">Login</p>
+        <br>
+        <input class="logininput" type="text" id="username" placeholder="Username">
+
+        <input class="logininput" type="password" id="password" placeholder="Password">
+        <span style="opacity:0"><input class="logininput" type="text" id="newpassword" placeholder="Update PW" disabled></span>
+
+        <form class="loginfo">
+            <button class="loginbtn" id="loginbtn" onclick='ajax("check");'>Login</button>
+        </form>
+        <form class="loginfo">
+            <button class="loginbtn" id="createbtn" onclick='ajax("create")'>Sign Up</button>
+        </form>
+        <!-- <form class="loginfo">
+            <button class="loginbtn" id="updatebtn" onclick='ajax("update")'>Update</button>
+
+        </form> -->
+        <p id="message" style="opacity:0;"></p>
+    </div>
+</div>
+<script>
+            $("#chatcontainer").hide();
+            $(".nav1").hide();
+        
+</script>

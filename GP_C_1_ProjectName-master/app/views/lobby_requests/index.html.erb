@@ -1,0 +1,40 @@
+<h1>Game Lobby</h1>
+<!--<a href="/messenger">Messenger</a><br>-->
+
+<body>There are currently <%= @lobby_requests.count  %> players online</body>
+
+<!--<meta http-equiv="refresh" content="5"/> -->
+
+<div id="table">
+  <table style="width:100%" border="2" >
+    <tr>
+      <th>Player Name</th>
+      <th>Game</th>
+      <th>Last Active</th>
+      <% if user_signed_in? %>
+      <th>Remove/Accept</th>
+      <% end %>
+    </tr>
+    <% for lobby_request in @lobby_requests %>
+      <tr>
+        <th><img src="https://t3.ftcdn.net/jpg/00/64/67/80/240_F_64678017_zUpiZFjj04cnLri7oADnyMH0XBYyQghG.jpg" style="width:50px;height:50px;"><a href= "<%= lobby_request.name %>/profile"><%= lobby_request.name %></a></th>
+        <td><a href= "<%= lobby_request.game %>/community"><%= lobby_request.game %></a></td>
+        <td><%= elapsedTime(lobby_request.time) %></td> <!-- Make into fuction -->
+        <% if user_signed_in? %>
+          <% if current_user.email == lobby_request.name %>
+          <td><%= link_to 'Remove Request', lobby_request_path(lobby_request),
+                                            method: :delete,
+                                            data: { confirm: 'delet this??'},
+                                            :class => 'btn btn-danger' %></td>
+          <% else %>
+          <td><%= link_to 'Accept Request', '#', :class => 'btn btn-success' %></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<% if user_signed_in? %>
+<%= link_to "New Request", new_lobby_request_path, :class => 'btn card text-white bg-secondary' %>
+<% end %>
